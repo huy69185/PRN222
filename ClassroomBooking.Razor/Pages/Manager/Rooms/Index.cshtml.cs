@@ -19,9 +19,15 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
         }
 
         public List<Room> Rooms { get; set; } = new();
+        public int CurrentPage { get; set; } = 1; // Default to page 1
+        public int TotalPages { get; set; }
+        public int PageSize { get; set; } = 5; // 5 rooms per page
 
-        public async Task<IActionResult> OnGetAsync()
+        public async Task<IActionResult> OnGetAsync(int? pageNumber)
         {
+            // Set the current page (default to 1 if not provided)
+            CurrentPage = pageNumber ?? 1;
+
             // Lấy UserCode của Manager từ Claims
             var managerUserCode = User.Identity.Name;
             if (string.IsNullOrEmpty(managerUserCode))
@@ -42,8 +48,17 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
             var allRooms = await _roomService.GetAllRoomsAsync();
 
             // Lọc phòng theo CampusId của Manager
-            Rooms = allRooms
+            var filteredRooms = allRooms
                 .Where(r => r.CampusId == manager.CampusId)
+                .ToList();
+
+            // Tính tổng số trang
+            TotalPages = (int)Math.Ceiling(filteredRooms.Count / (double)PageSize);
+
+            // Lấy rooms cho trang hiện tại
+            Rooms = filteredRooms
+                .Skip((CurrentPage - 1) * PageSize)
+                .Take(PageSize)
                 .ToList();
 
             return Page();

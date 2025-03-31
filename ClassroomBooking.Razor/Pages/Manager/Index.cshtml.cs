@@ -22,9 +22,15 @@ namespace ClassroomBooking.Presentation.Pages.Manager
         }
 
         public List<Booking> BookingList { get; set; } = new();
+        public int CurrentPage { get; set; } = 1; // Default to page 1
+        public int TotalPages { get; set; }
+        public int PageSize { get; set; } = 5; // 5 records per page
 
-        public async Task<IActionResult> OnGetAsync()
+        public async Task<IActionResult> OnGetAsync(int? pageNumber)
         {
+            // Set the current page (default to 1 if not provided)
+            CurrentPage = pageNumber ?? 1;
+
             // Lấy UserCode của Manager từ Claims
             var managerUserCode = User.Identity.Name;
             if (string.IsNullOrEmpty(managerUserCode))
@@ -45,8 +51,17 @@ namespace ClassroomBooking.Presentation.Pages.Manager
             var allBookings = await _bookingService.GetAllBookingsAsync();
 
             // Lọc bookings theo CampusId của Manager
-            BookingList = allBookings
+            var filteredBookings = allBookings
                 .Where(b => b.RoomSlots.Any(rs => rs.Room != null && rs.Room.CampusId == manager.CampusId))
+                .ToList();
+
+            // Tính tổng số trang
+            TotalPages = (int)Math.Ceiling(filteredBookings.Count / (double)PageSize);
+
+            // Lấy bookings cho trang hiện tại
+            BookingList = filteredBookings
+                .Skip((CurrentPage - 1) * PageSize)
+                .Take(PageSize)
                 .ToList();
 
             return Page();
@@ -93,7 +108,7 @@ namespace ClassroomBooking.Presentation.Pages.Manager
                 ModelState.AddModelError("", "Update status failed!");
             }
 
-            return RedirectToPage();
+            return RedirectToPage(new { pageNumber = CurrentPage }); // Redirect to the current page after updating status
         }
     }
 }
