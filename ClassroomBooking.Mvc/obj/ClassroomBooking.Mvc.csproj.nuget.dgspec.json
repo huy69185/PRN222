@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj": {}
+    "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj": {
+    "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj",
+        "projectUniqueName": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj",
         "projectName": "ClassroomBooking.Mvc",
-        "projectPath": "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Mvc\\obj\\",
+        "projectPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj",
+        "packagesPath": "C:\\Users\\huyh6\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\huyh6\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj": {
-                "projectPath": "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj"
+              "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj": {
+                "projectPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj"
               }
             }
           }
@@ -90,24 +90,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj": {
+    "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj",
         "projectName": "ClassroomBooking.Repository",
-        "projectPath": "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Repository\\obj\\",
+        "projectPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj",
+        "packagesPath": "C:\\Users\\huyh6\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\huyh6\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -169,24 +169,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj": {
+    "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj",
+        "projectUniqueName": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj",
         "projectName": "ClassroomBooking.Service",
-        "projectPath": "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Service\\obj\\",
+        "projectPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj",
+        "packagesPath": "C:\\Users\\huyh6\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\huyh6\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -201,8 +201,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj": {
-                "projectPath": "C:\\Users\\nguye\\Desktop\\PRN222\\ClassroomBooking\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj"
+              "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj": {
+                "projectPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj"
               }
             }
           }
@@ -244,7 +244,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

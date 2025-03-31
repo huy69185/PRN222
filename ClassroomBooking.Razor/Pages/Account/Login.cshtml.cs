@@ -40,7 +40,8 @@ namespace ClassroomBooking.Presentation.Pages.Account
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.UserCode),
-                    new Claim(ClaimTypes.Role, normalizedRole)
+                    new Claim(ClaimTypes.Role, normalizedRole),
+                    new Claim("CampusId", user.CampusId.ToString()) // Thêm CampusId vào Claims
                 };
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

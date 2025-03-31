@@ -83,7 +83,8 @@ namespace ClassroomBooking.Mvc.Controllers
                 StudentId = user.USerId,
                 StartTime = DateTime.Now,
                 EndTime = DateTime.Now.AddHours(1),
-                CapacityLeft = 0
+                CapacityLeft = 0,
+                SelectedCampusId = user.CampusId // Gán CampusId của user
             };
 
             // Khôi phục dữ liệu từ TempData nếu có
@@ -91,22 +92,16 @@ namespace ClassroomBooking.Mvc.Controllers
             if (TempData["StartTime"] != null) model.StartTime = DateTime.Parse(TempData["StartTime"].ToString());
             if (TempData["EndTime"] != null) model.EndTime = DateTime.Parse(TempData["EndTime"].ToString());
             if (TempData["SeatsWanted"] != null) model.SeatsWanted = int.Parse(TempData["SeatsWanted"].ToString());
-            if (TempData["SelectedCampusId"] != null) model.SelectedCampusId = int.Parse(TempData["SelectedCampusId"].ToString());
             if (TempData["SelectedRoomId"] != null) model.SelectedRoomId = int.Parse(TempData["SelectedRoomId"].ToString());
             if (TempData["CapacityLeft"] != null) model.CapacityLeft = int.Parse(TempData["CapacityLeft"].ToString());
 
-            ViewBag.CampusList = await _campusService.GetAllCampusesAsync();
+            // Chỉ lấy campus của user
+            var campus = await _campusService.GetAllCampusesAsync();
+            ViewBag.CampusList = campus.Where(c => c.CampusId == user.CampusId).ToList();
 
-            // Chỉ lấy các phòng có trạng thái Available
-            if (model.SelectedCampusId > 0)
-            {
-                var rooms = await _roomService.GetRoomsByCampusAsync(model.SelectedCampusId);
-                ViewBag.RoomList = rooms;
-            }
-            else
-            {
-                ViewBag.RoomList = new List<Room>();
-            }
+            // Chỉ lấy các phòng có trạng thái Available và thuộc campus của user
+            var rooms = await _roomService.GetRoomsByCampusAsync(user.CampusId);
+            ViewBag.RoomList = rooms;
 
             return View(model);
         }
@@ -131,6 +126,24 @@ namespace ClassroomBooking.Mvc.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateCapacity(BookingCreateModel model)
         {
+            var userCode = User.Identity?.Name;
+            if (string.IsNullOrEmpty(userCode))
+            {
+                _logger.LogWarning("User not authenticated in UpdateCapacity, redirecting to login.");
+                return Redirect("http://localhost:5001/Account/Login");
+            }
+
+            var user = await _usersService.GetUserAsync(userCode);
+            if (user == null)
+            {
+                _logger.LogError("User not found for userCode: {0}", userCode);
+                TempData["Error"] = "User not found. Please log in again.";
+                return Redirect("http://localhost:5001/Account/Login");
+            }
+
+            // Đảm bảo CampusId của user được sử dụng
+            model.SelectedCampusId = user.CampusId;
+
             // Lưu trạng thái form vào TempData
             TempData["Purpose"] = model.Purpose;
             TempData["StartTime"] = model.StartTime.ToString("o");
@@ -143,9 +156,9 @@ namespace ClassroomBooking.Mvc.Controllers
             if (model.SelectedRoomId > 0)
             {
                 var room = await _roomService.GetRoomByIdAsync(model.SelectedRoomId);
-                if (room == null || room.Status != "Available")
+                if (room == null || room.Status != "Available" || room.CampusId != user.CampusId)
                 {
-                    TempData["Error"] = "Selected room is not available for booking.";
+                    TempData["Error"] = "Selected room is not available or does not belong to your campus.";
                     model.CapacityLeft = 0;
                 }
                 else
@@ -193,27 +206,24 @@ namespace ClassroomBooking.Mvc.Controllers
             }
 
             model.StudentId = user.USerId;
+            model.SelectedCampusId = user.CampusId; // Đảm bảo CampusId của user được sử dụng
 
             if (!ModelState.IsValid)
             {
                 _logger.LogWarning("ModelState invalid in Create POST.");
                 TempData["Error"] = "Please fill in all required fields correctly.";
                 ViewBag.CampusList = await _campusService.GetAllCampusesAsync();
-                ViewBag.RoomList = model.SelectedCampusId > 0
-                    ? await _roomService.GetRoomsByCampusAsync(model.SelectedCampusId)
-                    : new List<Room>();
+                ViewBag.RoomList = await _roomService.GetRoomsByCampusAsync(user.CampusId);
                 return View(model);
             }
 
             // Kiểm tra trạng thái Room trước khi tạo booking
             var room = await _roomService.GetRoomByIdAsync(model.SelectedRoomId);
-            if (room == null || room.Status != "Available")
+            if (room == null || room.Status != "Available" || room.CampusId != user.CampusId)
             {
-                TempData["Error"] = "Selected room is not available for booking.";
+                TempData["Error"] = "Selected room is not available or does not belong to your campus.";
                 ViewBag.CampusList = await _campusService.GetAllCampusesAsync();
-                ViewBag.RoomList = model.SelectedCampusId > 0
-                    ? await _roomService.GetRoomsByCampusAsync(model.SelectedCampusId)
-                    : new List<Room>();
+                ViewBag.RoomList = await _roomService.GetRoomsByCampusAsync(user.CampusId);
                 return View(model);
             }
 
@@ -225,9 +235,7 @@ namespace ClassroomBooking.Mvc.Controllers
             {
                 TempData["Error"] = "SeatsWanted must be greater than 0!";
                 ViewBag.CampusList = await _campusService.GetAllCampusesAsync();
-                ViewBag.RoomList = model.SelectedCampusId > 0
-                    ? await _roomService.GetRoomsByCampusAsync(model.SelectedCampusId)
-                    : new List<Room>();
+                ViewBag.RoomList = await _roomService.GetRoomsByCampusAsync(user.CampusId);
                 return View(model);
             }
 
@@ -235,9 +243,7 @@ namespace ClassroomBooking.Mvc.Controllers
             {
                 TempData["Error"] = $"Not enough seats. Capacity left = {model.CapacityLeft}.";
                 ViewBag.CampusList = await _campusService.GetAllCampusesAsync();
-                ViewBag.RoomList = model.SelectedCampusId > 0
-                    ? await _roomService.GetRoomsByCampusAsync(model.SelectedCampusId)
-                    : new List<Room>();
+                ViewBag.RoomList = await _roomService.GetRoomsByCampusAsync(user.CampusId);
                 return View(model);
             }
 
@@ -262,9 +268,7 @@ namespace ClassroomBooking.Mvc.Controllers
                 _logger.LogError("Error creating booking: {0}", ex.Message);
                 TempData["Error"] = $"Error creating booking: {ex.Message}";
                 ViewBag.CampusList = await _campusService.GetAllCampusesAsync();
-                ViewBag.RoomList = model.SelectedCampusId > 0
-                    ? await _roomService.GetRoomsByCampusAsync(model.SelectedCampusId)
-                    : new List<Room>();
+                ViewBag.RoomList = await _roomService.GetRoomsByCampusAsync(user.CampusId);
                 return View(model);
             }
         }

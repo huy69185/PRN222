@@ -15,7 +15,7 @@ namespace ClassroomBooking.Service
 
         public async Task<Users?> GetUserAsync(string userCode)
         {
-            return await _unitOfWork.UsersRepository.GetFirstOrDefaultAsync(u => u.UserCode == userCode);
+            return await _unitOfWork.UsersRepository.GetFirstOrDefaultAsync(u => u.UserCode == userCode, "Department,Campus");
         }
 
         public async Task RegisterUserAsync(Users user)
@@ -30,13 +30,17 @@ namespace ClassroomBooking.Service
             if (user.Role == "Manager")
             {
                 var existingManager = await _unitOfWork.UsersRepository.GetFirstOrDefaultAsync(
-                    u => u.DepartmentId == user.DepartmentId && u.Role == "Manager");
+                    u => u.CampusId == user.CampusId && u.Role == "Manager");
                 if (existingManager != null)
-                    throw new Exception("This department already has a Manager.");
+                    throw new Exception("This campus already has a Manager.");
             }
 
             var department = await _unitOfWork.DepartmentRepository.GetByIdAsync(user.DepartmentId);
             if (department == null) throw new Exception("Invalid DepartmentId.");
+
+            // Kiểm tra Department và CampusId có khớp không
+            if (department.CampusId != user.CampusId)
+                throw new Exception("Department does not belong to the selected campus.");
 
             if (user.Role != "Student" && user.Role != "Manager") user.Role = "Student";
 

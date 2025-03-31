@@ -39,6 +39,14 @@
     </div>
 
     <div class="mb-3">
+        <label asp-for="SelectedCampusName" class="form-label fw-bold">Campus</label>
+        <select asp-for="SelectedCampusName" class="form-select" asp-items="Model.CampusItems" required>
+            <option value="">-- Select Campus --</option>
+        </select>
+        <span asp-validation-for="SelectedCampusName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
         <label asp-for="User.DepartmentId" class="form-label fw-bold">Department</label>
         <select asp-for="User.DepartmentId" class="form-select" asp-items="Model.DepartmentItems" required>
             <option value="">-- Select Department --</option>

@@ -40,6 +40,10 @@ namespace ClassroomBooking.Repository
             {
                 entity.HasKey(e => e.DepartmentId);
                 entity.Property(e => e.DepartmentName).HasMaxLength(100);
+                entity.HasOne(d => d.Campus)
+                      .WithMany()
+                      .HasForeignKey(d => d.CampusId)
+                      .OnDelete(DeleteBehavior.NoAction);
             });
 
             modelBuilder.Entity<Room>(entity =>
@@ -80,8 +84,11 @@ namespace ClassroomBooking.Repository
                       .WithMany(d => d.Users)
                       .HasForeignKey(e => e.DepartmentId)
                       .OnDelete(DeleteBehavior.Restrict);
+                entity.HasOne(e => e.Campus)
+                      .WithMany()
+                      .HasForeignKey(e => e.CampusId)
+                      .OnDelete(DeleteBehavior.NoAction);
             });
-
         }
     }
 }

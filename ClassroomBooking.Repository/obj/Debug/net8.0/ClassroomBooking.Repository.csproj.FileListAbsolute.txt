@@ -10,3 +10,16 @@ C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\D
 C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\Debug\net8.0\refint\ClassroomBooking.Repository.dll
 C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.pdb
 C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\Debug\net8.0\ref\ClassroomBooking.Repository.dll
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\bin\Debug\net8.0\ClassroomBooking.Repository.deps.json
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\bin\Debug\net8.0\ClassroomBooking.Repository.dll
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\bin\Debug\net8.0\ClassroomBooking.Repository.pdb
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.csproj.AssemblyReference.cache
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.AssemblyInfoInputs.cache
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.AssemblyInfo.cs
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.csproj.CoreCompileInputs.cache
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.sourcelink.json
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.dll
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\refint\ClassroomBooking.Repository.dll
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.pdb
+C:\Users\huyh6\OneDrive\Desktop\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ref\ClassroomBooking.Repository.dll

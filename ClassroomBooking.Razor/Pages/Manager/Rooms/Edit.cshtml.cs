@@ -1,13 +1,13 @@
-using ClassroomBooking.Repository.Entities;
+ï»¿using ClassroomBooking.Repository.Entities;
 using ClassroomBooking.Service.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace ClassroomBooking.Presentation.Pages.Manager.Rooms // Thay Admin thành Manager
+namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
 {
-    [Authorize(Roles = "Manager")] // Thay Admin thành Manager
+    [Authorize(Roles = "Manager")]
     public class EditModel : PageModel
     {
         private readonly IRoomService _roomService;
@@ -54,17 +54,27 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms // Thay Admin thành 
 
         public async Task<IActionResult> OnPostAsync()
         {
-            // Debug giá tr? c?a Room ?? ki?m tra binding
-            Console.WriteLine($"Room.CampusId: {Room.CampusId}");
+            Console.WriteLine($"Room.CampusId: {Room.CampusId}, Room.Status: {Room.Status}");
 
-            // Xóa các l?i không liên quan trong ModelState
             ModelState.Remove("Room.Campus");
             ModelState.Remove("Room.RoomSlots");
 
-            // Ki?m tra tr??c khi validate ModelState
             if (Room.CampusId <= 0)
             {
                 ErrorMessage = "Please select a valid campus.";
+                var campuses = await _campusService.GetAllCampusesAsync();
+                CampusItems = campuses.Select(c => new SelectListItem
+                {
+                    Value = c.CampusId.ToString(),
+                    Text = c.CampusName
+                }).ToList();
+                return Page();
+            }
+
+            // Kiá»ƒm tra tráº¡ng thÃ¡i cÃ³ náº±m trong danh sÃ¡ch há»£p lá»‡ khÃ´ng
+            if (!new[] { "Available", "Occupied", "Maintenance" }.Contains(Room.Status))
+            {
+                ErrorMessage = "Please select a valid status.";
                 var campuses = await _campusService.GetAllCampusesAsync();
                 CampusItems = campuses.Select(c => new SelectListItem
                 {

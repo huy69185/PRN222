@@ -1,4 +1,4 @@
-using ClassroomBooking.Repository.Entities;
+﻿using ClassroomBooking.Repository.Entities;
 using ClassroomBooking.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -10,48 +10,71 @@ namespace ClassroomBooking.Presentation.Pages.Account
     {
         private readonly IUsersService _usersService;
         private readonly IDepartmentService _departmentService;
+        private readonly ICampusService _campusService;
 
-        public SignupModel(IUsersService usersService, IDepartmentService departmentService)
+        public SignupModel(IUsersService usersService, IDepartmentService departmentService, ICampusService campusService)
         {
             _usersService = usersService;
             _departmentService = departmentService;
+            _campusService = campusService;
         }
 
         [BindProperty]
         public Users User { get; set; } = new();
 
+        [BindProperty]
+        public string SelectedCampusName { get; set; } = string.Empty; // Thuộc tính để lưu CampusName được chọn từ dropdown
+
+        public List<SelectListItem> CampusItems { get; set; } = new();
         public List<SelectListItem> DepartmentItems { get; set; } = new();
 
         public string ErrorMessage { get; set; } = string.Empty;
 
         public async Task OnGetAsync()
         {
-            var departments = await _departmentService.GetAllDepartmentsAsync();
-            DepartmentItems = departments.Select(d => new SelectListItem
-            {
-                Value = d.DepartmentId.ToString(),
-                Text = d.DepartmentName
-            }).ToList();
+            await LoadDropdowns();
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
-            // Debug gi� tr? c?a User ?? ki?m tra binding
-            Console.WriteLine($"User.DepartmentId: {User.DepartmentId}");
+            Console.WriteLine($"SelectedCampusName: {SelectedCampusName}, User.DepartmentId: {User.DepartmentId}");
 
-            // X�a c�c l?i kh�ng li�n quan trong ModelState
             ModelState.Remove("User.Department");
+            ModelState.Remove("User.Campus");
+            ModelState.Remove("User.Bookings");
 
-            // Ki?m tra tr??c khi validate ModelState
+            // Kiểm tra CampusName được chọn
+            if (string.IsNullOrEmpty(SelectedCampusName))
+            {
+                ErrorMessage = "Please select a valid campus.";
+                await LoadDropdowns();
+                return Page();
+            }
+
+            // Ánh xạ CampusName sang CampusId
+            var campuses = await _campusService.GetAllCampusesAsync();
+            var selectedCampus = campuses.FirstOrDefault(c => c.CampusName == SelectedCampusName);
+            if (selectedCampus == null)
+            {
+                ErrorMessage = "Invalid campus selected.";
+                await LoadDropdowns();
+                return Page();
+            }
+            User.CampusId = selectedCampus.CampusId;
+
             if (User.DepartmentId <= 0)
             {
                 ErrorMessage = "Please select a valid department.";
-                var departments = await _departmentService.GetAllDepartmentsAsync();
-                DepartmentItems = departments.Select(d => new SelectListItem
-                {
-                    Value = d.DepartmentId.ToString(),
-                    Text = d.DepartmentName
-                }).ToList();
+                await LoadDropdowns();
+                return Page();
+            }
+
+            // Kiểm tra Department có thuộc Campus đã chọn không
+            var department = await _departmentService.GetDepartmentByIdAsync(User.DepartmentId);
+            if (department == null || department.CampusId != User.CampusId)
+            {
+                ErrorMessage = "The selected department does not belong to the chosen campus.";
+                await LoadDropdowns();
                 return Page();
             }
 
@@ -59,12 +82,7 @@ namespace ClassroomBooking.Presentation.Pages.Account
             {
                 var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
                 ErrorMessage = "Validation failed: " + string.Join(", ", errors);
-                var departments = await _departmentService.GetAllDepartmentsAsync();
-                DepartmentItems = departments.Select(d => new SelectListItem
-                {
-                    Value = d.DepartmentId.ToString(),
-                    Text = d.DepartmentName
-                }).ToList();
+                await LoadDropdowns();
                 return Page();
             }
 
@@ -76,14 +94,26 @@ namespace ClassroomBooking.Presentation.Pages.Account
             catch (Exception ex)
             {
                 ErrorMessage = "Error registering user: " + ex.Message;
-                var departments = await _departmentService.GetAllDepartmentsAsync();
-                DepartmentItems = departments.Select(d => new SelectListItem
-                {
-                    Value = d.DepartmentId.ToString(),
-                    Text = d.DepartmentName
-                }).ToList();
+                await LoadDropdowns();
                 return Page();
             }
+        }
+
+        private async Task LoadDropdowns()
+        {
+            var campuses = await _campusService.GetAllCampusesAsync();
+            CampusItems = campuses.Select(c => new SelectListItem
+            {
+                Value = c.CampusName, // Sử dụng CampusName làm giá trị của dropdown
+                Text = c.CampusName
+            }).ToList();
+
+            var departments = await _departmentService.GetAllDepartmentsAsync();
+            DepartmentItems = departments.Select(d => new SelectListItem
+            {
+                Value = d.DepartmentId.ToString(),
+                Text = d.DepartmentName
+            }).ToList();
         }
     }
 }

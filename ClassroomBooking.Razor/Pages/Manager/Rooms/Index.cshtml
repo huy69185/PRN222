@@ -1,5 +1,5 @@
 ﻿@page
-@model ClassroomBooking.Presentation.Pages.Manager.Rooms.IndexModel // Thay Admin thành Manager
+@model ClassroomBooking.Presentation.Pages.Manager.Rooms.IndexModel
 @{
     ViewData["Title"] = "Manage Rooms";
 }
@@ -7,8 +7,19 @@
 <div class="container mt-5">
     <h2 class="text-center mb-4">Manage Rooms</h2>
     <a asp-page="Create" class="btn btn-primary mb-3">Create New Room</a>
+
+    @if (Model.ModelState.ErrorCount > 0)
+    {
+        <div class="alert alert-danger">
+            @foreach (var error in Model.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <p>@error.ErrorMessage</p>
+            }
+        </div>
+    }
+
     <table class="table table-striped">
-        <thead>
+        <thead class="table-dark">
             <tr>
                 <th>Room Name</th>
                 <th>Capacity</th>
