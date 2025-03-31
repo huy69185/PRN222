@@ -3,51 +3,89 @@
 <head>
     <meta charset="utf-8" />
     <title>@ViewData["Title"] - ClassroomBooking</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+        /* Custom styles for the navbar */
+        .navbar {
+            background-color: #2f74c0; /* Blue background as in the screenshot */
+            padding: 0.5rem 1rem;
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+            .navbar-brand:hover {
+                color: #e0e0e0 !important; /* Lighten on hover */
+            }
+
+        .nav-link {
+            color: #fff !important;
+            margin-right: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+            .nav-link:hover {
+                background-color: #1f5a9b; /* Darker blue on hover */
+                color: #fff !important;
+            }
+
+        .btn-logout {
+            background-color: #c02f2f; /* Red logout button */
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+        }
+
+            .btn-logout:hover {
+                background-color: #a02525; /* Darker red on hover */
+            }
+
+        .container {
+            margin-top: 2rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #f8f9fa;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="navbar container">
-            <div>
-                <!-- Logo & Menu trái -->
-                <button onclick="window.location.href='http://localhost:5000/Home/Index'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px; margin-right:0.5rem;">
-                    ClassroomBooking
-                </button>
-                <button onclick="window.location.href='http://localhost:5000/Home/Index'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px; margin-right:0.5rem;">
-                    Home
-                </button>
-                <button onclick="window.location.href='http://localhost:5000/Home/Privacy'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px; margin-right:0.5rem;">
-                    Privacy
-                </button>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <!-- ClassroomBooking logo linking to Home -->
+                <a class="navbar-brand" asp-page="/Index">ClassroomBooking</a>
+                <div class="d-flex">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <!-- If logged in -->
+                        <a class="nav-link" href="http://localhost:5000/Bookings/Index"> View Bookings</a>
+                        <a class="nav-link" href="http://localhost:5000/Bookings/Create">  Create Booking</a>
+                        <form method="post" action="http://localhost:5000/Account/Logout" style="display:inline;">
+                            <button type="submit" class="btn btn-logout">Logout</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <!-- If not logged in -->
+                        <a class="nav-link" href="http://localhost:5001/Account/Login">Login</a>
+                        <a class="nav-link" href="http://localhost:5001/Account/Signup">Sign Up</a>
+                    }
+                </div>
             </div>
-            <div>
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <!-- Nếu đã đăng nhập -->
-                    <button onclick="window.location.href='http://localhost:5000/Bookings/Index'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px; margin-right:0.5rem;">
-                        View Bookings
-                    </button>
-                    <button onclick="window.location.href='http://localhost:5000/Bookings/Create'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px; margin-right:0.5rem;">
-                        Create Booking
-                    </button>
-                    <form method="post" action="http://localhost:5000/Account/Logout" style="display:inline;">
-                        <button type="submit" style="background-color:#c02f2f; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px;">
-                            Logout
-                        </button>
-                    </form>
-                }
-                else
-                {
-                    <!-- Nếu chưa đăng nhập -->
-                    <button onclick="window.location.href='http://localhost:5001/Account/Login'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px; margin-right:0.5rem;">
-                        Login
-                    </button>
-                    <button onclick="window.location.href='http://localhost:5001/Account/Signup'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px;">
-                        Sign Up
-                    </button>
-                }
-            </div>
-        </div>
+        </nav>
     </header>
 
     <main class="container">
@@ -58,6 +96,8 @@
         © 2025 - ClassroomBooking
     </footer>
 
+    <!-- Add Bootstrap JS (optional, for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
