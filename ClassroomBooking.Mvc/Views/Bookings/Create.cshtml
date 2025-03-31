@@ -1,0 +1,100 @@
+﻿@model ClassroomBooking.Mvc.Models.BookingCreateModel
+@{
+    ViewData["Title"] = "Create Booking";
+}
+
+<h2>Create Booking</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div style="color: red; margin-bottom: 1rem;">@TempData["Error"]</div>
+}
+
+<form method="post" style="background-color:#fff; padding:1rem; border-radius:4px;">
+    <input type="hidden" name="StudentId" value="@Model.StudentId" />
+
+    <div style="margin-bottom:1rem;">
+        <label class="form-label" style="font-weight:bold;">Purpose</label>
+        <input name="Purpose" class="form-control" style="display:block; width:100%; padding:0.5rem;" value="@Model.Purpose" required />
+        <span asp-validation-for="Purpose" style="color:red;"></span>
+    </div>
+
+    <div style="margin-bottom:1rem;">
+        <label class="form-label" style="font-weight:bold;">Campus</label>
+        <select name="SelectedCampusId" class="form-control" style="display:block; width:100%; padding:0.5rem;"
+                onchange="this.form.action='/Bookings/UpdateCampus'; this.form.submit()" required>
+            <option value="">-- Select Campus --</option>
+            @foreach (var c in ViewBag.CampusList)
+            {
+                <option value="@c.CampusId" @(Model.SelectedCampusId == c.CampusId ? "selected" : "")>@c.CampusName</option>
+            }
+        </select>
+    </div>
+
+    <div style="margin-bottom:1rem;">
+        <label class="form-label" style="font-weight:bold;">Room</label>
+        <select name="SelectedRoomId" class="form-control" style="display:block; width:100%; padding:0.5rem;"
+                onchange="this.form.action='/Bookings/UpdateCapacity'; this.form.submit()" required>
+            <option value="">-- Select Room --</option>
+            @if (ViewBag.RoomList != null)
+            {
+                foreach (var room in ViewBag.RoomList)
+                {
+                    <option value="@room.RoomId" @(Model.SelectedRoomId == room.RoomId ? "selected" : "")>@room.RoomName</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div style="margin-bottom:1rem;">
+        <label class="form-label" style="font-weight:bold;">Start Time</label>
+        <input name="StartTime" type="datetime-local" class="form-control" style="display:block; width:100%; padding:0.5rem;"
+               value="@(Model.StartTime != default(DateTime) ? Model.StartTime.ToString("yyyy-MM-ddTHH:mm") : "")"
+               required onchange="this.form.action='/Bookings/UpdateCapacity'; this.form.submit()" />
+        <span asp-validation-for="StartTime" style="color:red;"></span>
+    </div>
+
+    <div style="margin-bottom:1rem;">
+        <label class="form-label" style="font-weight:bold;">End Time</label>
+        <input name="EndTime" type="datetime-local" class="form-control" style="display:block; width:100%; padding:0.5rem;"
+               value="@(Model.EndTime != default(DateTime) ? Model.EndTime.ToString("yyyy-MM-ddTHH:mm") : "")"
+               required onchange="this.form.action='/Bookings/UpdateCapacity'; this.form.submit()" />
+        <span asp-validation-for="EndTime" style="color:red;"></span>
+    </div>
+
+    <div style="margin-bottom:1rem;">
+        <label class="form-label" style="font-weight:bold;">Seats Left</label>
+        <div style="background-color:#f0f0f0; padding:0.5rem;">
+            @Model.CapacityLeft
+        </div>
+    </div>
+
+    <div style="margin-bottom:1rem;">
+        <label class="form-label" style="font-weight:bold;">Seats Wanted</label>
+        <input name="SeatsWanted" type="number" min="1" class="form-control" style="display:block; width:100%; padding:0.5rem;"
+               value="@Model.SeatsWanted" required />
+        <span asp-validation-for="SeatsWanted" style="color:red;"></span>
+    </div>
+
+    <button type="submit" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px;">
+        <i class="bi bi-check-circle"></i> Create
+    </button>
+    <button type="button" onclick="window.location.href='http://localhost:5000/Bookings/Index'" style="margin-left:1rem; background-color:#aaa; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px;">
+        <i class="bi bi-arrow-left"></i> Back
+    </button>
+</form>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+    <script>
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/bookingHub")
+            .build();
+
+        connection.on("ReceiveBookingNotification", (message) => {
+            alert(message);
+        });
+
+        connection.start();
+    </script>
+}

@@ -1,0 +1,86 @@
+﻿@page
+@model ClassroomBooking.Presentation.Pages.Manager.Rooms.DetailsModel // Thay Admin thành Manager
+@{
+    ViewData["Title"] = "Room Details";
+}
+
+<h2>Room Details</h2>
+
+<div class="mb-3">
+    <strong>Room Name:</strong>
+    <p>@Model.Room.RoomName</p>
+</div>
+
+<div class="mb-3">
+    <strong>Capacity:</strong>
+    <p>@Model.Room.Capacity</p>
+</div>
+
+<div class="mb-3">
+    <strong>Campus:</strong>
+    <p>@Model.Room.Campus?.CampusName</p>
+</div>
+
+<div class="mb-3">
+    <strong>Status:</strong>
+    <p>@Model.Room.Status</p>
+</div>
+
+<div class="mb-3">
+    <strong>Description:</strong>
+    <p>@Model.Room.Description</p>
+</div>
+
+<h3>Bookings for this Room</h3>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Booking ID</th>
+            <th>Student</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Status</th>
+            <th>Purpose</th>
+            <th>Created Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model.BookingList)
+        {
+            <tr>
+                <td>@booking.BookingId</td>
+                <td>@booking.User?.FullName</td>
+                <td>@booking.StartTime.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@booking.EndTime.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@booking.BookingStatus</td>
+                <td>@booking.Purpose</td>
+                <td>@booking.CreatedDate.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>
+                    @if (booking.BookingStatus == "Pending")
+                    {
+                        <form method="post" asp-page-handler="UpdateStatus">
+                            <input type="hidden" name="bookingId" value="@booking.BookingId" />
+                            <button type="submit" name="bookingStatus" value="Approved" class="btn btn-success btn-sm">
+                                <i class="bi bi-check-circle"></i> Approve
+                            </button>
+                            <button type="submit" name="bookingStatus" value="Denied" class="btn btn-danger btn-sm">
+                                <i class="bi bi-x-circle"></i> Deny
+                            </button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-between">
+    <a asp-page="Index" class="btn btn-secondary">
+        <i class="bi bi-arrow-left"></i> Back to List
+    </a>
+    <a asp-page="Edit" asp-route-id="@Model.Room.RoomId" class="btn btn-primary">
+        <i class="bi bi-pencil-square"></i> Edit
+    </a>
+</div>

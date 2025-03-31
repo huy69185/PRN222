@@ -1,0 +1,27 @@
+﻿@page
+@model ClassroomBooking.Presentation.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Welcome to ClassroomBooking!</h2>
+<p>Please login or sign up to continue.</p>
+<div id="notifications"></div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+    <script>
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/bookingHub")
+            .build();
+
+        connection.start()
+            .then(() => console.log("SignalR connected."))
+            .catch(err => console.error(err));
+
+        connection.on("ReceiveBookingNotification", (message) => {
+            let div = document.getElementById("notifications");
+            div.innerHTML += "<p>" + message + "</p>";
+        });
+    </script>
+}

@@ -1,0 +1,57 @@
+﻿@page
+@model ClassroomBooking.Presentation.Pages.Account.SignupModel
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<h2>Sign Up</h2>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">@Model.ErrorMessage</div>
+}
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="User.FullName" class="form-label fw-bold"></label>
+        <input asp-for="User.FullName" class="form-control" />
+        <span asp-validation-for="User.FullName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="User.UserCode" class="form-label fw-bold"></label>
+        <input asp-for="User.UserCode" class="form-control" />
+        <span asp-validation-for="User.UserCode" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="User.Email" class="form-label fw-bold"></label>
+        <input asp-for="User.Email" class="form-control" />
+        <span asp-validation-for="User.Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="User.Password" class="form-label fw-bold"></label>
+        <input asp-for="User.Password" type="password" class="form-control" />
+        <span asp-validation-for="User.Password" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="User.DepartmentId" class="form-label fw-bold">Department</label>
+        <select asp-for="User.DepartmentId" class="form-select" asp-items="Model.DepartmentItems" required>
+            <option value="">-- Select Department --</option>
+        </select>
+        <span asp-validation-for="User.DepartmentId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+    <a asp-page="/Account/Login" class="btn btn-secondary">Back to Login</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - ClassroomBooking</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="header">
+        <div class="navbar container">
+            <div>
+                <!-- Logo & Menu trái -->
+                <button onclick="window.location.href='http://localhost:5000/Home/Index'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px; margin-right:0.5rem;">
+                    ClassroomBooking
+                </button>
+                <button onclick="window.location.href='http://localhost:5000/Home/Index'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px; margin-right:0.5rem;">
+                    Home
+                </button>
+                <button onclick="window.location.href='http://localhost:5000/Home/Privacy'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px; margin-right:0.5rem;">
+                    Privacy
+                </button>
+            </div>
+            <div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <!-- Nếu đã đăng nhập -->
+                    <button onclick="window.location.href='http://localhost:5000/Bookings/Index'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px; margin-right:0.5rem;">
+                        View Bookings
+                    </button>
+                    <button onclick="window.location.href='http://localhost:5000/Bookings/Create'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px; margin-right:0.5rem;">
+                        Create Booking
+                    </button>
+                    <form method="post" action="http://localhost:5000/Account/Logout" style="display:inline;">
+                        <button type="submit" style="background-color:#c02f2f; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px;">
+                            Logout
+                        </button>
+                    </form>
+                }
+                else
+                {
+                    <!-- Nếu chưa đăng nhập -->
+                    <button onclick="window.location.href='http://localhost:5001/Account/Login'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px; margin-right:0.5rem;">
+                        Login
+                    </button>
+                    <button onclick="window.location.href='http://localhost:5001/Account/Signup'" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px;">
+                        Sign Up
+                    </button>
+                }
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        © 2025 - ClassroomBooking
+    </footer>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

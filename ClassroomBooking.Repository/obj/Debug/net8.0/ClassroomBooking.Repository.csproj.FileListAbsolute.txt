@@ -1,0 +1,12 @@
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\bin\Debug\net8.0\ClassroomBooking.Repository.deps.json
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\bin\Debug\net8.0\ClassroomBooking.Repository.dll
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\bin\Debug\net8.0\ClassroomBooking.Repository.pdb
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.csproj.AssemblyReference.cache
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.AssemblyInfoInputs.cache
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.AssemblyInfo.cs
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.csproj.CoreCompileInputs.cache
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.dll
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\Debug\net8.0\refint\ClassroomBooking.Repository.dll
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.pdb
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Repository\obj\Debug\net8.0\ref\ClassroomBooking.Repository.dll

@@ -1,0 +1,37 @@
+﻿@page
+@model ClassroomBooking.Presentation.Pages.Manager.Rooms.IndexModel // Thay Admin thành Manager
+@{
+    ViewData["Title"] = "Manage Rooms";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Manage Rooms</h2>
+    <a asp-page="Create" class="btn btn-primary mb-3">Create New Room</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Room Name</th>
+                <th>Capacity</th>
+                <th>Campus</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var room in Model.Rooms)
+            {
+                <tr>
+                    <td>@room.RoomName</td>
+                    <td>@room.Capacity</td>
+                    <td>@room.Campus?.CampusName</td>
+                    <td>@room.Status</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@room.RoomId" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-page="Delete" asp-route-id="@room.RoomId" class="btn btn-sm btn-danger">Delete</a>
+                        <a asp-page="Details" asp-route-id="@room.RoomId" class="btn btn-sm btn-info">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

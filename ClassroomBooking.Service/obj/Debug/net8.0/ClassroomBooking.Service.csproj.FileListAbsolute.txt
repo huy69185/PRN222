@@ -1,0 +1,15 @@
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Service.deps.json
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Service.dll
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Service.pdb
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Repository.dll
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Repository.pdb
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.csproj.AssemblyReference.cache
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.AssemblyInfoInputs.cache
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.AssemblyInfo.cs
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.csproj.CoreCompileInputs.cache
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\obj\Debug\net8.0\Classroo.97035A7C.Up2Date
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.dll
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\obj\Debug\net8.0\refint\ClassroomBooking.Service.dll
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.pdb
+C:\Users\nguye\Desktop\PRN222\ClassroomBooking\ClassroomBooking.Service\obj\Debug\net8.0\ref\ClassroomBooking.Service.dll

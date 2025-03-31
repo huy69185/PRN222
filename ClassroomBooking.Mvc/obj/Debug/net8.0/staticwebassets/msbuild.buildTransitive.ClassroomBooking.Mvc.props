@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ClassroomBooking.Mvc.props" />
+</Project>

@@ -1,0 +1,65 @@
+﻿@page
+@model ClassroomBooking.Presentation.Pages.Manager.IndexModel // Thay Admin thành Manager
+@{
+    ViewData["Title"] = "Manage Bookings";
+}
+
+<h2>Manage Bookings</h2>
+
+@if (!User.IsInRole("Manager")) // Thay Admin thành Manager
+{
+    <p>
+        <a asp-page="/Bookings/Create" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Create Booking
+        </a>
+    </p>
+}
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Student</th>
+            <th>Room</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Status</th>
+            <th>Purpose</th>
+            <th>Approve/Deny</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model.BookingList)
+        {
+            <tr>
+                <td>@booking.BookingId</td>
+                <td>@booking.User?.FullName</td>
+                <td>
+                    @foreach (var rs in booking.RoomSlots)
+                    {
+                        @rs.Room?.RoomName
+                    }
+                </td>
+                <td>@booking.StartTime.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@booking.EndTime.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@booking.BookingStatus</td>
+                <td>@booking.Purpose</td>
+                <td>
+                    <form method="post" asp-page-handler="UpdateStatus">
+                        <input type="hidden" name="bookingId" value="@booking.BookingId" />
+                        <button type="submit" name="bookingStatus" value="Approved" class="btn btn-success btn-sm"
+                        @(booking.BookingStatus == "Pending" ? "" : "disabled")>
+                            <i class="bi bi-check-circle"></i> Approve
+                        </button>
+                        <button type="submit" name="bookingStatus" value="Denied" class="btn btn-danger btn-sm"
+                        @(booking.BookingStatus == "Pending" ? "" : "disabled")>
+                            <i class="bi bi-x-circle"></i> Deny
+                        </button>
+                    </form>
+                </td>
+                <td>@booking.CreatedDate.ToString("yyyy-MM-dd HH:mm")</td>
+            </tr>
+        }
+    </tbody>
+</table>

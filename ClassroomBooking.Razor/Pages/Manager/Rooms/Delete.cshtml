@@ -1,0 +1,47 @@
+﻿@page
+@model ClassroomBooking.Presentation.Pages.Manager.Rooms.DeleteModel // Thay Admin thành Manager
+@{
+    ViewData["Title"] = "Set Room to Maintenance";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg p-4 rounded">
+        <h2 class="text-warning">Confirm Set to Maintenance</h2>
+        <p class="text-muted">Are you sure you want to set this room to Maintenance? This will prevent the room from being booked until its status is changed. All future bookings for this room will be cancelled.</p>
+        <hr />
+
+        <dl class="row">
+            <dt class="col-sm-3 fw-bold">Room Name:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Room.RoomName)</dd>
+
+            <dt class="col-sm-3 fw-bold">Capacity:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Room.Capacity)</dd>
+
+            <dt class="col-sm-3 fw-bold">Campus:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Room.Campus.CampusName)</dd>
+
+            <dt class="col-sm-3 fw-bold">Status:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Room.Status)</dd>
+
+            <dt class="col-sm-3 fw-bold">Description:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Room.Description)</dd>
+        </dl>
+
+        <form method="post">
+            <input type="hidden" asp-for="Room.RoomId" />
+            <div class="d-flex justify-content-between">
+                <a asp-page="Index" class="btn btn-secondary">
+                    <i class="bi bi-arrow-left"></i> Back to List
+                </a>
+                <button type="submit" class="btn btn-warning">
+                    <i class="bi bi-tools"></i> Set to Maintenance
+                </button>
+            </div>
+        </form>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger mt-3">@Model.ErrorMessage</div>
+        }
+    </div>
+</div>

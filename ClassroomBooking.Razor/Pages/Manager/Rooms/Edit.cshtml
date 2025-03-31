@@ -1,0 +1,73 @@
+﻿@page
+@model ClassroomBooking.Presentation.Pages.Manager.Rooms.EditModel // Thay Admin thành Manager
+@{
+    ViewData["Title"] = "Edit Room";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg p-4 rounded">
+        <h2 class="text-primary"><i class="bi bi-pencil-square"></i> Edit Room</h2>
+        <hr />
+
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                    <input type="hidden" asp-for="Room.RoomId" />
+
+                    <div class="mb-3">
+                        <label asp-for="Room.RoomName" class="form-label fw-bold"></label>
+                        <input asp-for="Room.RoomName" class="form-control" />
+                        <span asp-validation-for="Room.RoomName" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Room.Capacity" class="form-label fw-bold"></label>
+                        <input asp-for="Room.Capacity" class="form-control" />
+                        <span asp-validation-for="Room.Capacity" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Room.CampusId" class="form-label fw-bold">Campus</label>
+                        <select asp-for="Room.CampusId" class="form-select" asp-items="Model.CampusItems">
+                            <option value="">-- Select Campus --</option>
+                        </select>
+                        <span asp-validation-for="Room.CampusId" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Room.Status" class="form-label fw-bold"></label>
+                        <select asp-for="Room.Status" class="form-select" asp-items="Model.StatusItems"></select>
+                        <span asp-validation-for="Room.Status" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Room.Description" class="form-label fw-bold"></label>
+                        <textarea asp-for="Room.Description" class="form-control" rows="3"></textarea>
+                        <span asp-validation-for="Room.Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a asp-page="Index" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Back to List
+                        </a>
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-check-circle"></i> Save Changes
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger mt-3">@Model.ErrorMessage</div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

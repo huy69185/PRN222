@@ -1,0 +1,6 @@
+@ClassroomBooking.Mvc_HostAddress = http://localhost:5116
+
+GET {{ClassroomBooking.Mvc_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
