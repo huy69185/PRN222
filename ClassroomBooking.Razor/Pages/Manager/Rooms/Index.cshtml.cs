@@ -11,24 +11,25 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
     {
         private readonly IRoomService _roomService;
         private readonly IUsersService _usersService;
+        private readonly IBookingService _bookingService;
 
-        public IndexModel(IRoomService roomService, IUsersService usersService)
+        public IndexModel(IRoomService roomService, IUsersService usersService, IBookingService bookingService)
         {
             _roomService = roomService;
             _usersService = usersService;
+            _bookingService = bookingService;
         }
 
         public List<Room> Rooms { get; set; } = new();
-        public int CurrentPage { get; set; } = 1; // Default to page 1
+        public Dictionary<int, int> CapacityLeft { get; set; } = new();
+        public int CurrentPage { get; set; } = 1;
         public int TotalPages { get; set; }
-        public int PageSize { get; set; } = 5; // 5 rooms per page
+        public int PageSize { get; set; } = 5;
 
         public async Task<IActionResult> OnGetAsync(int? pageNumber)
         {
-            // Set the current page (default to 1 if not provided)
             CurrentPage = pageNumber ?? 1;
 
-            // Lấy UserCode của Manager từ Claims
             var managerUserCode = User.Identity.Name;
             if (string.IsNullOrEmpty(managerUserCode))
             {
@@ -36,7 +37,6 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
                 return Page();
             }
 
-            // Lấy thông tin Manager, bao gồm CampusId
             var manager = await _usersService.GetUserAsync(managerUserCode);
             if (manager == null)
             {
@@ -44,22 +44,34 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
                 return Page();
             }
 
-            // Lấy tất cả phòng
             var allRooms = await _roomService.GetAllRoomsAsync();
-
-            // Lọc phòng theo CampusId của Manager
             var filteredRooms = allRooms
                 .Where(r => r.CampusId == manager.CampusId)
                 .ToList();
 
-            // Tính tổng số trang
             TotalPages = (int)Math.Ceiling(filteredRooms.Count / (double)PageSize);
-
-            // Lấy rooms cho trang hiện tại
             Rooms = filteredRooms
                 .Skip((CurrentPage - 1) * PageSize)
                 .Take(PageSize)
                 .ToList();
+
+            foreach (var room in Rooms)
+            {
+                var bookings = await _bookingService.GetBookingsByRoomIdAsync(room.RoomId);
+                var currentTime = DateTime.Now;
+                var activeBookings = bookings
+                    .Where(b => b.StartTime <= currentTime && b.EndTime >= currentTime
+                             && b.BookingStatus != "Denied" && b.BookingStatus != "Cancelled")
+                    .ToList();
+
+                int seatsBooked = activeBookings
+                    .Sum(b => b.RoomSlots
+                        .Where(rs => rs.RoomId == room.RoomId)
+                        .Sum(rs => rs.SeatsBooked));
+
+                int capacityLeft = room.Capacity - seatsBooked;
+                CapacityLeft[room.RoomId] = capacityLeft < 0 ? 0 : capacityLeft;
+            }
 
             return Page();
         }

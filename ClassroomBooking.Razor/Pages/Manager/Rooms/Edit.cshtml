@@ -11,7 +11,7 @@
 
         <div class="row">
             <div class="col-md-6">
-                <form method="post">
+                <form method="post" id="roomForm">
                     <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
                     <input type="hidden" asp-for="Room.RoomId" />
 
@@ -37,7 +37,7 @@
 
                     <div class="mb-3">
                         <label asp-for="Room.Status" class="form-label fw-bold"></label>
-                        <select asp-for="Room.Status" class="form-select" asp-items="Model.StatusItems"></select>
+                        <select asp-for="Room.Status" class="form-select" id="roomStatus" asp-items="Model.StatusItems"></select>
                         <span asp-validation-for="Room.Status" class="text-danger"></span>
                     </div>
 
@@ -70,4 +70,67 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        document.getElementById("roomForm").addEventListener("submit", function (event) {
+            const currentStatus = "@Model.Room.Status"; // Trạng thái hiện tại của phòng
+            const newStatus = document.getElementById("roomStatus").value;
+
+            if (currentStatus === "Occupied" && newStatus === "Available") {
+                event.preventDefault(); // Ngăn form submit ngay
+
+                // Hiển thị popup xác nhận
+                let choice = confirm("Room is currently Occupied (no seats available). Do you want to reset capacity to original or add seats?");
+                if (choice) {
+                    let action = prompt("Type 'reset' to reset capacity to original, or enter a number to add seats:");
+                    if (action) {
+                        if (action.toLowerCase() === "reset") {
+                            // Gửi yêu cầu với resetCapacity=true
+                            fetch(window.location.pathname, {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/x-www-form-urlencoded",
+                                    "RequestVerificationToken": document.querySelector("input[name='__RequestVerificationToken']").value
+                                },
+                                body: new URLSearchParams({
+                                    "Room.RoomId": "@Model.Room.RoomId",
+                                    "Room.RoomName": document.querySelector("input[name='Room.RoomName']").value,
+                                    "Room.Capacity": document.querySelector("input[name='Room.Capacity']").value,
+                                    "Room.CampusId": document.querySelector("select[name='Room.CampusId']").value,
+                                    "Room.Status": newStatus,
+                                    "Room.Description": document.querySelector("textarea[name='Room.Description']").value,
+                                    "resetCapacity": "true"
+                                })
+                            }).then(response => {
+                                if (response.ok) window.location.href = "/Manager/Rooms/Index";
+                                else alert("Error updating room.");
+                            });
+                        } else if (!isNaN(action) && parseInt(action) > 0) {
+                            // Gửi yêu cầu với additionalSeats
+                            fetch(window.location.pathname, {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/x-www-form-urlencoded",
+                                    "RequestVerificationToken": document.querySelector("input[name='__RequestVerificationToken']").value
+                                },
+                                body: new URLSearchParams({
+                                    "Room.RoomId": "@Model.Room.RoomId",
+                                    "Room.RoomName": document.querySelector("input[name='Room.RoomName']").value,
+                                    "Room.Capacity": document.querySelector("input[name='Room.Capacity']").value,
+                                    "Room.CampusId": document.querySelector("select[name='Room.CampusId']").value,
+                                    "Room.Status": newStatus,
+                                    "Room.Description": document.querySelector("textarea[name='Room.Description']").value,
+                                    "additionalSeats": parseInt(action)
+                                })
+                            }).then(response => {
+                                if (response.ok) window.location.href = "/Manager/Rooms/Index";
+                                else alert("Error updating room.");
+                            });
+                        } else {
+                            alert("Invalid input. Please enter 'reset' or a positive number.");
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 }

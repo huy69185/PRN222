@@ -1,154 +1,190 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\",
+  "WorkspaceRootPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\manager\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\services\\campusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\services\\campusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.mvc\\views\\bookings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\views\\bookings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.mvc\\views\\bookings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\views\\bookings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.mvc\\models\\bookingcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\models\\bookingcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.mvc\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.mvc\\controllers\\redirectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\controllers\\redirectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.mvc\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\account\\signup.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\signup.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\interfaces\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\interfaces\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\hubs\\bookinghub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\hubs\\bookinghub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.mvc\\views\\bookings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\views\\bookings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\services\\campusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\services\\campusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\manager\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\manager\\rooms\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\manager\\rooms\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\account\\signup.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\signup.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.razor\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.repository\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.mvc\\views\\bookings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\views\\bookings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.mvc\\models\\bookingcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\models\\bookingcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.mvc\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.mvc\\controllers\\redirectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\controllers\\redirectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.mvc\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.repository\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|solutionrelative:classroombooking.repository\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.repository\\entities\\classroombookingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.repository\\entities\\classroombookingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|solutionrelative:classroombooking.repository\\entities\\classroombookingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.repository\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.repository\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|solutionrelative:classroombooking.repository\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.repository\\entities\\campus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.repository\\entities\\campus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|solutionrelative:classroombooking.repository\\entities\\campus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/NGUYEN_NGUYEN/ClassroomBookingDB/sa/SqlTable/dbo.Rooms.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
@@ -157,83 +193,55 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/NGUYEN_NGUYEN/ClassroomBookingDB/sa/SqlTable/dbo.RoomSlots.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\interfaces\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\interfaces\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\interfaces\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\interfaces\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\interfaces\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\interfaces\\icampusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\interfaces\\icampusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\interfaces\\icampusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.mvc\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.mvc\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EB3C57D8-79AC-4AA3-B709-E53B46D5A224}|ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj|solutionrelative:classroombooking.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\hubs\\bookinghub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\hubs\\bookinghub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\dtos\\roomslotdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\dtos\\roomslotdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\dtos\\roomslotdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\dtos\\roomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\dtos\\roomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\dtos\\roomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.service\\dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.service\\dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C276BF54-AD83-496F-AD83-6F477EFCC3F9}|ClassroomBooking.Service\\ClassroomBooking.Service.csproj|solutionrelative:classroombooking.service\\dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.repository\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.repository\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|solutionrelative:classroombooking.repository\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.repository\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.repository\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|solutionrelative:classroombooking.repository\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.repository\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.repository\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|solutionrelative:classroombooking.repository\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.repository\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.repository\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|solutionrelative:classroombooking.repository\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.repository\\entities\\roomslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.repository\\entities\\roomslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|solutionrelative:classroombooking.repository\\entities\\roomslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.repository\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.repository\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|solutionrelative:classroombooking.repository\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.repository\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|c:\\users\\huyh6\\onedrive\\desktop\\clone\\prn222\\classroombooking.repository\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B119E57A-8B42-41C1-9F39-D4F451B74C27}|ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj|solutionrelative:classroombooking.repository\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -244,327 +252,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml.cs",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAUwGIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T16:37:07.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAE8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:25:51.137Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Create.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml.cs",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:26:26.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAcwD4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:26:31.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml.cs",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAcwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:27:05.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAcwC8AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:27:10.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAcwEoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:27:19.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UsersService.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Services\\UsersService.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Services\\UsersService.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Services\\UsersService.cs",
-              "RelativeToolTip": "ClassroomBooking.Service\\Services\\UsersService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:24:45.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "RoomService.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Services\\RoomService.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Services\\RoomService.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Service\\Services\\RoomService.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Services\\RoomService.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Services\\RoomService.cs",
               "RelativeToolTip": "ClassroomBooking.Service\\Services\\RoomService.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAADwv1YAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAgwGgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T16:23:46.764Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CampusService.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Services\\CampusService.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Services\\CampusService.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Services\\CampusService.cs",
-              "RelativeToolTip": "ClassroomBooking.Service\\Services\\CampusService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:24:30.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BookingService.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Services\\BookingService.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Services\\BookingService.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Services\\BookingService.cs",
-              "RelativeToolTip": "ClassroomBooking.Service\\Services\\BookingService.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAIwPgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:24:24.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml",
-              "ViewState": "AgIAACYAAAAAAAAAAAAcwFUAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:26:50.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Details.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml.cs",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAswDcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:26:45.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Delete.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml.cs",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAUwE4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:26:35.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:26:40.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Views\\Bookings\\Create.cshtml",
-              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Views\\Bookings\\Create.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Views\\Bookings\\Create.cshtml",
-              "RelativeToolTip": "ClassroomBooking.Mvc\\Views\\Bookings\\Create.cshtml",
-              "ViewState": "AgIAADQAAAAAAAAAAAAcwGMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:25:24.091Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Views\\Bookings\\Index.cshtml",
-              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Views\\Bookings\\Index.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Views\\Bookings\\Index.cshtml",
-              "RelativeToolTip": "ClassroomBooking.Mvc\\Views\\Bookings\\Index.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAswEkAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:25:29.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "BookingCreateModel.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Models\\BookingCreateModel.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Models\\BookingCreateModel.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Models\\BookingCreateModel.cs",
-              "RelativeToolTip": "ClassroomBooking.Mvc\\Models\\BookingCreateModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:25:18.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "BookingsController.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Controllers\\BookingsController.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Controllers\\BookingsController.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Controllers\\BookingsController.cs",
-              "RelativeToolTip": "ClassroomBooking.Mvc\\Controllers\\BookingsController.cs",
-              "ViewState": "AgIAACMBAAAAAAAAAAAcwFIBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:25:04.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RedirectController.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Controllers\\RedirectController.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Controllers\\RedirectController.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Controllers\\RedirectController.cs",
-              "RelativeToolTip": "ClassroomBooking.Mvc\\Controllers\\RedirectController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:25:08.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "RoomsController.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Controllers\\RoomsController.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Controllers\\RoomsController.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Controllers\\RoomsController.cs",
-              "RelativeToolTip": "ClassroomBooking.Mvc\\Controllers\\RoomsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:25:13.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "ClassroomBooking.Mvc\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:24:57.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAEgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:27:00.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 0,
               "Title": "Edit.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml.cs",
               "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAcwHUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAgwGoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T15:26:55.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Program.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Program.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Program.cs",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwC0AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:27:41.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Program.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Program.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Program.cs",
+              "RelativeToolTip": "ClassroomBooking.Mvc\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAgwDAAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:25:44.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IRoomService.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Interfaces\\IRoomService.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Interfaces\\IRoomService.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Service\\Interfaces\\IRoomService.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Interfaces\\IRoomService.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Interfaces\\IRoomService.cs",
               "RelativeToolTip": "ClassroomBooking.Service\\Interfaces\\IRoomService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -573,163 +321,506 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IBookingService.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Interfaces\\IBookingService.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Interfaces\\IBookingService.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Interfaces\\IBookingService.cs",
-              "RelativeToolTip": "ClassroomBooking.Service\\Interfaces\\IBookingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:23:59.739Z",
+              "DocumentIndex": 5,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Edit.cshtml",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAgwIcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T15:27:00.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAmwCkAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:25:58.921Z",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml.cs",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwE4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:27:05.612Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Index.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAmwFUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T15:27:10.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Services\\BookingService.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Services\\BookingService.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Services\\BookingService.cs",
+              "RelativeToolTip": "ClassroomBooking.Service\\Services\\BookingService.cs",
+              "ViewState": "AgIAALwAAAAAAAAAAAAmwOAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:24:24.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUsersService.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Interfaces\\IUsersService.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Interfaces\\IUsersService.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Interfaces\\IUsersService.cs",
+              "RelativeToolTip": "ClassroomBooking.Service\\Interfaces\\IUsersService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:24:19.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UsersService.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Services\\UsersService.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Services\\UsersService.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Services\\UsersService.cs",
+              "RelativeToolTip": "ClassroomBooking.Service\\Services\\UsersService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAUwDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:24:45.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T15:27:19.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BookingHub.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Hubs\\BookingHub.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Hubs\\BookingHub.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Hubs\\BookingHub.cs",
+              "RelativeToolTip": "ClassroomBooking.Service\\Hubs\\BookingHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:23:53.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Views\\Bookings\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Views\\Bookings\\Index.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Views\\Bookings\\Index.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Mvc\\Views\\Bookings\\Index.cshtml",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAlwJcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T15:25:29.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DepartmentService.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Services\\DepartmentService.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Services\\DepartmentService.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Services\\DepartmentService.cs",
+              "RelativeToolTip": "ClassroomBooking.Service\\Services\\DepartmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:24:35.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CampusService.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Services\\CampusService.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Services\\CampusService.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Services\\CampusService.cs",
+              "RelativeToolTip": "ClassroomBooking.Service\\Services\\CampusService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:24:30.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\appsettings.json",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\appsettings.json",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\appsettings.json",
+              "RelativeToolTip": "ClassroomBooking.Razor\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-31T15:52:32.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T01:29:22.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Index.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T01:29:18.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml.cs",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Index.cshtml.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAmwHEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T16:37:07.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAmwG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T15:27:26.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml.cs",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvzcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:26:45.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Details.cshtml",
+              "ViewState": "AgIAACwAAAAAAAAAAAAmwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T15:26:50.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml.cs",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAiwE4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:26:35.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T15:26:40.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml.cs",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAmwLYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:26:26.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Manager\\Rooms\\Create.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T15:26:31.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Signup.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml.cs",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAiwHYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:26:15.887Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
               "Title": "Signup.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml",
               "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml",
               "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml",
               "ViewState": "AgIAABAAAAAAAAAAAAAmwEAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:26:21.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T15:26:21.222Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "Signup.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml.cs",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAmwHYAAAABAAAAAAAAAA==",
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:26:15.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T15:26:05.72Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\appsettings.json",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\appsettings.json",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\appsettings.json",
-              "RelativeToolTip": "ClassroomBooking.Razor\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-31T15:52:32.992Z",
-              "EditorCaption": ""
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T15:26:11.054Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\appsettings.json",
-              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\appsettings.json",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\appsettings.json",
-              "RelativeToolTip": "ClassroomBooking.Mvc\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-31T15:52:22.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Program.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Program.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Program.cs",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAUwE8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:27:41.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T15:25:51.137Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\Department.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Entities\\Department.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\Department.cs",
-              "RelativeToolTip": "ClassroomBooking.Repository\\Entities\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:22:48.934Z",
-              "EditorCaption": ""
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T15:25:58.921Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
-              "Title": "ClassroomBookingDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\ClassroomBookingDbContext.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Entities\\ClassroomBookingDbContext.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\ClassroomBookingDbContext.cs",
-              "RelativeToolTip": "ClassroomBooking.Repository\\Entities\\ClassroomBookingDbContext.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAmwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:23:10.554Z",
-              "EditorCaption": ""
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\appsettings.json",
+              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\appsettings.json",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\appsettings.json",
+              "RelativeToolTip": "ClassroomBooking.Mvc\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-31T15:52:22.213Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 34,
-              "Title": "Users.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\Users.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Entities\\Users.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\Users.cs",
-              "RelativeToolTip": "ClassroomBooking.Repository\\Entities\\Users.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwCAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:23:05.103Z",
-              "EditorCaption": ""
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Mvc\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAmwGYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T15:25:34.121Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 35,
-              "Title": "Campus.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\Campus.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Entities\\Campus.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\Campus.cs",
-              "RelativeToolTip": "ClassroomBooking.Repository\\Entities\\Campus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:22:44.252Z",
-              "EditorCaption": ""
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Views\\Bookings\\Create.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Views\\Bookings\\Create.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Views\\Bookings\\Create.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Mvc\\Views\\Bookings\\Create.cshtml",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAmwJEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T15:25:24.091Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 36,
-              "Title": "DepartmentService.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Services\\DepartmentService.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Services\\DepartmentService.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Services\\DepartmentService.cs",
-              "RelativeToolTip": "ClassroomBooking.Service\\Services\\DepartmentService.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAYwBkAAAABAAAAAAAAAA==",
+              "Title": "BookingCreateModel.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Models\\BookingCreateModel.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Models\\BookingCreateModel.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Models\\BookingCreateModel.cs",
+              "RelativeToolTip": "ClassroomBooking.Mvc\\Models\\BookingCreateModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:24:35.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T15:25:18.616Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 37,
+              "Title": "RoomsController.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Controllers\\RoomsController.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Controllers\\RoomsController.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Controllers\\RoomsController.cs",
+              "RelativeToolTip": "ClassroomBooking.Mvc\\Controllers\\RoomsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:25:13.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "RedirectController.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Controllers\\RedirectController.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Controllers\\RedirectController.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Controllers\\RedirectController.cs",
+              "RelativeToolTip": "ClassroomBooking.Mvc\\Controllers\\RedirectController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:25:08.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "BookingsController.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Controllers\\BookingsController.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Controllers\\BookingsController.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Controllers\\BookingsController.cs",
+              "RelativeToolTip": "ClassroomBooking.Mvc\\Controllers\\BookingsController.cs",
+              "ViewState": "AgIAADEBAAAAAAAAAAAmwGEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:25:04.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "ClassroomBooking.Mvc\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:24:57.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IBookingService.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Interfaces\\IBookingService.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Interfaces\\IBookingService.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Interfaces\\IBookingService.cs",
+              "RelativeToolTip": "ClassroomBooking.Service\\Interfaces\\IBookingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:23:59.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\Department.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Entities\\Department.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\Department.cs",
+              "RelativeToolTip": "ClassroomBooking.Repository\\Entities\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:22:48.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ClassroomBookingDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\ClassroomBookingDbContext.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Entities\\ClassroomBookingDbContext.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\ClassroomBookingDbContext.cs",
+              "RelativeToolTip": "ClassroomBooking.Repository\\Entities\\ClassroomBookingDbContext.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAmwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:23:10.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\Users.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Entities\\Users.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\Users.cs",
+              "RelativeToolTip": "ClassroomBooking.Repository\\Entities\\Users.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:23:05.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Campus.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\Campus.cs",
+              "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Entities\\Campus.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\Campus.cs",
+              "RelativeToolTip": "ClassroomBooking.Repository\\Entities\\Campus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:22:44.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
               "Title": "dbo.Rooms.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/NGUYEN_NGUYEN/ClassroomBookingDB/sa/SqlTable/dbo.Rooms.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/NGUYEN_NGUYEN/ClassroomBookingDB/sa/SqlTable/dbo.Rooms.sql",
@@ -738,7 +829,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 47,
               "Title": "dbo.RoomSlots.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/NGUYEN_NGUYEN/ClassroomBookingDB/sa/SqlTable/dbo.RoomSlots.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/NGUYEN_NGUYEN/ClassroomBookingDB/sa/SqlTable/dbo.RoomSlots.sql",
@@ -747,23 +838,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "IUsersService.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Interfaces\\IUsersService.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Interfaces\\IUsersService.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Interfaces\\IUsersService.cs",
-              "RelativeToolTip": "ClassroomBooking.Service\\Interfaces\\IUsersService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:24:19.368Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 48,
               "Title": "IDepartmentService.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Interfaces\\IDepartmentService.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Interfaces\\IDepartmentService.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Service\\Interfaces\\IDepartmentService.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Interfaces\\IDepartmentService.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Interfaces\\IDepartmentService.cs",
               "RelativeToolTip": "ClassroomBooking.Service\\Interfaces\\IDepartmentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -771,11 +850,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 49,
               "Title": "ICampusService.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Interfaces\\ICampusService.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Interfaces\\ICampusService.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Service\\Interfaces\\ICampusService.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Interfaces\\ICampusService.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Interfaces\\ICampusService.cs",
               "RelativeToolTip": "ClassroomBooking.Service\\Interfaces\\ICampusService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -783,59 +862,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAswFoAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:27:26.234Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Logout.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:26:11.054Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "Logout.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml.cs",
-              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Logout.cshtml.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAgwB0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:26:05.72Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Program.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Program.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Program.cs",
-              "RelativeToolTip": "ClassroomBooking.Mvc\\Program.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAswEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:25:44.836Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Views\\_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\Views\\_ViewStart.cshtml",
               "RelativeToolTip": "ClassroomBooking.Mvc\\Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -843,35 +874,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ClassroomBooking.Mvc\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ClassroomBooking.Mvc\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACMAAAAAAAAAAAAswD4AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-27T15:25:34.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "BookingHub.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Hubs\\BookingHub.cs",
-              "RelativeDocumentMoniker": "ClassroomBooking.Service\\Hubs\\BookingHub.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Hubs\\BookingHub.cs",
-              "RelativeToolTip": "ClassroomBooking.Service\\Hubs\\BookingHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:23:53.941Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "RoomSlotDto.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Dtos\\RoomSlotDto.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Dtos\\RoomSlotDto.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Service\\Dtos\\RoomSlotDto.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Dtos\\RoomSlotDto.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Dtos\\RoomSlotDto.cs",
               "RelativeToolTip": "ClassroomBooking.Service\\Dtos\\RoomSlotDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -879,11 +886,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "RoomDto.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Dtos\\RoomDto.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Dtos\\RoomDto.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Service\\Dtos\\RoomDto.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Dtos\\RoomDto.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Dtos\\RoomDto.cs",
               "RelativeToolTip": "ClassroomBooking.Service\\Dtos\\RoomDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -891,11 +898,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "BookingDto.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Dtos\\BookingDto.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Dtos\\BookingDto.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Service\\Dtos\\BookingDto.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\Dtos\\BookingDto.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Service\\Dtos\\BookingDto.cs",
               "RelativeToolTip": "ClassroomBooking.Service\\Dtos\\BookingDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -903,11 +910,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\UnitOfWork\\UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\UnitOfWork\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Repository\\UnitOfWork\\UnitOfWork.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\UnitOfWork\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\UnitOfWork\\UnitOfWork.cs",
               "RelativeToolTip": "ClassroomBooking.Repository\\UnitOfWork\\UnitOfWork.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAuwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -915,11 +922,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 55,
               "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\UnitOfWork\\IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\UnitOfWork\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Repository\\UnitOfWork\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\UnitOfWork\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\UnitOfWork\\IUnitOfWork.cs",
               "RelativeToolTip": "ClassroomBooking.Repository\\UnitOfWork\\IUnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -927,11 +934,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 56,
               "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Repositories\\GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Repositories\\GenericRepository.cs",
               "RelativeToolTip": "ClassroomBooking.Repository\\Repositories\\GenericRepository.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwCcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -939,11 +946,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 57,
               "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Repositories\\IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Repositories\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Repositories\\IGenericRepository.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Repositories\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Repositories\\IGenericRepository.cs",
               "RelativeToolTip": "ClassroomBooking.Repository\\Repositories\\IGenericRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -951,11 +958,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 58,
               "Title": "RoomSlot.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\RoomSlot.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\RoomSlot.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Entities\\RoomSlot.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\RoomSlot.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\RoomSlot.cs",
               "RelativeToolTip": "ClassroomBooking.Repository\\Entities\\RoomSlot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -963,11 +970,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 59,
               "Title": "Room.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\Room.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\Room.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Entities\\Room.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\Room.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\Room.cs",
               "RelativeToolTip": "ClassroomBooking.Repository\\Entities\\Room.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAA+wBgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -975,11 +982,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 60,
               "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\Booking.cs",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\Booking.cs",
               "RelativeDocumentMoniker": "ClassroomBooking.Repository\\Entities\\Booking.cs",
-              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\Entities\\Booking.cs",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Repository\\Entities\\Booking.cs",
               "RelativeToolTip": "ClassroomBooking.Repository\\Entities\\Booking.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAA8wBcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

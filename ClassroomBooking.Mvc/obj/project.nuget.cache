@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N/N3SmbM+sQ=",
+  "dgSpecHash": "KNk7Jx4oew8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj",
+  "projectFilePath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\Clone\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\huyh6\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\huyh6\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

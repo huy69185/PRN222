@@ -29,16 +29,34 @@ namespace ClassroomBooking.Service
             await _unitOfWork.SaveChangesAsync();
         }
 
-        public async Task UpdateRoomAsync(Room room)
+        public async Task UpdateRoomAsync(Room room, bool resetCapacity = false, int additionalSeats = 0)
         {
             var existingRoom = await _unitOfWork.RoomRepository.GetByIdAsync(room.RoomId);
             if (existingRoom == null) throw new Exception("Room not found.");
 
-            // Cập nhật trực tiếp các thuộc tính, bao gồm Status, từ giá trị được gửi
+            // Kiểm tra nếu chuyển từ Occupied sang Available
+            if (existingRoom.Status == "Occupied" && room.Status == "Available")
+            {
+                if (resetCapacity)
+                {
+                    // Reset về dung lượng ban đầu (giả sử room.Capacity là giá trị ban đầu)
+                    existingRoom.Capacity = room.Capacity;
+                }
+                else if (additionalSeats > 0)
+                {
+                    // Thêm số ghế vào Capacity hiện tại
+                    existingRoom.Capacity += additionalSeats;
+                }
+                else
+                {
+                    throw new Exception("Cannot update from Occupied to Available without resetting or adding seats.");
+                }
+            }
+
+            // Cập nhật các thuộc tính khác
             existingRoom.RoomName = room.RoomName;
             existingRoom.CampusId = room.CampusId;
-            existingRoom.Capacity = room.Capacity;
-            existingRoom.Status = room.Status; // Ghi trực tiếp giá trị Status từ giao diện
+            existingRoom.Status = room.Status;
             existingRoom.Description = room.Description;
 
             _unitOfWork.RoomRepository.Update(existingRoom);

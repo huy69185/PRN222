@@ -23,6 +23,7 @@
             <tr>
                 <th>Room Name</th>
                 <th>Capacity</th>
+                <th>Available Seats</th> <!-- Thêm cột mới -->
                 <th>Campus</th>
                 <th>Status</th>
                 <th>Actions</th>
@@ -34,6 +35,7 @@
                 <tr>
                     <td>@room.RoomName</td>
                     <td>@room.Capacity</td>
+                    <td>@Model.CapacityLeft[room.RoomId]</td> <!-- Hiển thị số ghế còn lại -->
                     <td>@room.Campus?.CampusName</td>
                     <td>@room.Status</td>
                     <td>

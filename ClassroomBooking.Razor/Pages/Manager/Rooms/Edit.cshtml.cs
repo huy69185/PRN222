@@ -52,9 +52,9 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(bool resetCapacity = false, int additionalSeats = 0)
         {
-            Console.WriteLine($"Room.CampusId: {Room.CampusId}, Room.Status: {Room.Status}");
+            Console.WriteLine($"Room.CampusId: {Room.CampusId}, Room.Status: {Room.Status}, ResetCapacity: {resetCapacity}, AdditionalSeats: {additionalSeats}");
 
             ModelState.Remove("Room.Campus");
             ModelState.Remove("Room.RoomSlots");
@@ -62,25 +62,14 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
             if (Room.CampusId <= 0)
             {
                 ErrorMessage = "Please select a valid campus.";
-                var campuses = await _campusService.GetAllCampusesAsync();
-                CampusItems = campuses.Select(c => new SelectListItem
-                {
-                    Value = c.CampusId.ToString(),
-                    Text = c.CampusName
-                }).ToList();
+                await LoadCampusItemsAsync();
                 return Page();
             }
 
-            // Kiểm tra trạng thái có nằm trong danh sách hợp lệ không
             if (!new[] { "Available", "Occupied", "Maintenance" }.Contains(Room.Status))
             {
                 ErrorMessage = "Please select a valid status.";
-                var campuses = await _campusService.GetAllCampusesAsync();
-                CampusItems = campuses.Select(c => new SelectListItem
-                {
-                    Value = c.CampusId.ToString(),
-                    Text = c.CampusName
-                }).ToList();
+                await LoadCampusItemsAsync();
                 return Page();
             }
 
@@ -88,31 +77,31 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
             {
                 var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
                 ErrorMessage = "Validation failed: " + string.Join(", ", errors);
-                var campuses = await _campusService.GetAllCampusesAsync();
-                CampusItems = campuses.Select(c => new SelectListItem
-                {
-                    Value = c.CampusId.ToString(),
-                    Text = c.CampusName
-                }).ToList();
+                await LoadCampusItemsAsync();
                 return Page();
             }
 
             try
             {
-                await _roomService.UpdateRoomAsync(Room);
+                await _roomService.UpdateRoomAsync(Room, resetCapacity, additionalSeats);
                 return RedirectToPage("Index");
             }
             catch (Exception ex)
             {
                 ErrorMessage = "Error updating room: " + ex.Message;
-                var campuses = await _campusService.GetAllCampusesAsync();
-                CampusItems = campuses.Select(c => new SelectListItem
-                {
-                    Value = c.CampusId.ToString(),
-                    Text = c.CampusName
-                }).ToList();
+                await LoadCampusItemsAsync();
                 return Page();
             }
+        }
+
+        private async Task LoadCampusItemsAsync()
+        {
+            var campuses = await _campusService.GetAllCampusesAsync();
+            CampusItems = campuses.Select(c => new SelectListItem
+            {
+                Value = c.CampusId.ToString(),
+                Text = c.CampusName
+            }).ToList();
         }
     }
 }
