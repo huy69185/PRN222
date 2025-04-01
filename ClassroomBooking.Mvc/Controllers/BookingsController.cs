@@ -332,13 +332,7 @@ namespace ClassroomBooking.Mvc.Controllers
                 _unitOfWork.BookingRepository.Update(booking);
                 await _unitOfWork.SaveChangesAsync();
 
-                // Update room status if needed
-                var roomSlot = booking.RoomSlots.FirstOrDefault();
-                if (roomSlot != null)
-                {
-                    int capacityLeft = await _bookingService.CalculateCapacityLeftAsync(roomSlot.RoomId, booking.StartTime, booking.EndTime);
-                    await _roomService.UpdateRoomStatusBasedOnCapacityAsync(roomSlot.RoomId, capacityLeft);
-                }
+                // Không còn cập nhật trạng thái phòng tự động
 
                 _logger.LogInformation("Booking {0} cancelled successfully by user {1}.", id, userCode);
                 return RedirectToAction("Index", new { searchRoom, searchPurpose, statusFilter, pageNumber });

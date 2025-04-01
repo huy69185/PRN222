@@ -34,17 +34,15 @@ namespace ClassroomBooking.Service
             var existingRoom = await _unitOfWork.RoomRepository.GetByIdAsync(room.RoomId);
             if (existingRoom == null) throw new Exception("Room not found.");
 
-            // Kiểm tra nếu chuyển từ Occupied sang Available
+            // Nếu chuyển từ Occupied sang Available thì reset capacity hoặc thêm số ghế theo tùy chọn
             if (existingRoom.Status == "Occupied" && room.Status == "Available")
             {
                 if (resetCapacity)
                 {
-                    // Reset về dung lượng ban đầu (giả sử room.Capacity là giá trị ban đầu)
                     existingRoom.Capacity = room.Capacity;
                 }
                 else if (additionalSeats > 0)
                 {
-                    // Thêm số ghế vào Capacity hiện tại
                     existingRoom.Capacity += additionalSeats;
                 }
                 else
@@ -67,6 +65,7 @@ namespace ClassroomBooking.Service
         {
             var room = await _unitOfWork.RoomRepository.GetByIdAsync(roomId);
             if (room == null) throw new Exception("Room not found.");
+            // Khi xóa, chuyển trạng thái của phòng sang "Maintenance" (do Manager thiết lập)
             room.Status = "Maintenance";
             _unitOfWork.RoomRepository.Update(room);
             await _unitOfWork.SaveChangesAsync();
@@ -74,32 +73,9 @@ namespace ClassroomBooking.Service
 
         public async Task<List<Room>> GetRoomsByCampusAsync(int campusId)
         {
+            // Lấy tất cả phòng thuộc campus, loại trừ những phòng có trạng thái "Maintenance"
             return await _unitOfWork.RoomRepository.GetAllAsync(
-                r => r.CampusId == campusId && r.Status == "Available", "Campus");
-        }
-
-        public async Task UpdateRoomStatusBasedOnCapacityAsync(int roomId, int capacityLeft)
-        {
-            var room = await _unitOfWork.RoomRepository.GetByIdAsync(roomId);
-            if (room == null) throw new Exception("Room not found.");
-
-            // Cập nhật trạng thái dựa trên capacityLeft
-            if (capacityLeft > 0)
-            {
-                room.Status = "Available";
-            }
-            else if (capacityLeft == 0)
-            {
-                room.Status = "Occupied";
-            }
-            else
-            {
-                // Nếu capacityLeft < 0 (trường hợp bất thường), đặt thành Occupied
-                room.Status = "Occupied";
-            }
-
-            _unitOfWork.RoomRepository.Update(room);
-            await _unitOfWork.SaveChangesAsync();
+                r => r.CampusId == campusId && r.Status != "Maintenance", "Campus");
         }
     }
 }
