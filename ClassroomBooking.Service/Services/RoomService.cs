@@ -74,6 +74,7 @@ namespace ClassroomBooking.Service
 
             // Gửi sự kiện RoomUpdated qua SignalR
             await _hubContext.Clients.All.SendAsync("RoomUpdated", new { roomId = existingRoom.RoomId });
+
         }
 
         public async Task DeleteRoomAsync(int roomId)

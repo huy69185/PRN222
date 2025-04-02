@@ -106,13 +106,15 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
 
             try
             {
+
                 await _roomService.UpdateRoomAsync(Room, ResetCapacity, AdditionalSeats);
 
                 // Gửi sự kiện RoomUpdated qua SignalR
                 _logger.LogInformation("Sending RoomUpdated event for room {0}", Room.RoomId);
+
                 await _hubContext.Clients.All.SendAsync("RoomUpdated", new { roomId = Room.RoomId });
 
-                return RedirectToPage("Index");
+                return RedirectToPage("/Manager/Rooms/Index");
             }
             catch (Exception ex)
             {

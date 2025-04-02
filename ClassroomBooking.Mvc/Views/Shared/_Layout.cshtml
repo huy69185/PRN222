@@ -10,7 +10,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark navbar-custom border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Bookings" asp-action="Index">ClassroomBooking</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Bookings" href="http://localhost:5000/Bookings/Index" asp-action="Index">ClassroomBooking</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,14 +35,14 @@
                             else
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Bookings" asp-action="Index">View Bookings</a>
+                                    <a class="nav-link" asp-area="" asp-controller="Bookings" href="http://localhost:5000/Bookings/Index" asp-action="Index">View Bookings</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Bookings" asp-action="Create">Create Booking</a>
+                                    <a class="nav-link" asp-area="" asp-controller="Bookings" href="http://localhost:5000/Bookings/Create" asp-action="Create">Create Booking</a>
                                 </li>
                             }
                             <li class="nav-item">
-                                <form method="post" asp-area="" asp-controller="Account" asp-action="Logout">
+                                <form method="post" asp-area="" asp-controller="Account" action="http://localhost:5000/Account/Logout" asp-action="Logout">
                                     <button type="submit" class="nav-link btn btn-danger text-white">Logout</button>
                                 </form>
                             </li>
@@ -50,10 +50,10 @@
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link btn btn-outline-light me-2" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                                <a class="nav-link btn btn-outline-light me-2" asp-area="" asp-controller="Account" href="http://localhost:5001/Account/Login" asp-action="Login">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn btn-light text-dark" asp-area="" asp-controller="Account" asp-action="Signup">Sign Up</a>
+                                <a class="nav-link btn btn-light text-dark" asp-area="" asp-controller="Account" href="http://localhost:5001/Account/Signup" asp-action="Signup">Sign Up</a>
                             </li>
                         }
                     </ul>
