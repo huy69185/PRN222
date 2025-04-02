@@ -22,6 +22,7 @@
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated)
                         {
+
                             var userRole = User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
 
                             @if (userRole == "Manager")
@@ -43,9 +44,10 @@
                                 </li>
                             }
 
+
                             <li class="nav-item">
-                                <form method="post" asp-area="" asp-page="/Account/Logout">
-                                    <button type="submit" class="nav-link btn btn-danger text-white">Logout</button>
+                                <form method="post" asp-page="/Account/Logout">
+                                    <button type="submit" class="btn btn-link nav-link">Logout</button>
                                 </form>
                             </li>
                         }
