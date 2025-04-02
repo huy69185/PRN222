@@ -61,3 +61,19 @@ C:\Users\nguye\Desktop\PRN222\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\C
 C:\Users\nguye\Desktop\PRN222\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\refint\ClassroomBooking.Service.dll
 C:\Users\nguye\Desktop\PRN222\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.pdb
 C:\Users\nguye\Desktop\PRN222\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ref\ClassroomBooking.Service.dll
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Service.deps.json
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Service.dll
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Service.pdb
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Repository.dll
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Repository.pdb
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.csproj.AssemblyReference.cache
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.AssemblyInfoInputs.cache
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.AssemblyInfo.cs
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.csproj.CoreCompileInputs.cache
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.sourcelink.json
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\Classroo.97035A7C.Up2Date
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.dll
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\refint\ClassroomBooking.Service.dll
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.pdb
+C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ref\ClassroomBooking.Service.dll

@@ -162,13 +162,16 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
                 {
                     _logger.LogInformation("Sending RoomCreated event for room {0}", Room.RoomId);
                     await _hubContext.Clients.All.SendAsync("RoomCreated", new { roomId = Room.RoomId });
+                    return RedirectToPage("/Manager/Rooms/Index");
+
                 }
                 catch (Exception exSignalR)
                 {
                     _logger.LogError("SignalR error when sending RoomCreated: {0}", exSignalR.Message);
+                    return Page();
+
                 }
 
-                return RedirectToPage("Index");
             }
             catch (Exception ex)
             {
