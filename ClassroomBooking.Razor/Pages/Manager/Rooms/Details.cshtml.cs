@@ -1,4 +1,4 @@
-﻿using ClassroomBooking.Repository.Entities;
+using ClassroomBooking.Repository.Entities;
 using ClassroomBooking.Service.Hubs;
 using ClassroomBooking.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -30,7 +30,7 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
         public Room Room { get; set; } = new();
         public List<Booking> BookingList { get; set; } = new();
 
-        public async Task<IActionResult> OnGetAsync(int? id, int pageNumber = 1, string sortOrder = "asc")
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null || id <= 0)
             {
@@ -45,28 +45,11 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
                 return RedirectToPage("/Manager/Rooms/Index");
             }
 
-            // Lấy danh sách booking
-            var allBookings = await _bookingService.GetBookingsByRoomIdAsync(id.Value);
-
-            // Sắp xếp theo StartTime dựa trên sortOrder
-            allBookings = sortOrder == "desc"
-                ? allBookings.OrderByDescending(b => b.StartTime).ToList()
-                : allBookings.OrderBy(b => b.StartTime).ToList();
-
-            const int pageSize = 4;
-            var totalBookings = allBookings.Count;
-            var totalPages = (int)Math.Ceiling(totalBookings / (double)pageSize);
-            BookingList = allBookings.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
-
-            // Lưu thông tin vào ViewData để sử dụng trong view
-            ViewData["CurrentPage"] = pageNumber;
-            ViewData["TotalPages"] = totalPages;
-            ViewData["SortOrder"] = sortOrder;
-
+            BookingList = await _bookingService.GetBookingsByRoomIdAsync(id.Value);
             return Page();
         }
 
-        public async Task<IActionResult> OnPostUpdateStatusAsync(int bookingId, string bookingStatus, int pageNumber = 1)
+        public async Task<IActionResult> OnPostUpdateStatusAsync(int bookingId, string bookingStatus)
         {
             var managerUserCode = User.Identity?.Name;
             var success = await _bookingService.UpdateBookingStatusRazorAsync(bookingId, bookingStatus, managerUserCode);
@@ -80,7 +63,7 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
                 await _hubContext.Clients.All.SendAsync("BookingUpdated", new { bookingId = bookingId });
             }
 
-            return RedirectToPage(new { id = Room.RoomId, pageNumber = pageNumber });
+            return RedirectToPage(new { id = Room.RoomId });
         }
     }
 }

@@ -53,28 +53,7 @@
                 </td>
                 <td>@booking.StartTime.ToString("yyyy-MM-dd HH:mm")</td>
                 <td>@booking.EndTime.ToString("yyyy-MM-dd HH:mm")</td>
-                <td>
-                    @if (booking.BookingStatus == "Pending")
-                    {
-                        <span class="text-warning">@booking.BookingStatus</span>
-                    }
-                    else if (booking.BookingStatus == "Approved")
-                    {
-                        <span class="text-success">@booking.BookingStatus</span>
-                    }
-                    else if (booking.BookingStatus == "Denied")
-                    {
-                        <span class="text-danger">@booking.BookingStatus</span>
-                    }
-                    else if (booking.BookingStatus == "Cancelled")
-                    {
-                        <span style="color: orangered;">@booking.BookingStatus</span>
-                    }
-                    else
-                    {
-                        @booking.BookingStatus
-                    }
-                </td>
+                <td>@booking.BookingStatus</td>
                 <td>@booking.Purpose</td>
                 <td>
                     <form method="post" asp-page-handler="UpdateStatus">
