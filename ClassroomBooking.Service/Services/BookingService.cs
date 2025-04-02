@@ -94,8 +94,7 @@ namespace ClassroomBooking.Service
             _unitOfWork.BookingRepository.Update(booking);
             await _unitOfWork.SaveChangesAsync();
 
-            // Không còn cập nhật trạng thái phòng tự động
-
+            // Gửi thông báo qua SignalR
             await _hubContext.Clients.All.SendAsync("ReceiveBookingNotification", $"Booking {bookingId} updated to {status}");
         }
 
@@ -113,8 +112,6 @@ namespace ClassroomBooking.Service
             booking.BookingStatus = status;
             _unitOfWork.BookingRepository.Update(booking);
             await _unitOfWork.SaveChangesAsync();
-
-            // Không còn cập nhật trạng thái phòng tự động
 
             await _hubContext.Clients.All.SendAsync("ReceiveBookingNotification", $"Booking {bookingId} updated to {status}");
             return true;
@@ -134,8 +131,6 @@ namespace ClassroomBooking.Service
 
             await _unitOfWork.BookingRepository.DeleteAsync(booking);
             await _unitOfWork.SaveChangesAsync();
-
-            // Không còn cập nhật trạng thái phòng tự động
 
             return true;
         }
@@ -159,12 +154,13 @@ namespace ClassroomBooking.Service
             return left < 0 ? 0 : left;
         }
 
-        public async Task CreateBookingWithRoomSlotAsync(BookingDto dto, int roomId, int seatsWanted)
+        // Sửa lại phương thức này để trả về đối tượng Booking
+        public async Task<Booking> CreateBookingWithRoomSlotAsync(BookingDto dto, int roomId, int seatsWanted)
         {
             if (dto.EndTime <= dto.StartTime)
                 throw new Exception("EndTime must be after StartTime!");
 
-            // Kiểm tra phòng tồn tại và trạng thái tĩnh
+            // Kiểm tra phòng tồn tại và trạng thái
             var room = await _roomService.GetRoomByIdAsync(roomId);
             if (room == null)
                 throw new Exception("Room not found.");
@@ -200,10 +196,10 @@ namespace ClassroomBooking.Service
             await _unitOfWork.BookingRepository.AddAsync(bookingEntity);
             await _unitOfWork.SaveChangesAsync();
 
-            // Không còn cập nhật trạng thái phòng tự động
-
-            // Silent broadcast thông báo booking được tạo
+            // Gửi thông báo qua SignalR khi booking được tạo
             await _hubContext.Clients.All.SendAsync("BookingCreated", bookingEntity.BookingId);
+
+            return bookingEntity;
         }
 
         public async Task<List<Booking>> GetBookingsByRoomIdAsync(int roomId)

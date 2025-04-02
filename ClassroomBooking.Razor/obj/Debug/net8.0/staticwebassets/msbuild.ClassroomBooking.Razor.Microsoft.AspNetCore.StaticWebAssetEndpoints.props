@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ClassroomBooking.Razor.gfgo679rrp.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1ATztax\u002BHEjSZa/d7VZ\u002BzSYOCGfDZDGldUDH\u002Bq1U344="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1140"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221ATztax\u002BHEjSZa/d7VZ\u002BzSYOCGfDZDGldUDH\u002Bq1U344=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 03:04:39 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1140"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221ATztax\u002BHEjSZa/d7VZ\u002BzSYOCGfDZDGldUDH\u002Bq1U344=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 13:36:12 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ClassroomBooking.Razor/ClassroomBooking.Razor.gfgo679rrp.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ClassroomBooking.Razor.gfgo679rrp.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gfgo679rrp"},{"Name":"integrity","Value":"sha256-1ATztax\u002BHEjSZa/d7VZ\u002BzSYOCGfDZDGldUDH\u002Bq1U344="},{"Name":"label","Value":"_content/ClassroomBooking.Razor/ClassroomBooking.Razor.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1140"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221ATztax\u002BHEjSZa/d7VZ\u002BzSYOCGfDZDGldUDH\u002Bq1U344=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 03:04:39 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1140"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221ATztax\u002BHEjSZa/d7VZ\u002BzSYOCGfDZDGldUDH\u002Bq1U344=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 13:36:12 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ClassroomBooking.Razor/css/site.c2tiyv64ts.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>

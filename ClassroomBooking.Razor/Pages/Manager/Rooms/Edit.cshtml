@@ -14,6 +14,11 @@
                 <form method="post" id="roomForm">
                     <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
                     <input type="hidden" asp-for="Room.RoomId" />
+                    <!-- Hidden inputs cho ResetCapacity và AdditionalSeats -->
+                    <input type="hidden" id="ResetCapacity" name="ResetCapacity" value="false" />
+                    <input type="hidden" id="AdditionalSeats" name="AdditionalSeats" value="0" />
+                    <!-- Hidden field để truyền availableSeats từ server -->
+                    <input type="hidden" id="AvailableSeats" value="@Model.AvailableSeats" />
 
                     <div class="mb-3">
                         <label asp-for="Room.RoomName" class="form-label fw-bold"></label>
@@ -71,66 +76,40 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script>
-        document.getElementById("roomForm").addEventListener("submit", function (event) {
-            const currentStatus = "@Model.Room.Status"; // Trạng thái hiện tại của phòng
-            const newStatus = document.getElementById("roomStatus").value;
+        (function(){
+            var form = document.getElementById("roomForm");
+            var skipPrompt = false;
+            form.addEventListener("submit", function (event) {
+                if (skipPrompt) return; // Nếu đã xử lý, cho phép submit
 
-            if (currentStatus === "Occupied" && newStatus === "Available") {
-                event.preventDefault(); // Ngăn form submit ngay
+                const currentStatus = "@Model.Room.Status"; // trạng thái hiện tại từ server
+                const newStatus = document.getElementById("roomStatus").value;
+                const availableSeats = parseInt(document.getElementById("AvailableSeats").value);
 
-                // Hiển thị popup xác nhận
-                let choice = confirm("Room is currently Occupied (no seats available). Do you want to reset capacity to original or add seats?");
-                if (choice) {
-                    let action = prompt("Type 'reset' to reset capacity to original, or enter a number to add seats:");
-                    if (action) {
-                        if (action.toLowerCase() === "reset") {
-                            // Gửi yêu cầu với resetCapacity=true
-                            fetch(window.location.pathname, {
-                                method: "POST",
-                                headers: {
-                                    "Content-Type": "application/x-www-form-urlencoded",
-                                    "RequestVerificationToken": document.querySelector("input[name='__RequestVerificationToken']").value
-                                },
-                                body: new URLSearchParams({
-                                    "Room.RoomId": "@Model.Room.RoomId",
-                                    "Room.RoomName": document.querySelector("input[name='Room.RoomName']").value,
-                                    "Room.Capacity": document.querySelector("input[name='Room.Capacity']").value,
-                                    "Room.CampusId": document.querySelector("select[name='Room.CampusId']").value,
-                                    "Room.Status": newStatus,
-                                    "Room.Description": document.querySelector("textarea[name='Room.Description']").value,
-                                    "resetCapacity": "true"
-                                })
-                            }).then(response => {
-                                if (response.ok) window.location.href = "/Manager/Rooms/Index";
-                                else alert("Error updating room.");
-                            });
-                        } else if (!isNaN(action) && parseInt(action) > 0) {
-                            // Gửi yêu cầu với additionalSeats
-                            fetch(window.location.pathname, {
-                                method: "POST",
-                                headers: {
-                                    "Content-Type": "application/x-www-form-urlencoded",
-                                    "RequestVerificationToken": document.querySelector("input[name='__RequestVerificationToken']").value
-                                },
-                                body: new URLSearchParams({
-                                    "Room.RoomId": "@Model.Room.RoomId",
-                                    "Room.RoomName": document.querySelector("input[name='Room.RoomName']").value,
-                                    "Room.Capacity": document.querySelector("input[name='Room.Capacity']").value,
-                                    "Room.CampusId": document.querySelector("select[name='Room.CampusId']").value,
-                                    "Room.Status": newStatus,
-                                    "Room.Description": document.querySelector("textarea[name='Room.Description']").value,
-                                    "additionalSeats": parseInt(action)
-                                })
-                            }).then(response => {
-                                if (response.ok) window.location.href = "/Manager/Rooms/Index";
-                                else alert("Error updating room.");
-                            });
-                        } else {
-                            alert("Invalid input. Please enter 'reset' or a positive number.");
+                // Nếu phòng đang Occupied và availableSeats = 0 và chuyển sang Available
+                if (currentStatus === "Occupied" && newStatus === "Available" && availableSeats === 0) {
+                    event.preventDefault(); // Ngăn submit mặc định
+
+                    let choice = confirm("Room is currently Occupied with no available seats. Do you want to reset capacity or add seats?");
+                    if (choice) {
+                        let action = prompt("Type 'reset' to reset capacity to original, or enter a positive number to add seats:");
+                        if (action) {
+                            if (action.toLowerCase() === "reset") {
+                                document.getElementById("ResetCapacity").value = "true";
+                                document.getElementById("AdditionalSeats").value = "0";
+                            } else if (!isNaN(action) && parseInt(action) > 0) {
+                                document.getElementById("ResetCapacity").value = "false";
+                                document.getElementById("AdditionalSeats").value = parseInt(action);
+                            } else {
+                                alert("Invalid input. Please enter 'reset' or a positive number.");
+                                return;
+                            }
+                            skipPrompt = true;
+                            form.submit();
                         }
                     }
                 }
-            }
-        });
+            });
+        })();
     </script>
 }

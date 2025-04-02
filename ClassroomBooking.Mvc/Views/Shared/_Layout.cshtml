@@ -3,101 +3,202 @@
 <head>
     <meta charset="utf-8" />
     <title>@ViewData["Title"] - ClassroomBooking</title>
-    <!-- Add Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <style>
-        /* Custom styles for the navbar */
-        .navbar {
-            background-color: #2f74c0; /* Blue background as in the screenshot */
-            padding: 0.5rem 1rem;
-        }
-
-        .navbar-brand {
-            color: #fff !important;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-            .navbar-brand:hover {
-                color: #e0e0e0 !important; /* Lighten on hover */
-            }
-
-        .nav-link {
-            color: #fff !important;
-            margin-right: 1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-        }
-
-            .nav-link:hover {
-                background-color: #1f5a9b; /* Darker blue on hover */
-                color: #fff !important;
-            }
-
-        .btn-logout {
-            background-color: #c02f2f; /* Red logout button */
-            color: #fff;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 4px;
-        }
-
-            .btn-logout:hover {
-                background-color: #a02525; /* Darker red on hover */
-            }
-
-        .container {
-            margin-top: 2rem;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #f8f9fa;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="container-fluid">
-                <!-- ClassroomBooking logo linking to Home -->
-                <a class="navbar-brand" href="http://localhost:5000/Bookings/Index">ClassroomBooking</a>
-                <div class="d-flex">
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <!-- If logged in -->
-                        <a class="nav-link" href="http://localhost:5000/Bookings/Index"> View Bookings</a>
-                        <a class="nav-link" href="http://localhost:5000/Bookings/Create">  Create Booking</a>
-                        <form method="post" action="http://localhost:5000/Account/Logout" style="display:inline;">
-                            <button type="submit" class="btn btn-logout">Logout</button>
-                        </form>
-                    }
-                    else
-                    {
-                        <!-- If not logged in -->
-                        <a class="nav-link" href="http://localhost:5001/Account/Login">Login</a>
-                        <a class="nav-link" href="http://localhost:5001/Account/Signup">Sign Up</a>
-                    }
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark navbar-custom border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Bookings" asp-action="Index">ClassroomBooking</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <!-- Thêm mục nếu cần -->
+                    </ul>
+                    <ul class="navbar-nav">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            var userRole = User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+                            @if (userRole == "Manager")
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Manager" asp-action="Index">Manage Bookings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Manager" asp-action="Rooms">Manage Rooms</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Bookings" asp-action="Index">View Bookings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Bookings" asp-action="Create">Create Booking</a>
+                                </li>
+                            }
+                            <li class="nav-item">
+                                <form method="post" asp-area="" asp-controller="Account" asp-action="Logout">
+                                    <button type="submit" class="nav-link btn btn-danger text-white">Logout</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-outline-light me-2" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-light text-dark" asp-area="" asp-controller="Account" asp-action="Signup">Sign Up</a>
+                            </li>
+                        }
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
-
-    <main class="container">
+    <div class="container">
+        <div id="notifications"></div>
         @RenderBody()
-    </main>
-
-    <footer class="footer">
-        © 2025 - ClassroomBooking
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container text-center">
+            © 2025 - ClassroomBooking.Presentation - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+    <script>
+        // Nếu đang ở trang Index => lưu lại URL có query string (pageNumber, searchRoom,...)
+        let duongDan = window.location.pathname.toLowerCase();
+        if (duongDan.includes("/bookings/index") || duongDan.includes("/manager/index") || duongDan.includes("/manager/rooms")) {
+            localStorage.setItem("lastIndexUrl", window.location.href);
+        }
 
-    <!-- Add Bootstrap JS (optional, for interactive components) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    @RenderSection("Scripts", required: false)
+        // Khởi tạo kết nối SignalR
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/bookingHub")
+            .configureLogging(signalR.LogLevel.Information)
+            .build();
+
+        // Bắt đầu kết nối
+        connection.start()
+            .then(() => console.log("SignalR connected successfully in MVC."))
+            .catch(err => console.error("Error connecting to SignalR in MVC:", err.toString()));
+
+        // Xử lý khi kết nối bị đóng
+        connection.onclose((error) => {
+            console.error("SignalR connection closed in MVC:", error);
+        });
+
+        // Khi tạo booking
+        connection.on("BookingCreated", (data) => {
+            console.log("Received BookingCreated event:", data);
+            if (duongDan.includes("/bookings/index") || duongDan.includes("/manager/index")) {
+                // Nếu đang ở trang Index, reload để giữ query string
+                window.location.reload();
+            } else {
+                // Trang khác => về lastIndexUrl (nếu có), ngược lại /Bookings/Index hoặc /Manager/Index
+                let lastUrl = localStorage.getItem("lastIndexUrl") ||
+                              (duongDan.includes("/manager") ? "/Manager/Index" : "/Bookings/Index");
+                window.location.href = lastUrl;
+            }
+        });
+
+        // Khi hủy booking
+        connection.on("BookingCancelled", (data) => {
+            console.log("Received BookingCancelled event:", data);
+            if (duongDan.includes("/bookings/index") || duongDan.includes("/manager/index")) {
+                window.location.reload();
+            } else {
+                let lastUrl = localStorage.getItem("lastIndexUrl") ||
+                              (duongDan.includes("/manager") ? "/Manager/Index" : "/Bookings/Index");
+                window.location.href = lastUrl;
+            }
+        });
+
+        // Khi phê duyệt/từ chối booking
+        connection.on("BookingUpdated", (data) => {
+            console.log("Received BookingUpdated event:", data);
+            let bookingId = data.bookingId;
+
+            if (duongDan.includes("/manager/details")) {
+                // Nếu đang ở trang chi tiết
+                if (window.currentBookingId && parseInt(window.currentBookingId) === parseInt(bookingId)) {
+                    // Cùng ID => reload trang chi tiết để cập nhật dữ liệu mới
+                    window.location.reload();
+                } else {
+                    // Nếu không cùng ID => chuyển về URL Index đã lưu
+                    let lastUrl = localStorage.getItem("lastIndexUrl") || "/Manager/Index";
+                    window.location.href = lastUrl;
+                }
+            } else if (duongDan.includes("/bookings/index") || duongDan.includes("/manager/index")) {
+                // Nếu đang ở trang Index thì reload trang để giữ nguyên query string
+                window.location.reload();
+            } else {
+                // Các trường hợp khác, chuyển về Index
+                let lastUrl = localStorage.getItem("lastIndexUrl") ||
+                              (duongDan.includes("/manager") ? "/Manager/Index" : "/Bookings/Index");
+                window.location.href = lastUrl;
+            }
+        });
+
+        // Khi tạo phòng
+        connection.on("RoomCreated", (data) => {
+            console.log("Received RoomCreated event:", data);
+            if (duongDan.includes("/manager/rooms")) {
+                window.location.reload();
+            } else {
+                let lastUrl = localStorage.getItem("lastIndexUrl") || "/Manager/Rooms";
+                window.location.href = lastUrl;
+            }
+        });
+
+        // Khi xóa phòng
+        connection.on("RoomDeleted", (data) => {
+            console.log("Received RoomDeleted event:", data);
+            if (duongDan.includes("/manager/rooms")) {
+                window.location.reload();
+            } else {
+                let lastUrl = localStorage.getItem("lastIndexUrl") || "/Manager/Rooms";
+                window.location.href = lastUrl;
+            }
+        });
+
+        // Khi cập nhật phòng
+        connection.on("RoomUpdated", (data) => {
+            console.log("Received RoomUpdated event:", data);
+            let roomId = data.roomId;
+
+            if (duongDan.includes("/manager/rooms/details")) {
+                // Nếu đang ở trang chi tiết
+                if (window.currentRoomId && parseInt(window.currentRoomId) === parseInt(roomId)) {
+                    // Cùng ID => reload trang chi tiết để cập nhật dữ liệu mới
+                    window.location.reload();
+                } else {
+                    // Nếu không cùng ID => chuyển về URL Index đã lưu
+                    let lastUrl = localStorage.getItem("lastIndexUrl") || "/Manager/Rooms";
+                    window.location.href = lastUrl;
+                }
+            } else if (duongDan.includes("/manager/rooms/edit")) {
+                // Nếu đang ở trang chỉnh sửa, luôn chuyển về Index
+                let lastUrl = localStorage.getItem("lastIndexUrl") || "/Manager/Rooms";
+                window.location.href = lastUrl;
+            } else if (duongDan.includes("/manager/rooms")) {
+                // Nếu đang ở trang Index thì reload trang để giữ nguyên query string
+                window.location.reload();
+            } else {
+                // Các trường hợp khác, chuyển về Index
+                let lastUrl = localStorage.getItem("lastIndexUrl") || "/Manager/Rooms";
+                window.location.href = lastUrl;
+            }
+        });
+    </script>
+    @RenderSection("Scripts", false)
 </body>
 </html>

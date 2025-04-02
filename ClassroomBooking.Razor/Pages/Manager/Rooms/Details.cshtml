@@ -1,52 +1,46 @@
 ﻿@page
-@model ClassroomBooking.Presentation.Pages.Manager.Rooms.DetailsModel // Thay Admin thành Manager
+@model ClassroomBooking.Presentation.Pages.Manager.Rooms.DetailsModel
 @{
     ViewData["Title"] = "Room Details";
 }
 
-<div class="container my-4">
-    <h2 class="mb-4 text-center">Room Details</h2>
+<h2>Room Details</h2>
 
-    <div class="card mb-4 shadow">
-        <div class="card-header bg-primary text-white">
-            <h4 class="card-title m-0">Room Information</h4>
-        </div>
-        <div class="card-body">
-            <div class="row mb-3">
-                <div class="col-md-4"><strong>Room Name:</strong></div>
-                <div class="col-md-8">@Model.Room.RoomName</div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-4"><strong>Capacity:</strong></div>
-                <div class="col-md-8">@Model.Room.Capacity</div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-4"><strong>Campus:</strong></div>
-                <div class="col-md-8">@Model.Room.Campus?.CampusName</div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-4"><strong>Status:</strong></div>
-                <div class="col-md-8">@Model.Room.Status</div>
-            </div>
-            <div class="row">
-                <div class="col-md-4"><strong>Description:</strong></div>
-                <div class="col-md-8">@Model.Room.Description</div>
-            </div>
-        </div>
-    </div>
+@if (Model.Room == null)
+{
+    <p>Room not found.</p>
+}
+else
+{
+    <dl class="row">
+        <dt class="col-sm-2">Room Name</dt>
+        <dd class="col-sm-10">@Model.Room.RoomName</dd>
 
-    <h3 class="mb-3">Bookings for this Room</h3>
-    <div class="table-responsive shadow">
-        <table class="table table-bordered table-hover">
-            <thead class="table-dark">
+        <dt class="col-sm-2">Capacity</dt>
+        <dd class="col-sm-10">@Model.Room.Capacity</dd>
+
+        <dt class="col-sm-2">Campus</dt>
+        <dd class="col-sm-10">@Model.Room.Campus?.CampusName</dd>
+
+        <dt class="col-sm-2">Status</dt>
+        <dd class="col-sm-10">@Model.Room.Status</dd>
+
+        <dt class="col-sm-2">Description</dt>
+        <dd class="col-sm-10">@Model.Room.Description</dd>
+    </dl>
+
+    <h3>Bookings for this Room</h3>
+    @if (Model.BookingList.Any())
+    {
+        <table class="table">
+            <thead>
                 <tr>
                     <th>Booking ID</th>
                     <th>Student</th>
                     <th>Start Time</th>
                     <th>End Time</th>
-                    <th>Status</th>
                     <th>Purpose</th>
-                    <th>Created Date</th>
+                    <th>Status</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -55,23 +49,21 @@
                 {
                     <tr>
                         <td>@booking.BookingId</td>
-                        <td>@booking.User?.FullName</td>
-                        <td>@booking.StartTime.ToString("yyyy-MM-dd HH:mm")</td>
-                        <td>@booking.EndTime.ToString("yyyy-MM-dd HH:mm")</td>
-                        <td>@booking.BookingStatus</td>
+                        <td>@(booking.User != null ? booking.User.FullName : "Unknown")</td>
+                        <td>@booking.StartTime.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>@booking.EndTime.ToString("dd/MM/yyyy HH:mm")</td>
                         <td>@booking.Purpose</td>
-                        <td>@booking.CreatedDate.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>@booking.BookingStatus</td>
                         <td>
                             @if (booking.BookingStatus == "Pending")
                             {
-                                <form method="post" asp-page-handler="UpdateStatus" class="d-flex gap-2">
-                                    <input type="hidden" name="bookingId" value="@booking.BookingId" />
-                                    <button type="submit" name="bookingStatus" value="Approved" class="btn btn-success btn-sm">
-                                        <i class="bi bi-check-circle"></i> Approve
-                                    </button>
-                                    <button type="submit" name="bookingStatus" value="Denied" class="btn btn-danger btn-sm">
-                                        <i class="bi bi-x-circle"></i> Deny
-                                    </button>
+                                <form method="post" asp-page-handler="UpdateStatus" asp-route-bookingId="@booking.BookingId" style="display:inline;">
+                                    <input type="hidden" name="bookingStatus" value="Approved" />
+                                    <button type="submit" class="btn btn-success btn-sm">Approve</button>
+                                </form>
+                                <form method="post" asp-page-handler="UpdateStatus" asp-route-bookingId="@booking.BookingId" style="display:inline;">
+                                    <input type="hidden" name="bookingStatus" value="Denied" />
+                                    <button type="submit" class="btn btn-danger btn-sm">Deny</button>
                                 </form>
                             }
                         </td>
@@ -79,14 +71,26 @@
                 }
             </tbody>
         </table>
-    </div>
+    }
+    else
+    {
+        <p>No bookings found for this room.</p>
+    }
 
-    <div class="d-flex justify-content-between mt-4">
-        <a asp-page="Index" class="btn btn-secondary">
-            <i class="bi bi-arrow-left"></i> Back to List
-        </a>
-        <a asp-page="Edit" asp-route-id="@Model.Room.RoomId" class="btn btn-primary">
-            <i class="bi bi-pencil-square"></i> Edit
-        </a>
+    <a asp-page="/Manager/Rooms/Index" class="btn btn-secondary">Back to List</a>
+}
+
+@if (!string.IsNullOrEmpty(TempData["ErrorMessage"]?.ToString()))
+{
+    <div class="alert alert-danger mt-3">
+        @TempData["ErrorMessage"]
     </div>
-</div>
+}
+
+@section Scripts {
+    <script>
+        // Thiết lập biến cho ID phòng, có thể dùng cho SignalR nếu cần
+        window.currentRoomId = "@Model.Room?.RoomId";
+        console.log("Current room ID =", window.currentRoomId);
+    </script>
+}

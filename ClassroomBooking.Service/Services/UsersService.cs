@@ -38,7 +38,6 @@ namespace ClassroomBooking.Service
             var department = await _unitOfWork.DepartmentRepository.GetByIdAsync(user.DepartmentId);
             if (department == null) throw new Exception("Invalid DepartmentId.");
 
-            // Kiểm tra Department và CampusId có khớp không
             if (department.CampusId != user.CampusId)
                 throw new Exception("Department does not belong to the selected campus.");
 

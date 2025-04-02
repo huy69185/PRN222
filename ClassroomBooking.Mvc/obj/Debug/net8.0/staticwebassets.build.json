@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vgtcIjRO23nqTSaeW+vDHBPGuZvJSiE40r7OHf0yrKw=",
+  "Hash": "KvkqshMkhLto3aIMbu+52kdtawtQ8k/CSlidQen8/Zw=",
   "Source": "ClassroomBooking.Mvc",
   "BasePath": "_content/ClassroomBooking.Mvc",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dqbe7q5m6f",
-      "Integrity": "G+5Wkp6O25mstpPqog5Crrsr2lQkTc4yq6W3y0BeSCc=",
+      "Fingerprint": "3qhjodyxuy",
+      "Integrity": "hVNkM+TpC8SIh2BtFA1hZs5ur6pCOJp+qyWQAjAT5pI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2896,6 +2896,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/site.3qhjodyxuy.css",
+      "AssetFile": "C:\\Users\\nguye\\Desktop\\PRN222\\PRN222\\ClassroomBooking.Mvc\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "385"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hVNkM+TpC8SIh2BtFA1hZs5ur6pCOJp+qyWQAjAT5pI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:07:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3qhjodyxuy"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hVNkM+TpC8SIh2BtFA1hZs5ur6pCOJp+qyWQAjAT5pI="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\nguye\\Desktop\\PRN222\\PRN222\\ClassroomBooking.Mvc\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -2906,7 +2951,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2328"
+          "Value": "385"
         },
         {
           "Name": "Content-Type",
@@ -2914,11 +2959,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"G+5Wkp6O25mstpPqog5Crrsr2lQkTc4yq6W3y0BeSCc=\""
+          "Value": "\"hVNkM+TpC8SIh2BtFA1hZs5ur6pCOJp+qyWQAjAT5pI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 03:04:39 GMT"
+          "Value": "Wed, 02 Apr 2025 10:07:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2928,52 +2973,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-G+5Wkp6O25mstpPqog5Crrsr2lQkTc4yq6W3y0BeSCc="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.dqbe7q5m6f.css",
-      "AssetFile": "C:\\Users\\nguye\\Desktop\\PRN222\\PRN222\\ClassroomBooking.Mvc\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2328"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"G+5Wkp6O25mstpPqog5Crrsr2lQkTc4yq6W3y0BeSCc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 03:04:39 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "dqbe7q5m6f"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-G+5Wkp6O25mstpPqog5Crrsr2lQkTc4yq6W3y0BeSCc="
+          "Value": "sha256-hVNkM+TpC8SIh2BtFA1hZs5ur6pCOJp+qyWQAjAT5pI="
         }
       ]
     },

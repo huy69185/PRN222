@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClassroomBooking.Razor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+706a59439add6dad354f211605423f2b69028501")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+893e0043d21f4090cc47e8071e286f81dd0f348e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClassroomBooking.Razor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClassroomBooking.Razor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

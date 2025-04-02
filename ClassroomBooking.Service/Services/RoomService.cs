@@ -1,16 +1,21 @@
 ﻿using ClassroomBooking.Repository.Entities;
 using ClassroomBooking.Repository.UnitOfWork;
+using ClassroomBooking.Service.Hubs;
 using ClassroomBooking.Service.Interfaces;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClassroomBooking.Service
 {
     public class RoomService : IRoomService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IHubContext<BookingHub> _hubContext;
 
-        public RoomService(IUnitOfWork unitOfWork)
+        public RoomService(IUnitOfWork unitOfWork, IHubContext<BookingHub> hubContext)
         {
             _unitOfWork = unitOfWork;
+            _hubContext = hubContext;
         }
 
         public async Task<Room?> GetRoomByIdAsync(int roomId)
@@ -27,6 +32,9 @@ namespace ClassroomBooking.Service
         {
             await _unitOfWork.RoomRepository.AddAsync(room);
             await _unitOfWork.SaveChangesAsync();
+
+            // Gửi thông báo qua SignalR sau khi tạo phòng
+            await _hubContext.Clients.All.SendAsync("RoomCreated", new { roomId = room.RoomId });
         }
 
         public async Task UpdateRoomAsync(Room room, bool resetCapacity = false, int additionalSeats = 0)
@@ -34,7 +42,7 @@ namespace ClassroomBooking.Service
             var existingRoom = await _unitOfWork.RoomRepository.GetByIdAsync(room.RoomId);
             if (existingRoom == null) throw new Exception("Room not found.");
 
-            // Nếu chuyển từ Occupied sang Available thì reset capacity hoặc thêm số ghế theo tùy chọn
+            // Nếu phòng chuyển từ Occupied sang Available, và available capacity = 0 (logic này do giao diện quyết định)
             if (existingRoom.Status == "Occupied" && room.Status == "Available")
             {
                 if (resetCapacity)
@@ -50,8 +58,12 @@ namespace ClassroomBooking.Service
                     throw new Exception("Cannot update from Occupied to Available without resetting or adding seats.");
                 }
             }
+            else
+            {
+                // Nếu không có điều kiện đặc biệt, cập nhật các thuộc tính khác theo giá trị mới
+                existingRoom.Capacity = room.Capacity;
+            }
 
-            // Cập nhật các thuộc tính khác
             existingRoom.RoomName = room.RoomName;
             existingRoom.CampusId = room.CampusId;
             existingRoom.Status = room.Status;
@@ -59,21 +71,24 @@ namespace ClassroomBooking.Service
 
             _unitOfWork.RoomRepository.Update(existingRoom);
             await _unitOfWork.SaveChangesAsync();
+
+            // Gửi sự kiện RoomUpdated qua SignalR
+            await _hubContext.Clients.All.SendAsync("RoomUpdated", new { roomId = existingRoom.RoomId });
         }
 
         public async Task DeleteRoomAsync(int roomId)
         {
             var room = await _unitOfWork.RoomRepository.GetByIdAsync(roomId);
             if (room == null) throw new Exception("Room not found.");
-            // Khi xóa, chuyển trạng thái của phòng sang "Maintenance" (do Manager thiết lập)
             room.Status = "Maintenance";
             _unitOfWork.RoomRepository.Update(room);
             await _unitOfWork.SaveChangesAsync();
+
+            await _hubContext.Clients.All.SendAsync("RoomDeleted", new { roomId = roomId });
         }
 
         public async Task<List<Room>> GetRoomsByCampusAsync(int campusId)
         {
-            // Lấy tất cả phòng thuộc campus, loại trừ những phòng có trạng thái "Maintenance"
             return await _unitOfWork.RoomRepository.GetAllAsync(
                 r => r.CampusId == campusId && r.Status != "Maintenance", "Campus");
         }

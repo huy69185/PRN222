@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/ClassroomBooking.Mvc/css/site.3qhjodyxuy.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3qhjodyxuy"},{"Name":"integrity","Value":"sha256-hVNkM\u002BTpC8SIh2BtFA1hZs5ur6pCOJp\u002BqyWQAjAT5pI="},{"Name":"label","Value":"_content/ClassroomBooking.Mvc/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"385"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022hVNkM\u002BTpC8SIh2BtFA1hZs5ur6pCOJp\u002BqyWQAjAT5pI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 10:07:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ClassroomBooking.Mvc/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-G\u002B5Wkp6O25mstpPqog5Crrsr2lQkTc4yq6W3y0BeSCc="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2328"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022G\u002B5Wkp6O25mstpPqog5Crrsr2lQkTc4yq6W3y0BeSCc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 03:04:39 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/ClassroomBooking.Mvc/css/site.dqbe7q5m6f.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dqbe7q5m6f"},{"Name":"integrity","Value":"sha256-G\u002B5Wkp6O25mstpPqog5Crrsr2lQkTc4yq6W3y0BeSCc="},{"Name":"label","Value":"_content/ClassroomBooking.Mvc/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2328"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022G\u002B5Wkp6O25mstpPqog5Crrsr2lQkTc4yq6W3y0BeSCc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 03:04:39 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hVNkM\u002BTpC8SIh2BtFA1hZs5ur6pCOJp\u002BqyWQAjAT5pI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"385"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022hVNkM\u002BTpC8SIh2BtFA1hZs5ur6pCOJp\u002BqyWQAjAT5pI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 10:07:46 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ClassroomBooking.Mvc/lib/bootstrap/css/bootstrap-grid.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\css\bootstrap-grid.css'))</AssetFile>

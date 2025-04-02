@@ -103,39 +103,22 @@
 </form>
 
 @section Scripts {
-    <!-- Include Bootstrap Icons (for the button icons) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- SignalR for real-time notifications -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+    <!-- Chỉ giữ lại code validate form, vì SignalR đã được thiết lập trong Layout -->
     <script>
-        // SignalR connection for real-time notifications
-        const connection = new signalR.HubConnectionBuilder()
-            .withUrl("/bookingHub")
-            .build();
-
-        connection.on("ReceiveBookingNotification", (message) => {
-            alert(message);
-        });
-
-        connection.start().catch(err => console.error(err.toString()));
-
-        // Client-side validation for booking
         document.getElementById("bookingForm").addEventListener("submit", function (event) {
             const seatsLeft = parseInt(document.getElementById("seatsLeft").innerText, 10);
             const seatsWanted = parseInt(document.querySelector("input[name='SeatsWanted']").value, 10);
 
-            // Check if the room is fully booked
             if (seatsLeft === 0) {
-                event.preventDefault(); // Prevent form submission
+                event.preventDefault();
                 document.getElementById("bookingErrorMessage").innerText = "The room is fully booked.";
                 const modal = new bootstrap.Modal(document.getElementById("bookingErrorModal"));
                 modal.show();
                 return;
             }
 
-            // Check if the requested seats exceed available seats
             if (seatsWanted > seatsLeft) {
-                event.preventDefault(); // Prevent form submission
+                event.preventDefault();
                 document.getElementById("bookingErrorMessage").innerText = "The room does not have enough seats available.";
                 const modal = new bootstrap.Modal(document.getElementById("bookingErrorModal"));
                 modal.show();

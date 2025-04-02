@@ -1,9 +1,11 @@
 ﻿using ClassroomBooking.Repository.Entities;
+using ClassroomBooking.Service.Hubs;
 using ClassroomBooking.Service.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.SignalR;
 
 namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
 {
@@ -12,15 +14,32 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
     {
         private readonly IRoomService _roomService;
         private readonly ICampusService _campusService;
+        private readonly Microsoft.AspNetCore.SignalR.IHubContext<BookingHub> _hubContext;
+        private readonly ILogger<EditModel> _logger;
 
-        public EditModel(IRoomService roomService, ICampusService campusService)
+        public EditModel(
+            IRoomService roomService,
+            ICampusService campusService,
+            Microsoft.AspNetCore.SignalR.IHubContext<BookingHub> hubContext,
+            ILogger<EditModel> logger)
         {
             _roomService = roomService;
             _campusService = campusService;
+            _hubContext = hubContext;
+            _logger = logger;
         }
 
         [BindProperty]
         public Room Room { get; set; } = new();
+
+        // Các thuộc tính để nhận giá trị cập nhật capacity nếu chuyển từ Occupied sang Available
+        [BindProperty]
+        public bool ResetCapacity { get; set; } = false;
+        [BindProperty]
+        public int AdditionalSeats { get; set; } = 0;
+
+        // Giả sử: nếu room đang Occupied, availableSeats = 0; nếu không thì availableSeats = Room.Capacity.
+        public int AvailableSeats { get; set; }
 
         public List<SelectListItem> CampusItems { get; set; } = new();
         public List<SelectListItem> StatusItems { get; set; } = new()
@@ -41,6 +60,9 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
             if (Room == null)
                 return NotFound();
 
+            // Giả sử: nếu Room.Status = "Occupied" thì availableSeats = 0, ngược lại lấy Room.Capacity
+            AvailableSeats = Room.Status == "Occupied" ? 0 : Room.Capacity;
+
             var campuses = await _campusService.GetAllCampusesAsync();
             CampusItems = campuses.Select(c => new SelectListItem
             {
@@ -52,10 +74,9 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(bool resetCapacity = false, int additionalSeats = 0)
+        public async Task<IActionResult> OnPostAsync()
         {
-            Console.WriteLine($"Room.CampusId: {Room.CampusId}, Room.Status: {Room.Status}, ResetCapacity: {resetCapacity}, AdditionalSeats: {additionalSeats}");
-
+            // Loại bỏ các ModelState không cần thiết
             ModelState.Remove("Room.Campus");
             ModelState.Remove("Room.RoomSlots");
 
@@ -75,7 +96,9 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
 
             if (!ModelState.IsValid)
             {
-                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+                var errors = ModelState.Values.SelectMany(v => v.Errors)
+                                              .Select(e => e.ErrorMessage)
+                                              .ToList();
                 ErrorMessage = "Validation failed: " + string.Join(", ", errors);
                 await LoadCampusItemsAsync();
                 return Page();
@@ -83,7 +106,12 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
 
             try
             {
-                await _roomService.UpdateRoomAsync(Room, resetCapacity, additionalSeats);
+                await _roomService.UpdateRoomAsync(Room, ResetCapacity, AdditionalSeats);
+
+                // Gửi sự kiện RoomUpdated qua SignalR
+                _logger.LogInformation("Sending RoomUpdated event for room {0}", Room.RoomId);
+                await _hubContext.Clients.All.SendAsync("RoomUpdated", new { roomId = Room.RoomId });
+
                 return RedirectToPage("Index");
             }
             catch (Exception ex)

@@ -1,21 +1,30 @@
 using ClassroomBooking.Repository.Entities;
+using ClassroomBooking.Service.Hubs;
 using ClassroomBooking.Service.Interfaces;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.SignalR;
 
-namespace ClassroomBooking.Presentation.Pages.Manager.Rooms // Thay Admin thành Manager
+namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
 {
-    [Authorize(Roles = "Manager")] // Thay Admin thành Manager
+    [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Manager")]
     public class DetailsModel : PageModel
     {
         private readonly IRoomService _roomService;
         private readonly IBookingService _bookingService;
+        private readonly IHubContext<BookingHub> _hubContext;
+        private readonly ILogger<DetailsModel> _logger;
 
-        public DetailsModel(IRoomService roomService, IBookingService bookingService)
+        public DetailsModel(
+            IRoomService roomService,
+            IBookingService bookingService,
+            IHubContext<BookingHub> hubContext,
+            ILogger<DetailsModel> logger)
         {
             _roomService = roomService;
             _bookingService = bookingService;
+            _hubContext = hubContext;
+            _logger = logger;
         }
 
         public Room Room { get; set; } = new();
@@ -26,14 +35,14 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms // Thay Admin thành 
             if (id == null || id <= 0)
             {
                 TempData["ErrorMessage"] = "Invalid room ID.";
-                return RedirectToPage("/Manager/Rooms/Index"); // Thay Admin thành Manager
+                return RedirectToPage("/Manager/Rooms/Index");
             }
 
             Room = await _roomService.GetRoomByIdAsync(id.Value);
             if (Room == null)
             {
                 TempData["ErrorMessage"] = "Room not found.";
-                return RedirectToPage("/Manager/Rooms/Index"); // Thay Admin thành Manager
+                return RedirectToPage("/Manager/Rooms/Index");
             }
 
             BookingList = await _bookingService.GetBookingsByRoomIdAsync(id.Value);
@@ -42,15 +51,19 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms // Thay Admin thành 
 
         public async Task<IActionResult> OnPostUpdateStatusAsync(int bookingId, string bookingStatus)
         {
-            var managerUserCode = User.Identity.Name; // L?y UserCode c?a Manager t? Claims
+            var managerUserCode = User.Identity?.Name;
             var success = await _bookingService.UpdateBookingStatusRazorAsync(bookingId, bookingStatus, managerUserCode);
             if (!success)
             {
                 TempData["ErrorMessage"] = "Update status failed!";
-                return RedirectToPage("/Manager/Rooms/Details", new { id = Room.RoomId });
+            }
+            else
+            {
+                _logger.LogInformation("Sending BookingUpdated event for booking {0}, status: {1}", bookingId, bookingStatus);
+                await _hubContext.Clients.All.SendAsync("BookingUpdated", new { bookingId = bookingId });
             }
 
-            return RedirectToPage("/Manager/Rooms/Details", new { id = Room.RoomId });
+            return RedirectToPage(new { id = Room.RoomId });
         }
     }
 }
