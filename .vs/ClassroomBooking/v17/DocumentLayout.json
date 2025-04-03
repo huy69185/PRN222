@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|c:\\users\\huyh6\\onedrive\\desktop\\prn222\\classroombooking.razor\\pages\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{582F17D7-DF42-4768-A315-D03EE8F4C1BB}|ClassroomBooking.Razor\\ClassroomBooking.Razor.csproj|solutionrelative:classroombooking.razor\\pages\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Signup.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Signup.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T11:26:06.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "ClassroomBooking.Razor\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T11:23:03.157Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

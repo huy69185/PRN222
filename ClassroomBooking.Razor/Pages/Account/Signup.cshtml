@@ -4,105 +4,190 @@
     ViewData["Title"] = "Sign Up";
 }
 
-<div class="container d-flex justify-content-center align-items-center" style="min-height: calc(100vh - 150px);">
-    <div class="card shadow-lg p-4 border-0" style="width: 500px; border-radius: 15px; background: #ffffff;">
-        <div class="text-center mb-4">
-            <h2 class="text-primary">
-                <i class="bi bi-person-plus-fill me-2"></i>Sign Up
-            </h2>
-        </div>
-
-        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
-        {
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                @Model.ErrorMessage
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        }
-
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="alert alert-danger alert-dismissible fade show" role="alert" style="@(ViewData.ModelState.IsValid ? "display: none;" : "")">
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg border-0" style="max-width: 550px; width: 100%;">
+        <div class="card-body p-5">
+            <div class="text-center mb-4">
+                <h2 class="text-primary fw-bold"><i class="bi bi-person-plus-fill me-2"></i>Sign Up</h2>
+                <p class="text-muted">Create your account to start booking rooms</p>
             </div>
 
-            <div class="mb-3">
-                <label asp-for="User.FullName" class="form-label fw-bold text-dark">
-                    <i class="bi bi-person-fill me-2 text-primary"></i>Full Name
-                </label>
-                <input asp-for="User.FullName" class="form-control shadow-sm" placeholder="Enter your full name" />
-                <span asp-validation-for="User.FullName" class="text-danger"></span>
-            </div>
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @Model.ErrorMessage
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
 
-            <div class="mb-3">
-                <label asp-for="User.UserCode" class="form-label fw-bold text-dark">
-                    <i class="bi bi-person-badge-fill me-2 text-primary"></i>User Code
-                </label>
-                <input asp-for="User.UserCode" class="form-control shadow-sm" placeholder="Enter your user code" />
-                <span asp-validation-for="User.UserCode" class="text-danger"></span>
-            </div>
+            <form method="post" class="needs-validation" novalidate>
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger alert-dismissible fade show" role="alert" style="@(ViewData.ModelState.IsValid ? "display: none;" : "")">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
 
-            <div class="mb-3">
-                <label asp-for="User.Email" class="form-label fw-bold text-dark">
-                    <i class="bi bi-envelope-fill me-2 text-primary"></i>Email
-                </label>
-                <input asp-for="User.Email" class="form-control shadow-sm" placeholder="Enter your email" />
-                <span asp-validation-for="User.Email" class="text-danger"></span>
-            </div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input asp-for="User.FullName" class="form-control" placeholder="Full Name" required />
+                            <label for="User_FullName"><i class="bi bi-person-fill me-2 text-primary"></i>Full Name</label>
+                            <span asp-validation-for="User.FullName" class="text-danger d-block mt-1"></span>
+                        </div>
+                    </div>
 
-            <div class="mb-3">
-                <label asp-for="User.Password" class="form-label fw-bold text-dark">
-                    <i class="bi bi-key-fill me-2 text-primary"></i>Password
-                </label>
-                <div class="input-group">
-                    <input asp-for="User.Password" type="password" class="form-control shadow-sm" placeholder="Enter your password" id="passwordInput" />
-                    <button type="button" class="btn btn-outline-secondary" onclick="togglePassword()">
-                        <i class="bi bi-eye" id="togglePasswordIcon"></i>Show
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input asp-for="User.UserCode" class="form-control" placeholder="User Code" required />
+                            <label for="User_UserCode"><i class="bi bi-person-badge-fill me-2 text-primary"></i>User Code</label>
+                            <span asp-validation-for="User.UserCode" class="text-danger d-block mt-1"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input asp-for="User.Email" class="form-control" type="email" placeholder="Email" required />
+                            <label for="User_Email"><i class="bi bi-envelope-fill me-2 text-primary"></i>Email</label>
+                            <span asp-validation-for="User.Email" class="text-danger d-block mt-1"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3 position-relative">
+                            <input asp-for="User.Password" type="password" class="form-control" placeholder="Password" id="passwordInput" required />
+                            <label for="User_Password"><i class="bi bi-key-fill me-2 text-primary"></i>Password</label>
+                            <button type="button" class="btn btn-outline-secondary position-absolute end-0 top-50 translate-middle-y" style="border: none;" onclick="togglePassword()">
+                                <i class="bi bi-eye" id="togglePasswordIcon"></i>
+                            </button>
+                            <span asp-validation-for="User.Password" class="text-danger d-block mt-1"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <select asp-for="SelectedCampusName" class="form-select" asp-items="Model.CampusItems" required>
+                                <option value="">-- Select Campus --</option>
+                            </select>
+                            <label for="SelectedCampusName"><i class="bi bi-geo-alt-fill me-2 text-primary"></i>Campus</label>
+                            <span asp-validation-for="SelectedCampusName" class="text-danger d-block mt-1"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <select asp-for="User.DepartmentId" class="form-select" asp-items="Model.DepartmentItems" required>
+                                <option value="">-- Select Department --</option>
+                            </select>
+                            <label for="User_DepartmentId"><i class="bi bi-building me-2 text-primary"></i>Department</label>
+                            <span asp-validation-for="User.DepartmentId" class="text-danger d-block mt-1"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <a asp-page="/Account/Login" class="btn btn-outline-secondary py-3 px-4">
+                        <i class="bi bi-arrow-left me-2"></i>Back to Login
+                    </a>
+                    <button type="submit" class="btn btn-primary py-3 px-4">
+                        <i class="bi bi-person-plus me-2"></i>Sign Up
                     </button>
                 </div>
-                <span asp-validation-for="User.Password" class="text-danger"></span>
-            </div>
+            </form>
 
-            <div class="mb-3">
-                <label asp-for="SelectedCampusName" class="form-label fw-bold text-dark">
-                    <i class="bi bi-geo-alt-fill me-2 text-primary"></i>Campus
-                </label>
-                <select asp-for="SelectedCampusName" class="form-select shadow-sm" asp-items="Model.CampusItems" required>
-                    <option value="">-- Select Campus --</option>
-                </select>
-                <span asp-validation-for="SelectedCampusName" class="text-danger"></span>
+            <div class="text-center mt-4">
+                <p class="text-muted mb-0">Already have an account? <a href="/Account/Login" class="text-primary fw-bold text-decoration-none">Login here</a></p>
             </div>
-
-            <div class="mb-4">
-                <label asp-for="User.DepartmentId" class="form-label fw-bold text-dark">
-                    <i class="bi bi-building me-2 text-primary"></i>Department
-                </label>
-                <select asp-for="User.DepartmentId" class="form-select shadow-sm" asp-items="Model.DepartmentItems" required>
-                    <option value="">-- Select Department --</option>
-                </select>
-                <span asp-validation-for="User.DepartmentId" class="text-danger"></span>
-            </div>
-
-            <div class="d-flex justify-content-between">
-                <button type="submit" class="btn btn-primary shadow-sm" style="border-radius: 8px; padding: 0.75rem 1.5rem; font-weight: 500;">
-                    <i class="bi bi-person-plus me-2"></i>Sign Up
-                </button>
-                <a asp-page="/Account/Login" class="btn btn-secondary shadow-sm" style="border-radius: 8px; padding: 0.75rem 1.5rem; font-weight: 500;">
-                    <i class="bi bi-arrow-left me-2"></i>Back to Login
-                </a>
-            </div>
-        </form>
-
-        <div class="text-center mt-3">
-            <p class="text-muted">Already have an account? <a href="/Account/Login" class="text-primary fw-bold">Login here</a></p>
         </div>
     </div>
 </div>
+
+<style>
+    body {
+        background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 100%);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+        border-radius: 20px;
+        background: #ffffff;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+    .form-floating > label {
+        color: #666;
+        padding-left: 2.5rem;
+    }
+
+    .form-control, .form-select {
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        height: 56px;
+    }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        }
+
+    .btn-primary {
+        border-radius: 10px;
+        background: linear-gradient(90deg, #007bff 0%, #0056d2 100%);
+        border: none;
+        transition: all 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #0056d2 0%, #003087 100%);
+            transform: translateY(-2px);
+        }
+
+    .btn-outline-secondary {
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+        .btn-outline-secondary:hover {
+            transform: translateY(-2px);
+        }
+
+    .alert {
+        border-radius: 10px;
+    }
+
+    .text-primary {
+        color: #007bff !important;
+    }
+
+    .text-muted {
+        color: #6c757d !important;
+    }
+</style>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script>
+        // Bootstrap validation
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })();
+
+        // Toggle password visibility
         function togglePassword() {
             const passwordInput = document.getElementById("passwordInput");
             const toggleIcon = document.getElementById("togglePasswordIcon");
