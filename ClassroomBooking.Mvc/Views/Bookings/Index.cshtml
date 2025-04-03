@@ -30,10 +30,11 @@
 </div>
 
 <table style="width:100%; border-collapse: collapse; border: 1px solid #ccc;">
-    <thead style="background-color: #9d2fc0;color: #fff;"
+    <thead style="background-color: #9d2fc0;color: #fff;">
         <tr>
             <th style="padding: 8px; border:1px solid #ccc;">ID</th>
             <th style="padding: 8px; border:1px solid #ccc;">Room</th>
+            <th style="padding: 8px; border:1px solid #ccc;">Seat Booked</th>
             <th style="padding: 8px; border:1px solid #ccc;">Start Time</th>
             <th style="padding: 8px; border:1px solid #ccc;">End Time</th>
             <th style="padding: 8px; border:1px solid #ccc;">Purpose</th>
@@ -55,6 +56,7 @@
                 <tr>
                     <td style="padding: 8px; border:1px solid #ccc;">@b.BookingId</td>
                     <td style="padding: 8px; border:1px solid #ccc;">@(b.RoomSlots.FirstOrDefault()?.Room?.RoomName ?? "-")</td>
+                    <td style="padding: 8px; border:1px solid #ccc;">@(b.RoomSlots.FirstOrDefault()?.SeatsBooked.ToString() ?? "-")</td>
                     <td style="padding: 8px; border:1px solid #ccc;">@b.StartTime.ToString("dd/MM/yyyy HH:mm")</td>
                     <td style="padding: 8px; border:1px solid #ccc;">@b.EndTime.ToString("dd/MM/yyyy HH:mm")</td>
                     <td style="padding: 8px; border:1px solid #ccc;">@b.Purpose</td>

@@ -74,6 +74,7 @@
                             <th>ID</th>
                             <th>Student</th>
                             <th>Room</th>
+                            <th>Seat Booked</th>
                             <th>Start Time</th>
                             <th>End Time</th>
                             <th>Status</th>
@@ -92,6 +93,12 @@
                                     @foreach (var rs in booking.RoomSlots)
                                     {
                                         @rs.Room?.RoomName
+                                    }
+                                </td>
+                                <td>
+                                    @foreach (var rs in booking.RoomSlots)
+                                    {
+                                        @( rs.SeatsBooked)
                                     }
                                 </td>
                                 <td>@booking.StartTime.ToString("yyyy-MM-dd HH:mm")</td>
