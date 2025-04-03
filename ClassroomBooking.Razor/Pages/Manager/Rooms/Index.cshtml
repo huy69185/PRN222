@@ -4,100 +4,210 @@
     ViewData["Title"] = "Manage Rooms";
 }
 
-<div class="container mt-5">
-    <h2 class="text-center mb-4">Manage Rooms</h2>
-    <a asp-page="Create" class="btn btn-primary mb-3">Create New Room</a>
-
-    @if (Model.ModelState.ErrorCount > 0)
-    {
-        <div class="alert alert-danger">
-            @foreach (var error in Model.ModelState.Values.SelectMany(v => v.Errors))
-            {
-                <p>@error.ErrorMessage</p>
-            }
+<div class="container py-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0"><i class="bi bi-house-door me-2"></i>Manage Rooms</h2>
         </div>
-    }
+        <div class="card-body p-4">
+            <!-- Filter and Search -->
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <select id="statusFilter" class="form-select">
+                            <option value="">All Statuses</option>
+                            <option value="Available">Available</option>
+                            <option value="Occupied">Occupied</option>
+                            <option value="Maintenance">Maintenance</option>
+                        </select>
+                        <label for="statusFilter">Filter by Status</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search by Room Name" />
+                        <label for="searchInput">Search by Room Name</label>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-end justify-content-end">
+                    <a asp-page="Create" class="btn btn-success btn-lg">
+                        <i class="bi bi-plus-circle me-2"></i>Create New Room
+                    </a>
+                </div>
+            </div>
 
-    <table class="table table-striped">
-        <thead class="table-dark">
-            <tr>
-                <th>Room Name</th>
-                <th>Capacity</th>
-                <th>Available Seats</th> <!-- Thêm cột mới -->
-                <th>Campus</th>
-                <th>Status</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var room in Model.Rooms)
+            <!-- Error Messages -->
+            @if (Model.ModelState.ErrorCount > 0)
             {
-                <tr>
-                    <td>@room.RoomName</td>
-                    <td>@room.Capacity</td>
-                    <td>@Model.CapacityLeft[room.RoomId]</td> <!-- Hiển thị số ghế còn lại -->
-                    <td>@room.Campus?.CampusName</td>
-                    <td>
-                        @if (room.Status == "Maintenance")
-                        {
-                            <span class="text-warning">@room.Status</span>
-                        }
-                        else if (room.Status == "Available")
-                        {
-                            <span class="text-success">@room.Status</span>
-                        }
-                        else if (room.Status == "Occupied")
-                        {
-                            <span class="text-danger">@room.Status</span>
-                        }
-                        else
-                        {
-                            @room.Status
-                        }
-                    </td>
-                    <td>
-                        <a asp-page="Edit" asp-route-id="@room.RoomId" class="btn btn-sm btn-warning">Edit</a>
-                        <a asp-page="Delete" asp-route-id="@room.RoomId" class="btn btn-sm btn-danger">Delete</a>
-                        <a asp-page="Details" asp-route-id="@room.RoomId" class="btn btn-sm btn-info">Details</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-
-    <!-- Pagination Controls -->
-    <div class="d-flex justify-content-between align-items-center mt-3">
-        <div>
-            <p>Page @Model.CurrentPage of @Model.TotalPages</p>
-        </div>
-        <div>
-            <!-- Previous Button -->
-            @if (Model.CurrentPage > 1)
-            {
-                <a asp-page="/Manager/Rooms/Index" asp-route-pageNumber="@(Model.CurrentPage - 1)" class="btn btn-secondary">
-                    <i class="bi bi-arrow-left"></i> Previous
-                </a>
-            }
-            else
-            {
-                <button class="btn btn-secondary" disabled>
-                    <i class="bi bi-arrow-left"></i> Previous
-                </button>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @foreach (var error in Model.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
             }
 
-            <!-- Next Button -->
-            @if (Model.CurrentPage < Model.TotalPages)
-            {
-                <a asp-page="/Manager/Rooms/Index" asp-route-pageNumber="@(Model.CurrentPage + 1)" class="btn btn-secondary ms-2">
-                    Next <i class="bi bi-arrow-right"></i>
-                </a>
-            }
-            else
-            {
-                <button class="btn btn-secondary ms-2" disabled>
-                    Next <i class="bi bi-arrow-right"></i>
-                </button>
-            }
+            <!-- Rooms Table -->
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle" id="roomsTable">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Room Name</th>
+                            <th>Capacity</th>
+                            <th>Available Seats</th>
+                            <th>Campus</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var room in Model.Rooms)
+                        {
+                            <tr data-status="@room.Status">
+                                <td>@room.RoomName</td>
+                                <td>@room.Capacity</td>
+                                <td>@Model.CapacityLeft[room.RoomId]</td>
+                                <td>@room.Campus?.CampusName</td>
+                                <td>
+                                    <span class="@(room.Status == "Maintenance" ? "text-warning" : room.Status == "Available" ? "text-success" : room.Status == "Occupied" ? "text-danger" : "")">
+                                        @room.Status
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a asp-page="Edit" asp-route-id="@room.RoomId" class="btn btn-sm btn-warning">
+                                            <i class="bi bi-pencil me-1"></i>Edit
+                                        </a>
+                                        <a asp-page="Delete" asp-route-id="@room.RoomId" class="btn btn-sm btn-danger">
+                                            <i class="bi bi-trash me-1"></i>Delete
+                                        </a>
+                                        <a asp-page="Details" asp-route-id="@room.RoomId" class="btn btn-sm btn-info">
+                                            <i class="bi bi-info-circle me-1"></i>Details
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <div>
+                    <p class="mb-0">Page @Model.CurrentPage of @Model.TotalPages</p>
+                </div>
+                <div>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination mb-0">
+                            <li class="page-item @(Model.CurrentPage > 1 ? "" : "disabled")">
+                                <a class="page-link" asp-page="/Manager/Rooms/Index" asp-route-pageNumber="@(Model.CurrentPage - 1)">
+                                    <i class="bi bi-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            @for (int i = 1; i <= Model.TotalPages; i++)
+                            {
+                                <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                                    <a class="page-link" asp-page="/Manager/Rooms/Index" asp-route-pageNumber="@i">@i</a>
+                                </li>
+                            }
+                            <li class="page-item @(Model.CurrentPage < Model.TotalPages ? "" : "disabled")">
+                                <a class="page-link" asp-page="/Manager/Rooms/Index" asp-route-pageNumber="@(Model.CurrentPage + 1)">
+                                    Next <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<style>
+    .card {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card-header {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .table-responsive {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .pagination .page-link {
+        color: #007bff;
+    }
+
+    .pagination .page-item.active .page-link {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-group .btn {
+        margin-right: 0.25rem;
+    }
+
+    .form-floating > label {
+        color: #666;
+    }
+
+    .form-control:focus, .form-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+</style>
+
+@section Scripts {
+    <script>
+        // Filter and Search functionality
+        (function () {
+            const statusFilter = document.getElementById('statusFilter');
+            const searchInput = document.getElementById('searchInput');
+            const table = document.getElementById('roomsTable');
+            const rows = table.querySelectorAll('tbody tr');
+
+            function filterAndSearch() {
+                const selectedStatus = statusFilter.value.toLowerCase();
+                const searchText = searchInput.value.toLowerCase();
+
+                rows.forEach(row => {
+                    const roomName = row.cells[0].textContent.toLowerCase();
+                    const status = row.getAttribute('data-status').toLowerCase();
+
+                    // Kiểm tra điều kiện filter và search
+                    const matchesStatus = selectedStatus === '' || status === selectedStatus;
+                    const matchesSearch = roomName.includes(searchText);
+
+                    // Hiển thị hoặc ẩn hàng
+                    if (matchesStatus && matchesSearch) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            }
+
+            // Gắn sự kiện cho filter và search
+            statusFilter.addEventListener('change', filterAndSearch);
+            searchInput.addEventListener('input', filterAndSearch);
+
+            // Gọi hàm lần đầu để áp dụng filter mặc định (nếu có)
+            filterAndSearch();
+        })();
+    </script>
+}

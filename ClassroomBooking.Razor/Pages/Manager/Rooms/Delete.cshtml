@@ -4,44 +4,105 @@
     ViewData["Title"] = "Set Room to Maintenance";
 }
 
-<div class="container mt-4">
-    <div class="card shadow-lg p-4 rounded">
-        <h2 class="text-warning">Confirm Set to Maintenance</h2>
-        <p class="text-muted">Are you sure you want to set this room to Maintenance? This will prevent the room from being booked until its status is changed. All future bookings for this room will be cancelled.</p>
-        <hr />
-
-        <dl class="row">
-            <dt class="col-sm-3 fw-bold">Room Name:</dt>
-            <dd class="col-sm-9">@Html.DisplayFor(model => model.Room.RoomName)</dd>
-
-            <dt class="col-sm-3 fw-bold">Capacity:</dt>
-            <dd class="col-sm-9">@Html.DisplayFor(model => model.Room.Capacity)</dd>
-
-            <dt class="col-sm-3 fw-bold">Campus:</dt>
-            <dd class="col-sm-9">@Html.DisplayFor(model => model.Room.Campus.CampusName)</dd>
-
-            <dt class="col-sm-3 fw-bold">Status:</dt>
-            <dd class="col-sm-9">@Html.DisplayFor(model => model.Room.Status)</dd>
-
-            <dt class="col-sm-3 fw-bold">Description:</dt>
-            <dd class="col-sm-9">@Html.DisplayFor(model => model.Room.Description)</dd>
-        </dl>
-
-        <form method="post">
-            <input type="hidden" asp-for="Room.RoomId" />
-            <div class="d-flex justify-content-between">
-                <a asp-page="Index" class="btn btn-secondary">
-                    <i class="bi bi-arrow-left"></i> Back to List
-                </a>
-                <button type="submit" class="btn btn-warning">
-                    <i class="bi bi-tools"></i> Set to Maintenance
-                </button>
+<div class="container py-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-warning text-white">
+            <h2 class="mb-0"><i class="bi bi-tools me-2"></i>Set Room to Maintenance</h2>
+        </div>
+        <div class="card-body p-4">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <i class="bi bi-exclamation-triangle me-2"></i>
+                Are you sure you want to set this room to Maintenance? This will prevent the room from being booked until its status is changed. All future bookings for this room will be cancelled.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-        </form>
 
-        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
-        {
-            <div class="alert alert-danger mt-3">@Model.ErrorMessage</div>
-        }
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @Model.ErrorMessage
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="card bg-light p-3">
+                        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-house me-2"></i>Room Details</h5>
+                        <dl class="row mb-0">
+                            <dt class="col-sm-4 fw-bold">Room Name:</dt>
+                            <dd class="col-sm-8">@Html.DisplayFor(model => model.Room.RoomName)</dd>
+
+                            <dt class="col-sm-4 fw-bold">Capacity:</dt>
+                            <dd class="col-sm-8">@Html.DisplayFor(model => model.Room.Capacity)</dd>
+
+                            <dt class="col-sm-4 fw-bold">Campus:</dt>
+                            <dd class="col-sm-8">@Html.DisplayFor(model => model.Room.Campus.CampusName)</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card bg-light p-3">
+                        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-info-circle me-2"></i>Additional Info</h5>
+                        <dl class="row mb-0">
+                            <dt class="col-sm-4 fw-bold">Status:</dt>
+                            <dd class="col-sm-8">@Html.DisplayFor(model => model.Room.Status)</dd>
+
+                            <dt class="col-sm-4 fw-bold">Description:</dt>
+                            <dd class="col-sm-8">@Html.DisplayFor(model => model.Room.Description)</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <form method="post" class="mt-4">
+                <input type="hidden" asp-for="Room.RoomId" />
+                <div class="d-flex justify-content-between">
+                    <a asp-page="Index" class="btn btn-outline-secondary btn-lg">
+                        <i class="bi bi-arrow-left me-2"></i>Back to List
+                    </a>
+                    <button type="submit" class="btn btn-warning btn-lg">
+                        <i class="bi bi-tools me-2"></i>Set to Maintenance
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
+
+<style>
+    .card {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card-header {
+        padding: 1.5rem;
+    }
+
+    .card.bg-light {
+        border: 1px solid #e9ecef;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+    .alert {
+        margin-bottom: 1.5rem;
+    }
+
+    dl dt {
+        color: #555;
+    }
+
+    dl dd {
+        color: #333;
+    }
+</style>
