@@ -1,54 +1,28 @@
-﻿@using Microsoft.AspNetCore.Http
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ClassroomBooking.Presentation</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <title>@ViewData["Title"] - ClassroomBooking</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <style>
-        /* Tùy chỉnh màu cho navbar và hiệu ứng hover */
-        .navbar-custom {
-            background-color: #4a90e2; /* Màu xanh dương, bạn có thể thay đổi */
-        }
-
-            .navbar-custom .nav-link {
-                color: #ffffff;
-                transition: background-color 0.3s ease, color 0.3s ease;
-            }
-
-                .navbar-custom .nav-link:hover {
-                    background-color: rgba(255, 255, 255, 0.2);
-                    color: #ffffff;
-                }
-
-            .navbar-custom .navbar-brand {
-                color: #ffffff;
-            }
-
-                .navbar-custom .navbar-brand:hover {
-                    color: #ffffff;
-                }
-    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark navbar-custom border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">ClassroomBooking</a>
+                <a class="navbar-brand" asp-page="/Index">ClassroomBooking</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
-                        <!-- Bạn có thể thêm các mục khác nếu cần -->
+                        <!-- Menu tùy chọn -->
                     </ul>
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated)
                         {
+
                             var userRole = User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
 
                             @if (userRole == "Manager")
@@ -63,26 +37,27 @@
                             else
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-page="/Bookings/Booking">View Bookings</a>
+                                    <a class="nav-link" href="http://localhost:5000/Bookings/Index"> View Bookings</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-page="/Bookings/Create">Create Booking</a>
+                                    <a class="nav-link" href="http://localhost:5000/Bookings/Create">  Create Booking</a>
                                 </li>
                             }
 
+
                             <li class="nav-item">
-                                <form method="post" asp-area="" asp-page="/Account/Logout">
-                                    <button type="submit" class="nav-link btn btn-danger text-white">Logout</button>
+                                <form method="post" asp-page="/Account/Logout">
+                                    <button type="submit" class="btn btn-link nav-link">Logout</button>
                                 </form>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link btn btn-outline-light me-2" asp-area="" asp-page="/Account/Login">Login</a>
+                                <a class="nav-link" asp-page="/Account/Login">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn btn-light text-dark" asp-area="" asp-page="/Account/Signup">Sign Up</a>
+                                <a class="nav-link" asp-page="/Account/Signup">Sign Up</a>
                             </li>
                         }
                     </ul>
@@ -90,21 +65,60 @@
             </div>
         </nav>
     </header>
+
     <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        <!-- Vùng hiển thị thông báo SignalR -->
+        <div id="notifications"></div>
+        @RenderBody()
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container text-center">
-            © 2025 - ClassroomBooking.Presentation - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            © 2025 - ClassroomBooking - <a asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    <!-- Thư viện JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Thư viện SignalR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+    <script>
+        // Nếu cần dùng URL đầy đủ, ví dụ: "http://localhost:5000/bookingHub" nếu hub nằm ở MVC
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/bookingHub")
+            .configureLogging(signalR.LogLevel.Information)
+            .build();
+
+        connection.start()
+            .then(() => console.log("SignalR connected successfully."))
+            .catch(err => console.error("Error connecting to SignalR:", err.toString()));
+
+        // Lắng nghe sự kiện liên quan đến Room
+        connection.on("RoomCreated", (data) => {
+            console.log("Received RoomCreated event:", data);
+            // Ví dụ: reload trang để cập nhật danh sách
+            window.location.reload();
+        });
+
+        connection.on("RoomUpdated", (data) => {
+            console.log("Received RoomUpdated event:", data);
+            window.location.reload();
+        });
+
+        connection.on("RoomDeleted", (data) => {
+            console.log("Received RoomDeleted event:", data);
+            window.location.reload();
+        });
+
+        // Lắng nghe sự kiện liên quan đến Booking (ví dụ cập nhật trạng thái)
+        connection.on("BookingUpdated", (data) => {
+            console.log("Received BookingUpdated event:", data);
+            window.location.reload();
+        });
+
+        // Các sự kiện khác nếu cần...
+    </script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

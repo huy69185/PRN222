@@ -19,7 +19,7 @@ namespace ClassroomBooking.Service.Interfaces
         Task<bool> UpdateBookingStatusRazorAsync(int bookingId, string status, string managerUserCode);
         Task<bool> DeleteBookingAsync(int bookingId);
         Task<int> CalculateCapacityLeftAsync(int roomId, DateTime start, DateTime end);
-        Task CreateBookingWithRoomSlotAsync(BookingDto dto, int roomId, int seatsWanted);
+        Task<Booking> CreateBookingWithRoomSlotAsync(BookingDto dto, int roomId, int seatsWanted);
         Task<List<Booking>> GetBookingsByRoomIdAsync(int roomId);
 
     }

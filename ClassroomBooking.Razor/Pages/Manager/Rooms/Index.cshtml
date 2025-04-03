@@ -37,7 +37,24 @@
                     <td>@room.Capacity</td>
                     <td>@Model.CapacityLeft[room.RoomId]</td> <!-- Hiển thị số ghế còn lại -->
                     <td>@room.Campus?.CampusName</td>
-                    <td>@room.Status</td>
+                    <td>
+                        @if (room.Status == "Maintenance")
+                        {
+                            <span class="text-warning">@room.Status</span>
+                        }
+                        else if (room.Status == "Available")
+                        {
+                            <span class="text-success">@room.Status</span>
+                        }
+                        else if (room.Status == "Occupied")
+                        {
+                            <span class="text-danger">@room.Status</span>
+                        }
+                        else
+                        {
+                            @room.Status
+                        }
+                    </td>
                     <td>
                         <a asp-page="Edit" asp-route-id="@room.RoomId" class="btn btn-sm btn-warning">Edit</a>
                         <a asp-page="Delete" asp-route-id="@room.RoomId" class="btn btn-sm btn-danger">Delete</a>

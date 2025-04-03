@@ -14,6 +14,18 @@ builder.Services.AddDataProtection()
     .PersistKeysToFileSystem(new DirectoryInfo(@"C:\SharedKeys"))
     .SetApplicationName("ClassroomBookingApp");
 
+// Thêm CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowRazorPages", builder =>
+    {
+        builder.WithOrigins("http://localhost:5001") // Cho phép Razor Pages
+               .AllowAnyMethod()
+               .AllowAnyHeader()
+               .AllowCredentials(); // Cần thiết cho SignalR
+    });
+});
+
 builder.Services.AddDbContext<ClassroomBookingDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ClassroomBookingDB")));
 
@@ -49,6 +61,7 @@ builder.Services.AddRazorPages();           // Dành cho Razor Pages
 
 var app = builder.Build();
 
+app.UseCors("AllowRazorPages");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();

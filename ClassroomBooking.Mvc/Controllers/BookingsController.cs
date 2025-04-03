@@ -2,9 +2,12 @@
 using ClassroomBooking.Repository.Entities;
 using ClassroomBooking.Repository.UnitOfWork;
 using ClassroomBooking.Service.Dtos;
+using ClassroomBooking.Service.Hubs;
 using ClassroomBooking.Service.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Logging;
 
 namespace ClassroomBooking.Mvc.Controllers
 {
@@ -17,6 +20,7 @@ namespace ClassroomBooking.Mvc.Controllers
         private readonly IUsersService _usersService;
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<BookingsController> _logger;
+        private readonly IHubContext<BookingHub> _hubContext;
 
         public BookingsController(
             IBookingService bookingService,
@@ -24,7 +28,8 @@ namespace ClassroomBooking.Mvc.Controllers
             ICampusService campusService,
             IUsersService usersService,
             ILogger<BookingsController> logger,
-            IUnitOfWork unitOfWork)
+            IUnitOfWork unitOfWork,
+            IHubContext<BookingHub> hubContext)
         {
             _bookingService = bookingService;
             _roomService = roomService;
@@ -32,6 +37,7 @@ namespace ClassroomBooking.Mvc.Controllers
             _usersService = usersService;
             _logger = logger;
             _unitOfWork = unitOfWork;
+            _hubContext = hubContext;
         }
 
         // GET: /Bookings/Index
@@ -55,17 +61,14 @@ namespace ClassroomBooking.Mvc.Controllers
                 statusFilter
             );
 
-            // Calculate total pages
             var totalBookings = bookingDtos.Count;
             var totalPages = (int)Math.Ceiling(totalBookings / (double)pageSize);
 
-            // Fetch bookings for the current page
             var bookingsForPage = bookingDtos
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .ToList();
 
-            // Store filter values and pagination info in ViewBag
             ViewBag.SearchRoom = searchRoom;
             ViewBag.SearchPurpose = searchPurpose;
             ViewBag.StatusFilter = statusFilter;
@@ -99,10 +102,9 @@ namespace ClassroomBooking.Mvc.Controllers
                 StartTime = DateTime.Now,
                 EndTime = DateTime.Now.AddHours(1),
                 CapacityLeft = 0,
-                SelectedCampusId = user.CampusId // Assign user's CampusId
+                SelectedCampusId = user.CampusId
             };
 
-            // Restore data from TempData if available
             if (TempData["Purpose"] != null) model.Purpose = TempData["Purpose"].ToString();
             if (TempData["StartTime"] != null) model.StartTime = DateTime.Parse(TempData["StartTime"].ToString());
             if (TempData["EndTime"] != null) model.EndTime = DateTime.Parse(TempData["EndTime"].ToString());
@@ -110,11 +112,9 @@ namespace ClassroomBooking.Mvc.Controllers
             if (TempData["SelectedRoomId"] != null) model.SelectedRoomId = int.Parse(TempData["SelectedRoomId"].ToString());
             if (TempData["CapacityLeft"] != null) model.CapacityLeft = int.Parse(TempData["CapacityLeft"].ToString());
 
-            // Fetch only the user's campus
             var campus = await _campusService.GetAllCampusesAsync();
             ViewBag.CampusList = campus.Where(c => c.CampusId == user.CampusId).ToList();
 
-            // Fetch only available rooms in the user's campus
             var rooms = await _roomService.GetRoomsByCampusAsync(user.CampusId);
             ViewBag.RoomList = rooms;
 
@@ -125,7 +125,6 @@ namespace ClassroomBooking.Mvc.Controllers
         [HttpPost]
         public IActionResult UpdateCampus(BookingCreateModel model)
         {
-            // Store form state in TempData
             TempData["Purpose"] = model.Purpose;
             TempData["StartTime"] = model.StartTime.ToString("o");
             TempData["EndTime"] = model.EndTime.ToString("o");
@@ -156,10 +155,8 @@ namespace ClassroomBooking.Mvc.Controllers
                 return Redirect("http://localhost:5001/Account/Login");
             }
 
-            // Ensure the user's CampusId is used
             model.SelectedCampusId = user.CampusId;
 
-            // Store form state in TempData
             TempData["Purpose"] = model.Purpose;
             TempData["StartTime"] = model.StartTime.ToString("o");
             TempData["EndTime"] = model.EndTime.ToString("o");
@@ -167,7 +164,6 @@ namespace ClassroomBooking.Mvc.Controllers
             TempData["SelectedCampusId"] = model.SelectedCampusId.ToString();
             TempData["SelectedRoomId"] = model.SelectedRoomId.ToString();
 
-            // Calculate CapacityLeft
             if (model.SelectedRoomId > 0)
             {
                 var room = await _roomService.GetRoomByIdAsync(model.SelectedRoomId);
@@ -221,7 +217,7 @@ namespace ClassroomBooking.Mvc.Controllers
             }
 
             model.StudentId = user.USerId;
-            model.SelectedCampusId = user.CampusId; // Ensure the user's CampusId is used
+            model.SelectedCampusId = user.CampusId;
 
             if (!ModelState.IsValid)
             {
@@ -232,7 +228,6 @@ namespace ClassroomBooking.Mvc.Controllers
                 return View(model);
             }
 
-            // Check room status before creating booking
             var room = await _roomService.GetRoomByIdAsync(model.SelectedRoomId);
             if (room == null || room.Status != "Available" || room.CampusId != user.CampusId)
             {
@@ -242,7 +237,6 @@ namespace ClassroomBooking.Mvc.Controllers
                 return View(model);
             }
 
-            // Check remaining slots
             model.CapacityLeft = await _bookingService.CalculateCapacityLeftAsync(
                 model.SelectedRoomId, model.StartTime, model.EndTime);
 
@@ -273,7 +267,11 @@ namespace ClassroomBooking.Mvc.Controllers
                     BookingStatus = "Pending"
                 };
 
-                await _bookingService.CreateBookingWithRoomSlotAsync(dto, model.SelectedRoomId, model.SeatsWanted);
+                var booking = await _bookingService.CreateBookingWithRoomSlotAsync(dto, model.SelectedRoomId, model.SeatsWanted);
+
+                // Gửi thông báo qua SignalR
+                _logger.LogInformation("Sending BookingCreated event for booking {0}", booking.BookingId);
+                await _hubContext.Clients.All.SendAsync("BookingCreated", new { bookingId = booking.BookingId });
 
                 _logger.LogInformation("Booking created successfully for StudentId: {0}", model.StudentId);
                 return RedirectToAction("Index");
@@ -301,7 +299,6 @@ namespace ClassroomBooking.Mvc.Controllers
 
             try
             {
-                // Fetch booking by ID
                 var booking = await _bookingService.GetBookingByIdAsync(id);
                 if (booking == null)
                 {
@@ -310,7 +307,6 @@ namespace ClassroomBooking.Mvc.Controllers
                     return RedirectToAction("Index", new { searchRoom, searchPurpose, statusFilter, pageNumber });
                 }
 
-                // Check if the booking belongs to the user
                 var user = await _usersService.GetUserAsync(userCode);
                 if (booking.StudentId != user.USerId)
                 {
@@ -319,7 +315,6 @@ namespace ClassroomBooking.Mvc.Controllers
                     return RedirectToAction("Index", new { searchRoom, searchPurpose, statusFilter, pageNumber });
                 }
 
-                // Allow cancellation only if status is "Pending" or "Approved"
                 if (booking.BookingStatus != "Pending" && booking.BookingStatus != "Approved")
                 {
                     _logger.LogWarning("Booking {0} cannot be cancelled due to status: {1}", id, booking.BookingStatus);
@@ -327,18 +322,13 @@ namespace ClassroomBooking.Mvc.Controllers
                     return RedirectToAction("Index", new { searchRoom, searchPurpose, statusFilter, pageNumber });
                 }
 
-                // Update status to "Cancelled"
                 booking.BookingStatus = "Cancelled";
                 _unitOfWork.BookingRepository.Update(booking);
                 await _unitOfWork.SaveChangesAsync();
 
-                // Update room status if needed
-                var roomSlot = booking.RoomSlots.FirstOrDefault();
-                if (roomSlot != null)
-                {
-                    int capacityLeft = await _bookingService.CalculateCapacityLeftAsync(roomSlot.RoomId, booking.StartTime, booking.EndTime);
-                    await _roomService.UpdateRoomStatusBasedOnCapacityAsync(roomSlot.RoomId, capacityLeft);
-                }
+                // Gửi thông báo qua SignalR
+                _logger.LogInformation("Sending BookingCancelled event for booking {0}", id);
+                await _hubContext.Clients.All.SendAsync("BookingCancelled", new { bookingId = id });
 
                 _logger.LogInformation("Booking {0} cancelled successfully by user {1}.", id, userCode);
                 return RedirectToAction("Index", new { searchRoom, searchPurpose, statusFilter, pageNumber });

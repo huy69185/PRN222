@@ -30,7 +30,7 @@
 </div>
 
 <table style="width:100%; border-collapse: collapse; border: 1px solid #ccc;">
-    <thead style="background-color: #2f74c0; color: #fff;">
+    <thead style="background-color: #9d2fc0;color: #fff;"
         <tr>
             <th style="padding: 8px; border:1px solid #ccc;">ID</th>
             <th style="padding: 8px; border:1px solid #ccc;">Room</th>
@@ -85,13 +85,11 @@
     </tbody>
 </table>
 
-<!-- Pagination -->
 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
     <div>
         <p>Page @ViewBag.CurrentPage of @ViewBag.TotalPages</p>
     </div>
     <div style="display: flex; gap: 0.5rem;">
-        <!-- Previous Button -->
         @if (ViewBag.CurrentPage > 1)
         {
             <a href="@Url.Action("Index", new { searchRoom = ViewBag.SearchRoom, searchPurpose = ViewBag.SearchPurpose, statusFilter = ViewBag.StatusFilter, pageNumber = ViewBag.CurrentPage - 1 })"
@@ -106,7 +104,6 @@
             </button>
         }
 
-        <!-- Next Button -->
         @if (ViewBag.CurrentPage < ViewBag.TotalPages)
         {
             <a href="@Url.Action("Index", new { searchRoom = ViewBag.SearchRoom, searchPurpose = ViewBag.SearchPurpose, statusFilter = ViewBag.StatusFilter, pageNumber = ViewBag.CurrentPage + 1 })"
@@ -124,29 +121,5 @@
 </div>
 
 @section Scripts {
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
-    <script>
-        const connection = new signalR.HubConnectionBuilder()
-            .withUrl("/bookingHub")
-            .build();
-
-        connection.start().then(() => console.log("SignalR connected"));
-
-        // Refresh the page when a booking is created, updated, or cancelled
-        connection.on("BookingCreated", (bookingId) => {
-            window.location.reload(); // Silent refresh
-        });
-
-        connection.on("BookingStatusUpdated", (bookingId) => {
-            window.location.reload(); // Silent refresh
-        });
-
-        connection.on("BookingCancelled", (bookingId) => {
-            window.location.reload(); // Silent refresh
-        });
-
-        connection.on("RoomUpdated", (roomId) => {
-            window.location.reload(); // Silent refresh
-        });
-    </script>
-    }
+    <!-- SignalR code is in Layout, so no duplicate code here -->
+}

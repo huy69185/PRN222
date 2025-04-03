@@ -3,139 +3,159 @@
     ViewData["Title"] = "Create Booking";
 }
 
-<h2>Create Booking</h2>
+<div class="container mt-5">
+    <h2 class="mb-4 text-center text-primary">Create Booking</h2>
 
-@if (TempData["Error"] != null)
-{
-    <div style="color: red; margin-bottom: 1rem;">@TempData["Error"]</div>
-}
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
 
-<!-- Bootstrap Modal for Pop-up -->
-<div class="modal fade" id="bookingErrorModal" tabindex="-1" aria-labelledby="bookingErrorModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="bookingErrorModalLabel">Booking Error</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="bookingErrorMessage">
-                <!-- Error message will be set dynamically -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <!-- Bootstrap Modal for Pop-up -->
+    <div class="modal fade" id="bookingErrorModal" tabindex="-1" aria-labelledby="bookingErrorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingErrorModalLabel">Booking Error</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="bookingErrorMessage">
+                    <!-- Error message will be set dynamically -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="card shadow-lg p-4 border-0" style="border-radius: 15px; background: linear-gradient(145deg, #f8f9fa, #e9ecef);">
+        <form method="post" id="bookingForm">
+            <input type="hidden" name="StudentId" value="@Model.StudentId" />
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label fw-bold text-dark">
+                    <i class="bi bi-bookmark-fill me-2 text-primary"></i>Purpose
+                </label>
+                <div class="col-sm-9">
+                    <input name="Purpose" class="form-control shadow-sm" value="@Model.Purpose" required />
+                    <span asp-validation-for="Purpose" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label fw-bold text-dark">
+                    <i class="bi bi-geo-alt-fill me-2 text-primary"></i>Campus
+                </label>
+                <div class="col-sm-9">
+                    <select name="SelectedCampusId" class="form-select shadow-sm"
+                            onchange="this.form.action='/Bookings/UpdateCampus'; this.form.submit()" required>
+                        <option value="">-- Select Campus --</option>
+                        @foreach (var c in ViewBag.CampusList)
+                        {
+                            <option value="@c.CampusId" @(Model.SelectedCampusId == c.CampusId ? "selected" : "")>@c.CampusName</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label fw-bold text-dark">
+                    <i class="bi bi-building me-2 text-primary"></i>Room
+                </label>
+                <div class="col-sm-9">
+                    <select name="SelectedRoomId" class="form-select shadow-sm"
+                            onchange="this.form.action='/Bookings/UpdateCapacity'; this.form.submit()" required>
+                        <option value="">-- Select Room --</option>
+                        @if (ViewBag.RoomList != null)
+                        {
+                            foreach (var room in ViewBag.RoomList)
+                            {
+                                <option value="@room.RoomId" @(Model.SelectedRoomId == room.RoomId ? "selected" : "")>@room.RoomName</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label fw-bold text-dark">
+                    <i class="bi bi-clock-fill me-2 text-primary"></i>Start Time
+                </label>
+                <div class="col-sm-9">
+                    <input name="StartTime" type="datetime-local" class="form-control shadow-sm"
+                           value="@(Model.StartTime != default(DateTime) ? Model.StartTime.ToString("yyyy-MM-ddTHH:mm") : "")"
+                           required onchange="this.form.action='/Bookings/UpdateCapacity'; this.form.submit()" />
+                    <span asp-validation-for="StartTime" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label fw-bold text-dark">
+                    <i class="bi bi-clock-fill me-2 text-primary"></i>End Time
+                </label>
+                <div class="col-sm-9">
+                    <input name="EndTime" type="datetime-local" class="form-control shadow-sm"
+                           value="@(Model.EndTime != default(DateTime) ? Model.EndTime.ToString("yyyy-MM-ddTHH:mm") : "")"
+                           required onchange="this.form.action='/Bookings/UpdateCapacity'; this.form.submit()" />
+                    <span asp-validation-for="EndTime" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label fw-bold text-dark">
+                    <i class="bi bi-chair me-2 text-primary"></i>Seats Left
+                </label>
+                <div class="col-sm-9">
+                    <div class="p-2 bg-light border rounded shadow-sm" id="seatsLeft">
+                        @Model.CapacityLeft
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label fw-bold text-dark">
+                    <i class="bi bi-people-fill me-2 text-primary"></i>Seats Wanted
+                </label>
+                <div class="col-sm-9">
+                    <input name="SeatsWanted" type="number" min="1" class="form-control shadow-sm"
+                           value="@Model.SeatsWanted" required />
+                    <span asp-validation-for="SeatsWanted" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end mt-4">
+                <button type="submit" class="btn btn-primary me-2 shadow-sm" style="border-radius: 8px; padding: 0.5rem 1.5rem;">
+                    <i class="bi bi-check-circle me-1"></i>Create
+                </button>
+                <button type="button" onclick="window.location.href='http://localhost:5000/Bookings/Index'"
+                        class="btn btn-secondary shadow-sm" style="border-radius: 8px; padding: 0.5rem 1.5rem;">
+                    <i class="bi bi-arrow-left me-1"></i>Back
+                </button>
+            </div>
+        </form>
     </div>
 </div>
 
-<form method="post" style="background-color:#fff; padding:1rem; border-radius:4px;" id="bookingForm">
-    <input type="hidden" name="StudentId" value="@Model.StudentId" />
-
-    <div style="margin-bottom:1rem;">
-        <label class="form-label" style="font-weight:bold;">Purpose</label>
-        <input name="Purpose" class="form-control" style="display:block; width:100%; padding:0.5rem;" value="@Model.Purpose" required />
-        <span asp-validation-for="Purpose" style="color:red;"></span>
-    </div>
-
-    <div style="margin-bottom:1rem;">
-        <label class="form-label" style="font-weight:bold;">Campus</label>
-        <select name="SelectedCampusId" class="form-control" style="display:block; width:100%; padding:0.5rem;"
-                onchange="this.form.action='/Bookings/UpdateCampus'; this.form.submit()" required>
-            <option value="">-- Select Campus --</option>
-            @foreach (var c in ViewBag.CampusList)
-            {
-                <option value="@c.CampusId" @(Model.SelectedCampusId == c.CampusId ? "selected" : "")>@c.CampusName</option>
-            }
-        </select>
-    </div>
-
-    <div style="margin-bottom:1rem;">
-        <label class="form-label" style="font-weight:bold;">Room</label>
-        <select name="SelectedRoomId" class="form-control" style="display:block; width:100%; padding:0.5rem;"
-                onchange="this.form.action='/Bookings/UpdateCapacity'; this.form.submit()" required>
-            <option value="">-- Select Room --</option>
-            @if (ViewBag.RoomList != null)
-            {
-                foreach (var room in ViewBag.RoomList)
-                {
-                    <option value="@room.RoomId" @(Model.SelectedRoomId == room.RoomId ? "selected" : "")>@room.RoomName</option>
-                }
-            }
-        </select>
-    </div>
-
-    <div style="margin-bottom:1rem;">
-        <label class="form-label" style="font-weight:bold;">Start Time</label>
-        <input name="StartTime" type="datetime-local" class="form-control" style="display:block; width:100%; padding:0.5rem;"
-               value="@(Model.StartTime != default(DateTime) ? Model.StartTime.ToString("yyyy-MM-ddTHH:mm") : "")"
-               required onchange="this.form.action='/Bookings/UpdateCapacity'; this.form.submit()" />
-        <span asp-validation-for="StartTime" style="color:red;"></span>
-    </div>
-
-    <div style="margin-bottom:1rem;">
-        <label class="form-label" style="font-weight:bold;">End Time</label>
-        <input name="EndTime" type="datetime-local" class="form-control" style="display:block; width:100%; padding:0.5rem;"
-               value="@(Model.EndTime != default(DateTime) ? Model.EndTime.ToString("yyyy-MM-ddTHH:mm") : "")"
-               required onchange="this.form.action='/Bookings/UpdateCapacity'; this.form.submit()" />
-        <span asp-validation-for="EndTime" style="color:red;"></span>
-    </div>
-
-    <div style="margin-bottom:1rem;">
-        <label class="form-label" style="font-weight:bold;">Seats Left</label>
-        <div style="background-color:#f0f0f0; padding:0.5rem;" id="seatsLeft">
-            @Model.CapacityLeft
-        </div>
-    </div>
-
-    <div style="margin-bottom:1rem;">
-        <label class="form-label" style="font-weight:bold;">Seats Wanted</label>
-        <input name="SeatsWanted" type="number" min="1" class="form-control" style="display:block; width:100%; padding:0.5rem;"
-               value="@Model.SeatsWanted" required />
-        <span asp-validation-for="SeatsWanted" style="color:red;"></span>
-    </div>
-
-    <button type="submit" style="background-color:#2f74c0; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px;">
-        <i class="bi bi-check-circle"></i> Create
-    </button>
-    <button type="button" onclick="window.location.href='http://localhost:5000/Bookings/Index'" style="margin-left:1rem; background-color:#aaa; color:#fff; padding:0.5rem 1rem; border:none; border-radius:4px;">
-        <i class="bi bi-arrow-left"></i> Back
-    </button>
-</form>
-
 @section Scripts {
-    <!-- Include Bootstrap Icons (for the button icons) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- SignalR for real-time notifications -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
     <script>
-        // SignalR connection for real-time notifications
-        const connection = new signalR.HubConnectionBuilder()
-            .withUrl("/bookingHub")
-            .build();
-
-        connection.on("ReceiveBookingNotification", (message) => {
-            alert(message);
-        });
-
-        connection.start().catch(err => console.error(err.toString()));
-
-        // Client-side validation for booking
         document.getElementById("bookingForm").addEventListener("submit", function (event) {
             const seatsLeft = parseInt(document.getElementById("seatsLeft").innerText, 10);
             const seatsWanted = parseInt(document.querySelector("input[name='SeatsWanted']").value, 10);
 
-            // Check if the room is fully booked
             if (seatsLeft === 0) {
-                event.preventDefault(); // Prevent form submission
+                event.preventDefault();
                 document.getElementById("bookingErrorMessage").innerText = "The room is fully booked.";
                 const modal = new bootstrap.Modal(document.getElementById("bookingErrorModal"));
                 modal.show();
                 return;
             }
 
-            // Check if the requested seats exceed available seats
             if (seatsWanted > seatsLeft) {
-                event.preventDefault(); // Prevent form submission
+                event.preventDefault();
                 document.getElementById("bookingErrorMessage").innerText = "The room does not have enough seats available.";
                 const modal = new bootstrap.Modal(document.getElementById("bookingErrorModal"));
                 modal.show();

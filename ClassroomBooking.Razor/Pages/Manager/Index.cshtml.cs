@@ -1,9 +1,12 @@
 ﻿using ClassroomBooking.Repository.Entities;
 using ClassroomBooking.Repository.UnitOfWork;
+using ClassroomBooking.Service.Hubs;
 using ClassroomBooking.Service.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Logging;
 
 namespace ClassroomBooking.Presentation.Pages.Manager
 {
@@ -13,25 +16,32 @@ namespace ClassroomBooking.Presentation.Pages.Manager
         private readonly IBookingService _bookingService;
         private readonly IUsersService _usersService;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IHubContext<BookingHub> _hubContext;
+        private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(IBookingService bookingService, IUsersService usersService, IUnitOfWork unitOfWork)
+        public IndexModel(
+            IBookingService bookingService,
+            IUsersService usersService,
+            IUnitOfWork unitOfWork,
+            IHubContext<BookingHub> hubContext,
+            ILogger<IndexModel> logger)
         {
             _bookingService = bookingService;
             _usersService = usersService;
             _unitOfWork = unitOfWork;
+            _hubContext = hubContext;
+            _logger = logger;
         }
 
         public List<Booking> BookingList { get; set; } = new();
-        public int CurrentPage { get; set; } = 1; // Default to page 1
+        public int CurrentPage { get; set; } = 1;
         public int TotalPages { get; set; }
-        public int PageSize { get; set; } = 5; // 5 records per page
+        public int PageSize { get; set; } = 5;
 
         public async Task<IActionResult> OnGetAsync(int? pageNumber)
         {
-            // Set the current page (default to 1 if not provided)
             CurrentPage = pageNumber ?? 1;
 
-            // Lấy UserCode của Manager từ Claims
             var managerUserCode = User.Identity.Name;
             if (string.IsNullOrEmpty(managerUserCode))
             {
@@ -39,7 +49,6 @@ namespace ClassroomBooking.Presentation.Pages.Manager
                 return Page();
             }
 
-            // Lấy thông tin Manager, bao gồm CampusId
             var manager = await _usersService.GetUserAsync(managerUserCode);
             if (manager == null)
             {
@@ -47,18 +56,14 @@ namespace ClassroomBooking.Presentation.Pages.Manager
                 return Page();
             }
 
-            // Lấy tất cả bookings
             var allBookings = await _bookingService.GetAllBookingsAsync();
 
-            // Lọc bookings theo CampusId của Manager
             var filteredBookings = allBookings
                 .Where(b => b.RoomSlots.Any(rs => rs.Room != null && rs.Room.CampusId == manager.CampusId))
                 .ToList();
 
-            // Tính tổng số trang
             TotalPages = (int)Math.Ceiling(filteredBookings.Count / (double)PageSize);
 
-            // Lấy bookings cho trang hiện tại
             BookingList = filteredBookings
                 .Skip((CurrentPage - 1) * PageSize)
                 .Take(PageSize)
@@ -69,7 +74,6 @@ namespace ClassroomBooking.Presentation.Pages.Manager
 
         public async Task<IActionResult> OnPostUpdateStatusAsync(int bookingId, string bookingStatus)
         {
-            // Lấy UserCode của Manager từ Claims
             var managerUserCode = User.Identity.Name;
             if (string.IsNullOrEmpty(managerUserCode))
             {
@@ -77,7 +81,6 @@ namespace ClassroomBooking.Presentation.Pages.Manager
                 return RedirectToPage();
             }
 
-            // Lấy thông tin Manager, bao gồm CampusId
             var manager = await _usersService.GetUserAsync(managerUserCode);
             if (manager == null)
             {
@@ -85,7 +88,6 @@ namespace ClassroomBooking.Presentation.Pages.Manager
                 return RedirectToPage();
             }
 
-            // Lấy booking để kiểm tra CampusId
             var booking = await _bookingService.GetBookingByIdAsync(bookingId);
             if (booking == null)
             {
@@ -93,7 +95,6 @@ namespace ClassroomBooking.Presentation.Pages.Manager
                 return RedirectToPage();
             }
 
-            // Kiểm tra xem booking có thuộc campus của Manager không
             var isBookingInManagerCampus = booking.RoomSlots.Any(rs => rs.Room != null && rs.Room.CampusId == manager.CampusId);
             if (!isBookingInManagerCampus)
             {
@@ -101,14 +102,19 @@ namespace ClassroomBooking.Presentation.Pages.Manager
                 return RedirectToPage();
             }
 
-            // Cập nhật trạng thái booking
             var success = await _bookingService.UpdateBookingStatusRazorAsync(bookingId, bookingStatus, managerUserCode);
             if (!success)
             {
                 ModelState.AddModelError("", "Update status failed!");
             }
+            else
+            {
+                // Gửi thông báo qua SignalR
+                _logger.LogInformation("Sending BookingUpdated event for booking {0}, status: {1}", bookingId, bookingStatus);
+                await _hubContext.Clients.All.SendAsync("BookingUpdated", new { bookingId = bookingId });
+            }
 
-            return RedirectToPage(new { pageNumber = CurrentPage }); // Redirect to the current page after updating status
+            return RedirectToPage(new { pageNumber = CurrentPage });
         }
     }
 }

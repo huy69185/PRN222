@@ -94,13 +94,7 @@ namespace ClassroomBooking.Service
             _unitOfWork.BookingRepository.Update(booking);
             await _unitOfWork.SaveChangesAsync();
 
-            var roomSlot = booking.RoomSlots.FirstOrDefault();
-            if (roomSlot != null)
-            {
-                int capacityLeft = await CalculateCapacityLeftAsync(roomSlot.RoomId, booking.StartTime, booking.EndTime);
-                await _roomService.UpdateRoomStatusBasedOnCapacityAsync(roomSlot.RoomId, capacityLeft);
-            }
-
+            // Gửi thông báo qua SignalR
             await _hubContext.Clients.All.SendAsync("ReceiveBookingNotification", $"Booking {bookingId} updated to {status}");
         }
 
@@ -118,13 +112,6 @@ namespace ClassroomBooking.Service
             booking.BookingStatus = status;
             _unitOfWork.BookingRepository.Update(booking);
             await _unitOfWork.SaveChangesAsync();
-
-            var roomSlot = booking.RoomSlots.FirstOrDefault();
-            if (roomSlot != null)
-            {
-                int capacityLeft = await CalculateCapacityLeftAsync(roomSlot.RoomId, booking.StartTime, booking.EndTime);
-                await _roomService.UpdateRoomStatusBasedOnCapacityAsync(roomSlot.RoomId, capacityLeft);
-            }
 
             await _hubContext.Clients.All.SendAsync("ReceiveBookingNotification", $"Booking {bookingId} updated to {status}");
             return true;
@@ -145,13 +132,6 @@ namespace ClassroomBooking.Service
             await _unitOfWork.BookingRepository.DeleteAsync(booking);
             await _unitOfWork.SaveChangesAsync();
 
-            if (roomSlots.Any())
-            {
-                var roomId = roomSlots.First().RoomId;
-                int capacityLeft = await CalculateCapacityLeftAsync(roomId, booking.StartTime, booking.EndTime);
-                await _roomService.UpdateRoomStatusBasedOnCapacityAsync(roomId, capacityLeft);
-            }
-
             return true;
         }
 
@@ -171,23 +151,23 @@ namespace ClassroomBooking.Service
             int sumSeats = overlapBookings.Sum(b => b.RoomSlots.Where(rs => rs.RoomId == roomId)
                                             .Sum(rs => rs.SeatsBooked));
             int left = room.Capacity - sumSeats;
-            // Không gọi UpdateRoomStatusBasedOnCapacityAsync ở đây nữa
             return left < 0 ? 0 : left;
         }
 
-        public async Task CreateBookingWithRoomSlotAsync(BookingDto dto, int roomId, int seatsWanted)
+        // Sửa lại phương thức này để trả về đối tượng Booking
+        public async Task<Booking> CreateBookingWithRoomSlotAsync(BookingDto dto, int roomId, int seatsWanted)
         {
             if (dto.EndTime <= dto.StartTime)
                 throw new Exception("EndTime must be after StartTime!");
 
-            // Kiểm tra trạng thái phòng trước khi tạo booking
+            // Kiểm tra phòng tồn tại và trạng thái
             var room = await _roomService.GetRoomByIdAsync(roomId);
             if (room == null)
                 throw new Exception("Room not found.");
             if (room.Status != "Available")
                 throw new Exception("Selected room is not available for booking.");
 
-            // Kiểm tra số ghế còn lại
+            // Tính số ghế còn lại theo khoảng thời gian đặt của Student
             int capacityLeft = await CalculateCapacityLeftAsync(roomId, dto.StartTime, dto.EndTime);
             if (capacityLeft < seatsWanted)
                 throw new Exception("Not enough seats available in the selected room.");
@@ -204,24 +184,22 @@ namespace ClassroomBooking.Service
             };
 
             bookingEntity.RoomSlots = new List<RoomSlot>
-    {
-        new RoomSlot
-        {
-            RoomId = roomId,
-            SeatsBooked = seatsWanted,
-            SlotDate = dto.StartTime.Date
-        }
-    };
+            {
+                new RoomSlot
+                {
+                    RoomId = roomId,
+                    SeatsBooked = seatsWanted,
+                    SlotDate = dto.StartTime.Date
+                }
+            };
 
             await _unitOfWork.BookingRepository.AddAsync(bookingEntity);
             await _unitOfWork.SaveChangesAsync();
 
-            // Cập nhật trạng thái phòng sau khi tạo booking
-            capacityLeft = await CalculateCapacityLeftAsync(roomId, dto.StartTime, dto.EndTime);
-            await _roomService.UpdateRoomStatusBasedOnCapacityAsync(roomId, capacityLeft);
-
-            // Silent broadcast (dùng đúng tên phương thức đã định nghĩa trong BookingHub)
+            // Gửi thông báo qua SignalR khi booking được tạo
             await _hubContext.Clients.All.SendAsync("BookingCreated", bookingEntity.BookingId);
+
+            return bookingEntity;
         }
 
         public async Task<List<Booking>> GetBookingsByRoomIdAsync(int roomId)

@@ -11,6 +11,5 @@ namespace ClassroomBooking.Service.Interfaces
         Task UpdateRoomAsync(Room room, bool resetCapacity = false, int additionalSeats = 0);
         Task DeleteRoomAsync(int roomId);
         Task<List<Room>> GetRoomsByCampusAsync(int campusId);
-        Task UpdateRoomStatusBasedOnCapacityAsync(int roomId, int capacityLeft);
     }
 }
