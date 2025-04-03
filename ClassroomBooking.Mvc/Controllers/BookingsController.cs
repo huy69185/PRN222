@@ -43,7 +43,7 @@ namespace ClassroomBooking.Mvc.Controllers
         // GET: /Bookings/Index
         public async Task<IActionResult> Index(string searchRoom = "", string searchPurpose = "", string statusFilter = "", int pageNumber = 1)
         {
-            const int pageSize = 5; // 5 records per page
+            const int pageSize = 4; 
 
             var userCode = User.Identity?.Name;
             if (string.IsNullOrEmpty(userCode))

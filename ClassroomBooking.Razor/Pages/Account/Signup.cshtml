@@ -55,8 +55,8 @@
                 </label>
                 <div class="input-group">
                     <input asp-for="User.Password" type="password" class="form-control shadow-sm" placeholder="Enter your password" id="passwordInput" />
-                    <button type="button" class="btn btn-outline-secondary" onclick="togglePassword()">
-                        <i class="bi bi-eye" id="togglePasswordIcon"></i>Show
+                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                        <i class="bi bi-eye"></i>Show
                     </button>
                 </div>
                 <span asp-validation-for="User.Password" class="text-danger"></span>
@@ -103,18 +103,15 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script>
-        function togglePassword() {
-            const passwordInput = document.getElementById("passwordInput");
-            const toggleIcon = document.getElementById("togglePasswordIcon");
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                toggleIcon.classList.remove("bi-eye");
-                toggleIcon.classList.add("bi-eye-slash");
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            var passwordInput = document.getElementById('passwordInput');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                this.innerHTML = '<i class="bi bi-eye-slash"></i>Hide';
             } else {
-                passwordInput.type = "password";
-                toggleIcon.classList.remove("bi-eye-slash");
-                toggleIcon.classList.add("bi-eye");
+                passwordInput.type = 'password';
+                this.innerHTML = '<i class="bi bi-eye"></i>Show';
             }
-        }
+        });
     </script>
 }

@@ -3,125 +3,326 @@
     ViewData["Title"] = "My Bookings";
 }
 
-<h2 class="mb-4">My Bookings</h2>
+<!-- Áp dụng style từ "Manage Bookings" và giữ màu dropdown -->
+<style>
+    /* Style cho tiêu đề */
+    h2 {
+        color: #007bff; /* Màu xanh giống "Manage Bookings" */
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
 
-@if (TempData["Error"] != null)
-{
-    <div style="color: red; margin-bottom: 1rem;">@TempData["Error"]</div>
-}
+    /* Style cho form tìm kiếm */
+    .search-form {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
 
-<div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
-    <form method="get" style="display: flex; gap: 0.5rem;">
-        <input type="text" name="searchRoom" value="@ViewBag.SearchRoom" placeholder="Search by room..." style="padding: 0.5rem;" />
-        <input type="text" name="searchPurpose" value="@ViewBag.SearchPurpose" placeholder="Search by purpose..." style="padding: 0.5rem;" />
-        <select name="statusFilter" style="padding: 0.4rem;">
-            <option value="">All Status</option>
-            <option value="Approved" @(ViewBag.StatusFilter == "Approved" ? "selected" : "")>Approved</option>
-            <option value="Denied" @(ViewBag.StatusFilter == "Denied" ? "selected" : "")>Denied</option>
-            <option value="Pending" @(ViewBag.StatusFilter == "Pending" ? "selected" : "")>Pending</option>
-            <option value="Cancelled" @(ViewBag.StatusFilter == "Cancelled" ? "selected" : "")>Cancelled</option>
-        </select>
-        <button type="submit" style="padding: 0.5rem;">Search</button>
-    </form>
-
-    <a href="http://localhost:5000/Bookings/Create" style="background-color: #2f74c0; color: #fff; padding: 0.5rem 1rem; text-decoration: none; border-radius: 4px;">
-        Create Booking
-    </a>
-</div>
-
-<table style="width:100%; border-collapse: collapse; border: 1px solid #ccc;">
-    <thead style="background-color: #9d2fc0;color: #fff;">
-        <tr>
-            <th style="padding: 8px; border:1px solid #ccc;">ID</th>
-            <th style="padding: 8px; border:1px solid #ccc;">Room</th>
-            <th style="padding: 8px; border:1px solid #ccc;">Seat Booked</th>
-            <th style="padding: 8px; border:1px solid #ccc;">Start Time</th>
-            <th style="padding: 8px; border:1px solid #ccc;">End Time</th>
-            <th style="padding: 8px; border:1px solid #ccc;">Purpose</th>
-            <th style="padding: 8px; border:1px solid #ccc;">Status</th>
-            <th style="padding: 8px; border:1px solid #ccc;">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (Model == null || Model.Count == 0)
-        {
-            <tr>
-                <td colspan="7" style="padding: 8px; text-align: center;">No bookings found.</td>
-            </tr>
+        .search-form input, .search-form select {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 0.5rem;
+            font-size: 1rem;
+            width: 200px; /* Kích thước giống "Manage Bookings" */
         }
-        else
-        {
-            foreach (var b in Model)
-            {
-                <tr>
-                    <td style="padding: 8px; border:1px solid #ccc;">@b.BookingId</td>
-                    <td style="padding: 8px; border:1px solid #ccc;">@(b.RoomSlots.FirstOrDefault()?.Room?.RoomName ?? "-")</td>
-                    <td style="padding: 8px; border:1px solid #ccc;">@(b.RoomSlots.FirstOrDefault()?.SeatsBooked.ToString() ?? "-")</td>
-                    <td style="padding: 8px; border:1px solid #ccc;">@b.StartTime.ToString("dd/MM/yyyy HH:mm")</td>
-                    <td style="padding: 8px; border:1px solid #ccc;">@b.EndTime.ToString("dd/MM/yyyy HH:mm")</td>
-                    <td style="padding: 8px; border:1px solid #ccc;">@b.Purpose</td>
-                    <td style="padding: 8px; border:1px solid #ccc;">@b.BookingStatus</td>
-                    <td style="padding: 8px; border:1px solid #ccc;">
-                        @if (b.BookingStatus == "Pending" || b.BookingStatus == "Approved")
-                        {
-                            <form action="/Bookings/Cancel" method="post" style="display:inline;">
-                                <input type="hidden" name="id" value="@b.BookingId" />
-                                <input type="hidden" name="searchRoom" value="@ViewBag.SearchRoom" />
-                                <input type="hidden" name="searchPurpose" value="@ViewBag.SearchPurpose" />
-                                <input type="hidden" name="statusFilter" value="@ViewBag.StatusFilter" />
-                                <input type="hidden" name="pageNumber" value="@ViewBag.CurrentPage" />
-                                <button type="submit" style="background-color:#c02f2f; color:#fff; border:none; padding: 0.3rem 0.7rem; border-radius:4px;"
-                                        onclick="return confirm('Are you sure you want to cancel this booking?');">
-                                    Cancel
-                                </button>
-                            </form>
-                        }
-                        else
-                        {
-                            <span style="color:#999;">N/A</span>
-                        }
-                    </td>
-                </tr>
+
+        .search-form select {
+            width: 150px; /* Kích thước dropdown giống "Manage Bookings" */
+        }
+
+    /* Giữ lại màu cho dropdown statusFilter */
+    select[name="statusFilter"] option {
+        color: black; /* Màu mặc định */
+    }
+
+        select[name="statusFilter"] option[value="Approved"] {
+            color: #198754; /* Màu xanh theo Bootstrap text-success */
+            font-weight: bold;
+        }
+
+        select[name="statusFilter"] option[value="Denied"] {
+            color: #dc3545; /* Màu đỏ theo Bootstrap text-danger */
+            font-weight: bold;
+        }
+
+        select[name="statusFilter"] option[value="Pending"] {
+            color: #ffc107; /* Màu vàng theo Bootstrap text-warning */
+            font-weight: bold;
+        }
+
+        select[name="statusFilter"] option[value="Cancelled"] {
+            color: orange; /* Màu cam theo yêu cầu */
+            font-weight: bold;
+        }
+
+    /* Style cho nút Search */
+    .search-form button {
+        background-color: #007bff; /* Màu xanh giống "Manage Bookings" */
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+        .search-form button:hover {
+            background-color: #0056b3; /* Hiệu ứng hover */
+        }
+
+    /* Style cho nút Create Booking */
+    .create-booking-btn {
+        background-color: #28a745; /* Màu xanh lá giống "Manage Bookings" */
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+        .create-booking-btn:hover {
+            background-color: #218838; /* Hiệu ứng hover */
+            color: white;
+        }
+
+    /* Style cho bảng */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1rem;
+    }
+
+        table thead {
+            background-color: #343a40; /* Màu đen giống "Manage Bookings" */
+            color: white;
+        }
+
+        table th, table td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f8f9fa; /* Màu nền xen kẽ */
+        }
+
+    /* Style cho cột Status */
+    .text-success {
+        color: #28a745 !important;
+        font-weight: bold;
+    }
+
+    .text-danger {
+        color: #dc3545 !important;
+        font-weight: bold;
+    }
+
+    .text-warning {
+        color: #ffc107 !important;
+        font-weight: bold;
+    }
+
+    .text-muted {
+        color: #6c757d !important;
+        font-weight: bold;
+    }
+
+    /* Style cho nút Cancel */
+    .cancel-btn {
+        padding: 0.3rem 0.7rem;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-size: 0.9rem;
+        background-color: #dc3545; /* Màu đỏ giống "Manage Bookings" */
+    }
+
+        .cancel-btn:hover {
+            background-color: #c82333;
+        }
+
+    /* Style cho phân trang */
+    .pagination {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+        .pagination a, .pagination button {
+            padding: 0.5rem 1rem;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #007bff;
+            background-color: white;
+        }
+
+            .pagination a:hover {
+                background-color: #e9ecef;
             }
-        }
-    </tbody>
-</table>
 
-<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
-    <div>
-        <p>Page @ViewBag.CurrentPage of @ViewBag.TotalPages</p>
+            .pagination button:disabled {
+                background-color: #f8f9fa;
+                color: #6c757d;
+                cursor: not-allowed;
+            }
+
+        .pagination .current-page {
+            padding: 0.5rem 1rem;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+        }
+</style>
+
+<div class="container mt-5">
+    <h2>My Bookings</h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <form method="get" class="search-form">
+            <!-- Thêm input "Search by Student" từ "Manage Bookings" -->
+            <input type="text" name="searchStudent" value="@ViewBag.SearchStudent" placeholder="Search by Student" />
+            <input type="text" name="searchRoom" value="@ViewBag.SearchRoom" placeholder="Search by Room" />
+            <select name="statusFilter">
+                <option value="">ALL STATUSES</option>
+                <option value="Approved" @(ViewBag.StatusFilter == "Approved" ? "selected" : "")>Approved</option>
+                <option value="Denied" @(ViewBag.StatusFilter == "Denied" ? "selected" : "")>Denied</option>
+                <option value="Pending" @(ViewBag.StatusFilter == "Pending" ? "selected" : "")>Pending</option>
+                <option value="Cancelled" @(ViewBag.StatusFilter == "Cancelled" ? "selected" : "")>Cancelled</option>
+            </select>
+            <input type="text" name="searchPurpose" value="@ViewBag.SearchPurpose" placeholder="Search by Purpose" />
+            <button type="submit">Search</button>
+        </form>
+
+        <a href="http://localhost:5000/Bookings/Create" class="create-booking-btn">Create Booking</a>
     </div>
-    <div style="display: flex; gap: 0.5rem;">
-        @if (ViewBag.CurrentPage > 1)
-        {
-            <a href="@Url.Action("Index", new { searchRoom = ViewBag.SearchRoom, searchPurpose = ViewBag.SearchPurpose, statusFilter = ViewBag.StatusFilter, pageNumber = ViewBag.CurrentPage - 1 })"
-               style="background-color: #aaa; color: #fff; padding: 0.5rem 1rem; text-decoration: none; border-radius: 4px;">
-                <i class="bi bi-arrow-left"></i> Previous
-            </a>
-        }
-        else
-        {
-            <button disabled style="background-color: #ccc; color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 4px;">
-                <i class="bi bi-arrow-left"></i> Previous
-            </button>
-        }
 
-        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
-        {
-            <a href="@Url.Action("Index", new { searchRoom = ViewBag.SearchRoom, searchPurpose = ViewBag.SearchPurpose, statusFilter = ViewBag.StatusFilter, pageNumber = ViewBag.CurrentPage + 1 })"
-               style="background-color: #aaa; color: #fff; padding: 0.5rem 1rem; text-decoration: none; border-radius: 4px;">
-                Next <i class="bi bi-arrow-right"></i>
-            </a>
-        }
-        else
-        {
-            <button disabled style="background-color: #ccc; color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 4px;">
-                Next <i class="bi bi-arrow-right"></i>
-            </button>
-        }
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Room</th>
+                    <th>Seat Booked</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Purpose</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model == null || Model.Count == 0)
+                {
+                    <tr>
+                        <td colspan="8" class="text-center text-muted py-3">No bookings found.</td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var b in Model)
+                    {
+                        <tr>
+                            <td>@b.BookingId</td>
+                            <td>@(b.RoomSlots.FirstOrDefault()?.Room?.RoomName ?? "-")</td>
+                            <td>@(b.RoomSlots.FirstOrDefault()?.SeatsBooked.ToString() ?? "-")</td>
+                            <td>@b.StartTime.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@b.EndTime.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@b.Purpose</td>
+                            <td>
+                                <span class="@(b.BookingStatus switch
+                                {
+                                    "Approved" => "text-success",
+                                    "Denied" => "text-danger",
+                                    "Pending" => "text-warning",
+                                    "Cancelled" => "text-muted",
+                                    _ => "text-secondary"
+                                })">
+                                    @b.BookingStatus
+                                </span>
+                            </td>
+                            <td>
+                                @if (b.BookingStatus == "Pending" || b.BookingStatus == "Approved")
+                                {
+                                    <form action="/Bookings/Cancel" method="post" style="display:inline;">
+                                        <input type="hidden" name="id" value="@b.BookingId" />
+                                        <input type="hidden" name="searchRoom" value="@ViewBag.SearchRoom" />
+                                        <input type="hidden" name="searchPurpose" value="@ViewBag.SearchPurpose" />
+                                        <input type="hidden" name="statusFilter" value="@ViewBag.StatusFilter" />
+                                        <input type="hidden" name="pageNumber" value="@ViewBag.CurrentPage" />
+                                        <button type="submit" class="cancel-btn" onclick="return confirm('Are you sure you want to cancel this booking?');">
+                                            Cancel
+                                        </button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">N/A</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-4">
+        <div>
+            <p class="text-muted">Page @ViewBag.CurrentPage of @ViewBag.TotalPages</p>
+        </div>
+        <div class="pagination">
+            @if (ViewBag.CurrentPage > 1)
+            {
+                <a href="@Url.Action("Index", new { searchRoom = ViewBag.SearchRoom, searchPurpose = ViewBag.SearchPurpose, statusFilter = ViewBag.StatusFilter, pageNumber = ViewBag.CurrentPage - 1 })">
+                    Previous
+                </a>
+            }
+            else
+            {
+                <button disabled>Previous</button>
+            }
+
+            <!-- Hiển thị số trang hiện tại -->
+            <span class="current-page">@ViewBag.CurrentPage</span>
+
+            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+            {
+                <a href="@Url.Action("Index", new { searchRoom = ViewBag.SearchRoom, searchPurpose = ViewBag.SearchPurpose, statusFilter = ViewBag.StatusFilter, pageNumber = ViewBag.CurrentPage + 1 })">
+                    Next
+                </a>
+            }
+            else
+            {
+                <button disabled>Next</button>
+            }
+        </div>
     </div>
 </div>
 
 @section Scripts {
     <!-- SignalR code is in Layout, so no duplicate code here -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const statusSpans = document.querySelectorAll("table tbody tr td span");
+            statusSpans.forEach(function (span) {
+                if (span.textContent.trim() === "Cancelled") {
+                    span.style.setProperty("color", "orange", "important");
+                    span.style.setProperty("font-weight", "bold", "important");
+                }
+            });
+        });
+    </script>
 }

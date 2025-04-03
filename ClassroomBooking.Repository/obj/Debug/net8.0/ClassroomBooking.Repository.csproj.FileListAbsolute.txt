@@ -62,16 +62,3 @@ C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Repository\obj\D
 C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\refint\ClassroomBooking.Repository.dll
 C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.pdb
 C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ref\ClassroomBooking.Repository.dll
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\bin\Debug\net8.0\ClassroomBooking.Repository.deps.json
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\bin\Debug\net8.0\ClassroomBooking.Repository.dll
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\bin\Debug\net8.0\ClassroomBooking.Repository.pdb
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.csproj.AssemblyReference.cache
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.GeneratedMSBuildEditorConfig.editorconfig
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.AssemblyInfoInputs.cache
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.AssemblyInfo.cs
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.csproj.CoreCompileInputs.cache
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.sourcelink.json
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.dll
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\refint\ClassroomBooking.Repository.dll
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ClassroomBooking.Repository.pdb
-E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Repository\obj\Debug\net8.0\ref\ClassroomBooking.Repository.dll

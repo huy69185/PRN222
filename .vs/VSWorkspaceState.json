@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ClassroomBooking.Mvc"
+    "\\ClassroomBooking.Mvc",
+    "\\ClassroomBooking.Service",
+    "\\ClassroomBooking.Service\\Services"
   ],
-  "SelectedNode": "\\ClassroomBooking.Mvc\\appsettings.json",
+  "SelectedNode": "\\ClassroomBooking.Service\\Services\\BookingService.cs",
   "PreviewInSolutionExplorer": false
 }
