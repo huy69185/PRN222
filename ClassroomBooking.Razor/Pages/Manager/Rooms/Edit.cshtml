@@ -4,78 +4,142 @@
     ViewData["Title"] = "Edit Room";
 }
 
-<div class="container mt-4">
-    <div class="card shadow-lg p-4 rounded">
-        <h2 class="text-primary"><i class="bi bi-pencil-square"></i> Edit Room</h2>
-        <hr />
-
-        <div class="row">
-            <div class="col-md-6">
-                <form method="post" id="roomForm">
-                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
-                    <input type="hidden" asp-for="Room.RoomId" />
-                    <!-- Hidden inputs cho ResetCapacity và AdditionalSeats -->
-                    <input type="hidden" id="ResetCapacity" name="ResetCapacity" value="false" />
-                    <input type="hidden" id="AdditionalSeats" name="AdditionalSeats" value="0" />
-                    <!-- Hidden field để truyền availableSeats từ server -->
-                    <input type="hidden" id="AvailableSeats" value="@Model.AvailableSeats" />
-
-                    <div class="mb-3">
-                        <label asp-for="Room.RoomName" class="form-label fw-bold"></label>
-                        <input asp-for="Room.RoomName" class="form-control" />
-                        <span asp-validation-for="Room.RoomName" class="text-danger"></span>
-                    </div>
-
-                    <div class="mb-3">
-                        <label asp-for="Room.Capacity" class="form-label fw-bold"></label>
-                        <input asp-for="Room.Capacity" class="form-control" />
-                        <span asp-validation-for="Room.Capacity" class="text-danger"></span>
-                    </div>
-
-                    <div class="mb-3">
-                        <label asp-for="Room.CampusId" class="form-label fw-bold">Campus</label>
-                        <select asp-for="Room.CampusId" class="form-select" asp-items="Model.CampusItems">
-                            <option value="">-- Select Campus --</option>
-                        </select>
-                        <span asp-validation-for="Room.CampusId" class="text-danger"></span>
-                    </div>
-
-                    <div class="mb-3">
-                        <label asp-for="Room.Status" class="form-label fw-bold"></label>
-                        <select asp-for="Room.Status" class="form-select" id="roomStatus" asp-items="Model.StatusItems"></select>
-                        <span asp-validation-for="Room.Status" class="text-danger"></span>
-                    </div>
-
-                    <div class="mb-3">
-                        <label asp-for="Room.Description" class="form-label fw-bold"></label>
-                        <textarea asp-for="Room.Description" class="form-control" rows="3"></textarea>
-                        <span asp-validation-for="Room.Description" class="text-danger"></span>
-                    </div>
-
-                    <div class="d-flex justify-content-between">
-                        <a asp-page="Index" class="btn btn-secondary">
-                            <i class="bi bi-arrow-left"></i> Back to List
-                        </a>
-                        <button type="submit" class="btn btn-success">
-                            <i class="bi bi-check-circle"></i> Save Changes
-                        </button>
-                    </div>
-                </form>
-            </div>
+<div class="container py-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0"><i class="bi bi-pencil-square me-2"></i>Edit Room</h2>
         </div>
+        <div class="card-body p-4">
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @Model.ErrorMessage
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
 
-        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
-        {
-            <div class="alert alert-danger mt-3">@Model.ErrorMessage</div>
-        }
+            <form method="post" id="roomForm" class="needs-validation" novalidate>
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                <input type="hidden" asp-for="Room.RoomId" />
+                <!-- Hidden inputs cho ResetCapacity và AdditionalSeats -->
+                <input type="hidden" id="ResetCapacity" name="ResetCapacity" value="false" />
+                <input type="hidden" id="AdditionalSeats" name="AdditionalSeats" value="0" />
+                <!-- Hidden field để truyền availableSeats từ server -->
+                <input type="hidden" id="AvailableSeats" value="@Model.AvailableSeats" />
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input asp-for="Room.RoomName" class="form-control" placeholder="Room Name" required />
+                            <label asp-for="Room.RoomName" class="form-label">Room Name</label>
+                            <span asp-validation-for="Room.RoomName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input asp-for="Room.Capacity" class="form-control" type="number" min="1" placeholder="Capacity" required />
+                            <label asp-for="Room.Capacity" class="form-label">Capacity</label>
+                            <span asp-validation-for="Room.Capacity" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <select asp-for="Room.CampusId" class="form-select" asp-items="Model.CampusItems" required>
+                                <option value="">-- Select Campus --</option>
+                            </select>
+                            <label asp-for="Room.CampusId" class="form-label">Campus</label>
+                            <span asp-validation-for="Room.CampusId" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <select asp-for="Room.Status" class="form-select" id="roomStatus" asp-items="Model.StatusItems"></select>
+                            <label asp-for="Room.Status" class="form-label">Status</label>
+                            <span asp-validation-for="Room.Status" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <textarea asp-for="Room.Description" class="form-control" rows="4" placeholder="Description" style="height: 120px"></textarea>
+                            <label asp-for="Room.Description" class="form-label">Description</label>
+                            <span asp-validation-for="Room.Description" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 d-flex justify-content-between">
+                    <a asp-page="Index" class="btn btn-outline-secondary btn-lg">
+                        <i class="bi bi-arrow-left me-2"></i>Back to List
+                    </a>
+                    <button type="submit" class="btn btn-success btn-lg">
+                        <i class="bi bi-check-circle me-2"></i>Save Changes
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
+
+<style>
+    .card {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card-header {
+        padding: 1.5rem;
+    }
+
+    .form-floating > label {
+        color: #666;
+    }
+
+    .form-control:focus, .form-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+    .alert {
+        margin-bottom: 1.5rem;
+    }
+</style>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script>
+        // Bootstrap validation
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })();
+
+        // Original script for room status handling
         (function(){
             var form = document.getElementById("roomForm");
             var skipPrompt = false;
