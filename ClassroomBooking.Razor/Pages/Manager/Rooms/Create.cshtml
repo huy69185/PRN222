@@ -4,60 +4,133 @@
     ViewData["Title"] = "Create Room";
 }
 
-<h2>Create Room</h2>
+<div class="container py-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0"><i class="bi bi-house-add me-2"></i>Create New Room</h2>
+        </div>
+        <div class="card-body p-4">
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @Model.ErrorMessage
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
 
-@if (!string.IsNullOrEmpty(Model.ErrorMessage))
-{
-    <div class="alert alert-danger">@Model.ErrorMessage</div>
-}
+            <form method="post" class="needs-validation" novalidate>
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
-<form method="post">
-    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input asp-for="Room.RoomName" class="form-control" placeholder="Room Name" required />
+                            <label asp-for="Room.RoomName" class="form-label">Room Name</label>
+                            <span asp-validation-for="Room.RoomName" class="text-danger"></span>
+                        </div>
+                    </div>
 
-    <div class="mb-3">
-        <label asp-for="Room.RoomName" class="form-label fw-bold"></label>
-        <input asp-for="Room.RoomName" class="form-control" />
-        <span asp-validation-for="Room.RoomName" class="text-danger"></span>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input asp-for="Room.Capacity" class="form-control" type="number" min="1" placeholder="Capacity" required />
+                            <label asp-for="Room.Capacity" class="form-label">Capacity</label>
+                            <span asp-validation-for="Room.Capacity" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <select asp-for="Room.CampusId" class="form-select" asp-items="Model.CampusItems" required>
+                                <option value="">-- Select Campus --</option>
+                            </select>
+                            <label asp-for="Room.CampusId" class="form-label">Campus</label>
+                            <span asp-validation-for="Room.CampusId" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <select asp-for="Room.Status" class="form-select" asp-items="Model.StatusItems"></select>
+                            <label asp-for="Room.Status" class="form-label">Status</label>
+                            <span asp-validation-for="Room.Status" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <textarea asp-for="Room.Description" class="form-control" rows="4" placeholder="Description" style="height: 120px"></textarea>
+                            <label asp-for="Room.Description" class="form-label">Description</label>
+                            <span asp-validation-for="Room.Description" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 d-flex justify-content-between">
+                    <a asp-page="Index" class="btn btn-outline-secondary btn-lg">
+                        <i class="bi bi-arrow-left me-2"></i>Back to List
+                    </a>
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="bi bi-check-circle me-2"></i>Create Room
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
+</div>
 
-    <div class="mb-3">
-        <label asp-for="Room.Capacity" class="form-label fw-bold"></label>
-        <input asp-for="Room.Capacity" class="form-control" />
-        <span asp-validation-for="Room.Capacity" class="text-danger"></span>
-    </div>
+<style>
+    .card {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+    }
 
-    <div class="mb-3">
-        <label asp-for="Room.CampusId" class="form-label fw-bold">Campus</label>
-        <select asp-for="Room.CampusId" class="form-select" asp-items="Model.CampusItems" required>
-            <option value="">-- Select Campus --</option>
-        </select>
-        <span asp-validation-for="Room.CampusId" class="text-danger"></span>
-    </div>
+    .card-header {
+        padding: 1.5rem;
+    }
 
-    <div class="mb-3">
-        <label asp-for="Room.Status" class="form-label fw-bold"></label>
-        <select asp-for="Room.Status" class="form-select" asp-items="Model.StatusItems"></select>
-        <span asp-validation-for="Room.Status" class="text-danger"></span>
-    </div>
+    .form-floating > label {
+        color: #666;
+    }
 
-    <div class="mb-3">
-        <label asp-for="Room.Description" class="form-label fw-bold"></label>
-        <textarea asp-for="Room.Description" class="form-control" rows="3"></textarea>
-        <span asp-validation-for="Room.Description" class="text-danger"></span>
-    </div>
+    .form-control:focus, .form-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
 
-    <div class="d-flex justify-content-between">
-        <a asp-page="Index" class="btn btn-secondary">
-            <i class="bi bi-arrow-left"></i> Back to List
-        </a>
-        <button type="submit" class="btn btn-success">
-            <i class="bi bi-check-circle"></i> Create Room
-        </button>
-    </div>
-</form>
+    .btn {
+        padding: 0.75rem 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+    .alert {
+        margin-bottom: 1.5rem;
+    }
+</style>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        // Bootstrap validation
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
 }
