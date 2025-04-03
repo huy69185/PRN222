@@ -44,7 +44,14 @@ namespace ClassroomBooking.Presentation.Pages.Manager.Rooms
                 TempData["ErrorMessage"] = "Room not found.";
                 return RedirectToPage("/Manager/Rooms/Index");
             }
-
+            if (Room.Campus == null)
+            {
+                _logger.LogWarning("Campus is null for RoomId: {0}", id.Value);
+            }
+            else
+            {
+                _logger.LogInformation("CampusName: {0}", Room.Campus.CampusName);
+            }
             // Lấy danh sách booking
             var allBookings = await _bookingService.GetBookingsByRoomIdAsync(id.Value);
 

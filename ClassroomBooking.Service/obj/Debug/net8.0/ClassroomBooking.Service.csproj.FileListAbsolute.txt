@@ -77,3 +77,19 @@ C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debu
 C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\refint\ClassroomBooking.Service.dll
 C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.pdb
 C:\Users\tnqt3\OneDrive\Máy tính\Code\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ref\ClassroomBooking.Service.dll
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Service.deps.json
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Service.dll
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Service.pdb
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Repository.dll
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\bin\Debug\net8.0\ClassroomBooking.Repository.pdb
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.csproj.AssemblyReference.cache
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.AssemblyInfoInputs.cache
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.AssemblyInfo.cs
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.csproj.CoreCompileInputs.cache
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.sourcelink.json
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\Classroo.97035A7C.Up2Date
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.dll
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\refint\ClassroomBooking.Service.dll
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ClassroomBooking.Service.pdb
+E:\PRN222\FTUBookingV3\PRN222\ClassroomBooking.Service\obj\Debug\net8.0\ref\ClassroomBooking.Service.dll
