@@ -20,7 +20,10 @@ namespace ClassroomBooking.Service
 
         public async Task<Room?> GetRoomByIdAsync(int roomId)
         {
-            return await _unitOfWork.RoomRepository.GetByIdAsync(roomId);
+            return await _unitOfWork.RoomRepository.GetFirstOrDefaultAsync(
+                r => r.RoomId == roomId,
+                includeProperties: "Campus"
+            );
         }
 
         public async Task<List<Room>> GetAllRoomsAsync()

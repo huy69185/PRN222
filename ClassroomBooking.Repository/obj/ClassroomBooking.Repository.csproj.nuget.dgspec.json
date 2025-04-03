@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj": {}
+    "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj": {
+    "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj",
+        "projectUniqueName": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj",
         "projectName": "ClassroomBooking.Repository",
-        "projectPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj",
-        "packagesPath": "C:\\Users\\huyh6\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\obj\\",
+        "projectPath": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\VSC\\2022\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\huyh6\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,8 +44,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
