@@ -1378,10 +1378,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.3"
         },
         "runtime": {
-          "ClassroomBooking.Repository.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "ClassroomBooking.Repository.dll": {}
         }
       },
       "ClassroomBooking.Service/1.0.0": {
@@ -1390,10 +1387,7 @@
           "Microsoft.AspNetCore.SignalR.Core": "1.2.0"
         },
         "runtime": {
-          "ClassroomBooking.Service.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "ClassroomBooking.Service.dll": {}
         }
       }
     }

@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ClassroomBooking.Mvc",
+    "\\ClassroomBooking.Mvc\\Views",
+    "\\ClassroomBooking.Mvc\\Views\\Shared",
+    "\\ClassroomBooking.Razor",
+    "\\ClassroomBooking.Razor\\Pages",
+    "\\ClassroomBooking.Razor\\Pages\\Account",
+    "\\ClassroomBooking.Razor\\Pages\\Manager",
+    "\\ClassroomBooking.Razor\\Pages\\Manager\\Rooms"
+  ],
+  "SelectedNode": "\\ClassroomBooking.sln",
+  "PreviewInSolutionExplorer": false
+}
