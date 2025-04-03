@@ -22,7 +22,8 @@ namespace ClassroomBooking.Service
 
         public async Task<List<Booking>> GetAllBookingsAsync()
         {
-            return await _unitOfWork.BookingRepository.GetAllAsync(includeProperties: "User,RoomSlots,RoomSlots.Room");
+            var bookings = await _unitOfWork.BookingRepository.GetAllAsync(includeProperties: "User,RoomSlots,RoomSlots.Room");
+            return bookings.OrderByDescending(b => b.CreatedDate).ToList();
         }
 
         public async Task<Booking?> GetBookingByIdAsync(int bookingId)
@@ -37,15 +38,17 @@ namespace ClassroomBooking.Service
             if (user == null)
                 return new List<Booking>();
 
-            return await _unitOfWork.BookingRepository.GetAllAsync(
-                b => b.StudentId == user.USerId, "User,RoomSlots,RoomSlots.Room");
+            var bookings = await _unitOfWork.BookingRepository.GetAllAsync(
+                b => b.StudentId == user.USerId,
+                "User,RoomSlots,RoomSlots.Room");
+            return bookings.OrderByDescending(b => b.CreatedDate).ToList();
         }
 
         public async Task<List<BookingDto>> GetBookingsByUserCodeWithFilterAsync(
-            string userCode,
-            string searchRoom,
-            string searchPurpose,
-            string statusFilter)
+         string userCode,
+         string searchRoom,
+         string searchPurpose,
+         string statusFilter)
         {
             var user = await _unitOfWork.UsersRepository.GetFirstOrDefaultAsync(u => u.UserCode == userCode);
             if (user == null)
@@ -73,7 +76,9 @@ namespace ClassroomBooking.Service
                 all = all.Where(b => b.BookingStatus.Equals(statusFilter, StringComparison.OrdinalIgnoreCase)).ToList();
             }
 
-            var result = all.Select(b => MapToDto(b)).ToList();
+            var result = all.OrderByDescending(b => b.CreatedDate)
+                           .Select(b => MapToDto(b))
+                           .ToList();
             return result;
         }
 
@@ -204,9 +209,10 @@ namespace ClassroomBooking.Service
 
         public async Task<List<Booking>> GetBookingsByRoomIdAsync(int roomId)
         {
-            return await _unitOfWork.BookingRepository.GetAllAsync(
+            var bookings = await _unitOfWork.BookingRepository.GetAllAsync(
                 b => b.RoomSlots.Any(rs => rs.RoomId == roomId),
                 "User,RoomSlots,RoomSlots.Room");
+            return bookings.OrderByDescending(b => b.CreatedDate).ToList();
         }
 
         private BookingDto MapToDto(Booking b)

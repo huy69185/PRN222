@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj": {}
+    "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj": {}
   },
   "projects": {
-    "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj": {
+    "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj",
+        "projectUniqueName": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj",
         "projectName": "ClassroomBooking.Mvc",
-        "projectPath": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Mvc\\obj\\",
+        "projectPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\ClassroomBooking.Mvc.csproj",
+        "packagesPath": "C:\\Users\\huyh6\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Mvc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VSC\\2022\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\huyh6\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj": {
-                "projectPath": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj"
+              "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj": {
+                "projectPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj"
               }
             }
           }
@@ -48,7 +47,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -90,24 +90,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj": {
+    "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj",
         "projectName": "ClassroomBooking.Repository",
-        "projectPath": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Repository\\obj\\",
+        "projectPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj",
+        "packagesPath": "C:\\Users\\huyh6\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VSC\\2022\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\huyh6\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -116,7 +116,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -134,7 +133,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -169,24 +169,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj": {
+    "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj",
+        "projectUniqueName": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj",
         "projectName": "ClassroomBooking.Service",
-        "projectPath": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Service\\obj\\",
+        "projectPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\ClassroomBooking.Service.csproj",
+        "packagesPath": "C:\\Users\\huyh6\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\VSC\\2022\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\huyh6\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -195,15 +195,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj": {
-                "projectPath": "E:\\PRN222\\FTUBookingV3\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj"
+              "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj": {
+                "projectPath": "C:\\Users\\huyh6\\OneDrive\\Desktop\\PRN222\\ClassroomBooking.Repository\\ClassroomBooking.Repository.csproj"
               }
             }
           }
@@ -217,7 +216,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -244,7 +244,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
