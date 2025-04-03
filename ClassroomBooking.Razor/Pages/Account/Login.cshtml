@@ -26,7 +26,12 @@
                 <label class="form-label fw-bold text-dark">
                     <i class="bi bi-key-fill me-2 text-primary"></i>Password
                 </label>
-                <input type="password" class="form-control shadow-sm" asp-for="LoginVM.Password" placeholder="Enter your password" required />
+                <div class="input-group">
+                    <input type="password" class="form-control shadow-sm" asp-for="LoginVM.Password" placeholder="Enter your password" required id="passwordInput" />
+                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                        <i class="bi bi-eye"></i>Show
+                    </button>
+                </div>
                 <span asp-validation-for="LoginVM.Password" class="text-danger"></span>
             </div>
 
@@ -55,6 +60,18 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            var passwordInput = document.getElementById('passwordInput');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                this.innerHTML = '<i class="bi bi-eye-slash"></i>Hide';
+            } else {
+                passwordInput.type = 'password';
+                this.innerHTML = '<i class="bi bi-eye"></i>Show';
+            }
+        });
+    </script>
 }
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
